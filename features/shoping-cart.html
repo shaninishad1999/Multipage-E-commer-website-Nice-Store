@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>shoping-cart</title>
+</head>
+
+<body>
+
+    <!-- top navbar -->
+    <header>
+
+        <div class="top-navbar">
+            <div class="top-navbar-head">
+                <p>Free shipping for standard order over $100</p>
+                <div class="top-navbar-list">
+                    <ul>
+                        <li><a href="#">Help & FAQs</a></li>
+                        <li><a href="/myaccount/myaccount.html">My Account </a></li>
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">USD</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- top navbar close -->
+
+        <nav class="navbar nav-bar">
+            <input type="checkbox" name="click" id="click">
+            <div class="nav-content">
+
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/logo/logo-01.png.webp" alt=""></a>
+                </div>
+                <ul>
+                    <div class="top-navbar top-bar2">
+                        <div class="top-navbar-head">
+                            <p>Free shipping for standard order over $100</p>
+                        </div>
+
+                    </div>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/shop/shop.html">Shop</a></li>
+                    <li><a href="/features/shoping-cart.html">features</a></li>
+                    <li><a href="/blog/blog.html">Blog</a></li>
+                    <li><a href="/about/about.html">About</a></li>
+                    <li><a href="/contact/contact.html">Contact</a></li>
+                    <!-- mobile view  login and ragister-->
+                    <div class="login-ragister">
+                        <li><a href="/login/login.html">Login</a></li>
+                        <li><a href="/signup/signup.html">Ragister</a></li>
+                    </div>
+                    <!-- mobile view  login and ragister-->
+                </ul>
+                <label for="click" class="click">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+
+            <div class="nav-icons">
+                <section class="login-ragister-desktop">
+                    <a href="/login/login.html">Login</a>
+                    <span>/</span>
+                    <a href="/signup/signup.html">Ragister</a>
+                </section>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- header close -->
+
+    <!-- hero home -->
+    <div class="hero-home">
+        <p><a href="/index.html"> Home </a> <i class="fa-solid fa-greater-than"></i><span> Shoping Cart</span></p>
+    </div>
+
+    <!-- hero-home close -->
+
+
+
+
+    <section id="product">
+
+        <div class="product-cart">
+            <!-- div 1 -->
+            <div class="product-cart-product">
+                <div class="product-column">
+                    <h5>PRODUCT </h5>
+                    <h5 class="product-column-price">PRICE</h5>
+                    <h5 class="product-column-quanitity">QUANTITY</h5>
+                    <h5>TOTAL</h5>
+                </div>
+                <div class="product-cart-1">
+                    <img src="/images/shoping-cart/item-cart-01.jpg.webp" alt="image-1">
+                    <p class="product-name">Fresh Strawberries</p>
+                    <p class="product-price">$ 36.00</p>
+                    <div class="container">
+                        <div class="item">-</div>
+                        <div class="item">2</div>
+                        <div class="item">+</div>
+                    </div>
+                    <p>$ 36.00</p>
+                </div>
+
+                <div class="product-cart-1">
+                    <img src="/images/shoping-cart/item-cart-01.jpg.webp" alt="image-1">
+                    <p class="product-name">Fresh Strawberries</p>
+                    <p class="product-price">$ 36.00</p>
+                    <div class="container">
+                        <div class="item">-</div>
+                        <div class="item">2</div>
+                        <div class="item">+</div>
+                    </div>
+                    <p>$ 36.00</p>
+                </div>
+
+                <div class="btn-section">
+                    <div class="btn-section-text">
+                        <label for="coupon"></label>
+                        <input type="text" name="coupon" id="coupon" placeholder="Coupon Code">
+                    </div>
+                    <a href="#"><button>APPLY COUPON</button></a>
+                    <a href="#"><button>UPDATE CART</button></a>
+
+                </div>
+
+            </div>
+            <!-- div 1 close -->
+
+        </div>
+
+
+        <!-- div 2 -->
+        <div class="product-cart-total">
+            <h2>CART TOTALS</h2>
+            <div class="product-name-value">
+                <h2>Subtotal:</h2>
+                <h3>$79.65</h3>
+            </div>
+            <div class="shipping-area">
+                <h3>Shipping:</h3>
+                <div class="shipping-area-calculated-shiping">
+                    <p>
+                        There are no shipping methods available. Please double check your address, or contact us if you
+                        need
+                        any help.</p>
+                    <div class="shipping-area-calculated-shiping-address">
+                        <span class="shiping-span">CALCULATE SHIPPING</span>
+                        <form action="#">
+                            <label for="country"></label>
+                            <select name="country" id="country">
+                                <option value="Select a country">Select a country</option>
+                                <option value="USA">USA</option>
+                                <option value="UK">UK</option>
+                            </select>
+                            <label for="c-s"></label>
+                            <input type="text" id="c-s" placeholder="State / Country">
+                            <label for="pin-code"></label>
+                            <input type="text" id="pin-code" placeholder="Postcode/Zip">
+                            <label for="update-btn"></label>
+                            <input type="button" id="update-btn" value="UPDATE TOTALS">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="calculated-price">
+                <h1>Totals</h1>
+                <h1>79.65</h1>
+            </div>
+            <a href="#"><button>PROCEED TO CHECKOUT</button></a>
+            
+        </div>
+
+        <!-- div 2 close -->
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer section start -->
+
+    <footer>
+        <div class="footer">
+
+            <div class="categories footer-heading  footer-list">
+                <h1>CATEGORIES</h1>
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Watches</a></li>
+                </ul>
+            </div>
+            <div class="help footer-heading footer-list">
+                <h1>HELP</h1>
+                <ul>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="get-in-touch footer-heading">
+                <h1>GET IN TOUCH</h1>
+                <p>Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on
+                    (+1) 96 716 6879</p>
+                <div class="footer-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="newsletter footer-heading">
+                <h1>NEWSLETTER</h1>
+                <label for="email">
+                    <input type="email" id="email" placeholder="email@example.com">
+                </label>
+                <button>SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/images/card/icon-pay-01.png.webp" alt="">
+            <img src="/images/card/icon-pay-02.png.webp" alt="">
+            <img src="/images/card/icon-pay-03.png.webp" alt="">
+            <img src="/images/card/icon-pay-04.png.webp" alt="">
+            <img src="/images/card/icon-pay-05.png.webp" alt="">
+        </div>
+        <div class="copyrights">
+            <p>Copyright ©2024 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a
+                    href="#">Shanideval</a></span></p>
+        </div>
+    </footer>
+    <!-- footer section close -->
+
+
+
+</body>
+
+</html>
