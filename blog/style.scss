@@ -175,7 +175,7 @@ header {
 .blog-section {
 
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     padding-left: 200px;
     padding-top: 100px;
     column-gap: 50px;
@@ -359,7 +359,11 @@ header {
 
 
 
-
+@media  screen and (max-width:768px) {
+    .blog-section {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 /* mobile view */
