@@ -180,7 +180,7 @@ header {
     padding-top: 100px;
     column-gap: 50px;
     width: 100%;
- 
+
 
 
 }
@@ -214,31 +214,34 @@ header {
             opacity: 0.6;
         }
     }
-    .page-change-btn{
+
+    .page-change-btn {
         margin-bottom: 100px;
     }
-.page-change-btn button{
-    padding: 10px;
-    border-radius: 50%;
-    margin: 10px;
-    border: 1px solid white;
-    cursor: pointer;
-    background-color: #ccc;
-  
 
-    >a{
-        text-decoration: none;
-        font-size: 17px;
-        color: white;
-        
+    .page-change-btn button {
+        padding: 10px;
+        border-radius: 50%;
+        margin: 10px;
+        border: 1px solid white;
+        cursor: pointer;
+        background-color: #ccc;
+
+
+        >a {
+            text-decoration: none;
+            font-size: 17px;
+            color: white;
+
+        }
+
+
     }
-   
 
-}
-.page-change-btn button:hover{
-    background-color: #848181;
-   
-}
+    .page-change-btn button:hover {
+        background-color: #848181;
+
+    }
 
 }
 
@@ -252,7 +255,7 @@ header {
 
     input[type=text],
     select {
-        width: 50%;
+        width: 100%;
         position: relative;
         padding: 12px 20px;
         border-radius: 25px;
@@ -276,186 +279,81 @@ header {
         line-height: 2.0;
         border-bottom: 2px solid rgba(37, 35, 35, 0.5);
     }
+
     .categories ul li a {
         text-decoration: none;
         color: $bgcolor;
     }
-    .right-image{
+
+    .right-image {
         display: flex;
         padding: 20px;
-        >p{
+
+        >p {
             padding: 20px;
         }
     }
-    .right-image img{
+
+    .right-image img {
         width: 100px;
         height: 110px;
         border: 2px solid #717FE0;
-     
+
 
     }
-    .archive h1{
+
+    .archive h1 {
         font-size: 26px;
         margin-top: 50px;
-       margin-bottom: 50px;
+        margin-bottom: 50px;
     }
-    .archive ul li{
+
+    .archive ul li {
         list-style: none;
 
-        >a{
+        >a {
             color: $bgcolor;
             text-decoration: none;
-            
+
         }
-        span{
+
+        span {
             padding-right: 100px;
         }
-       
+
     }
-    .tags{
+
+    .tags {
         padding-right: 100px;
     }
-    .tags h1{
+
+    .tags h1 {
         margin-top: 50px;
         margin-bottom: 50px;
-        
+
     }
-    button{
+
+    button {
         padding: 10px 20px 10px 20px;
         font-size: 17px;
         border-radius: 25px;
         border: 2px solid white;
-      margin: 5px;
-        >a{
+        margin: 5px;
+
+        >a {
             text-decoration: none;
         }
-       
+
     }
-    button:hover{
+
+    button:hover {
         border: 2px solid blue;
         cursor: pointer;
     }
-    
+
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media  screen and (max-width:768px) {
-    .blog-section {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* mobile view */
-
-@media screen and (max-width:500px) {
-
-    .top-navbar {
-        display: none;
-    }
-
-    /* humburgar menu */
-    .nav-content label {
-        display: block;
-
-    }
-
-    .nav-content ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        display: none;
-        background-color: $bgcolor;
-        z-index: 2;
-
-    }
-
-    .nav-content ul li {
-        margin: 5px;
-
-    }
-
-    .nav-content ul li a {
-        color: white;
-    }
-
-    .nav-content ul li a:hover {
-        color: blue;
-    }
-
-    #click:checked~.nav-content ul {
-        display: flex;
-    }
-
-    /* humbergar menu */
-
-
-    /* login-ragister */
-    .login-ragister {
-        display: block;
-    }
-
-    .login-ragister-desktop {
-        display: none;
-    }
-
-    /* login-ragister close */
-
-    /* logo */
-    .logo {
-        margin-left: -100px;
-    }
-
-    /* logo */
-    .nav-icons {
-        display: flex;
-        position: relative;
-        left: 70px;
-    }
-
-    .hero {
-        width: auto;
-        height: auto;
-    }
-
-    .items img {
-        width: 500px;
-        height: auto;
-    }
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -471,8 +369,8 @@ footer {
 }
 
 .footer {
-    display: flex;
-    justify-content: space-between;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
     padding-left: 160px;
     padding-right: 160px;
 
@@ -598,7 +496,138 @@ select {
 /* footer section close */
 
 /* mobile view */
+
+
+@media screen and (max-width:768px) {
+    .blog-section {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 100px;
+        text-align: center;
+
+    }
+
+
+
+    .top-navbar {
+        display: none;
+    }
+
+    /* humburgar menu */
+    .nav-content label {
+        display: block;
+
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $bgcolor;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: white;
+    }
+
+    .nav-content ul li a:hover {
+        color: blue;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -100px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        position: relative;
+        left: 70px;
+    }
+
+    .hero {
+        width: auto;
+        height: auto;
+    }
+
+    .items img {
+        width: 500px;
+        height: auto;
+    }
+
+    input[type=text],
+    select {
+        width: 100%;
+        position: relative;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-size: 20px;
+        border: 2px solid whitesmoke;
+    }
+    footer {
+        display: block;
+        height: auto;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2,1fr);
+        height: auto;
+        padding-left: 30px;
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+
+}
+
+
+
+
+/* mobile view */
 @media screen and (max-width:500px) {
+
+
+
     footer {
         display: block;
         height: auto;
@@ -622,5 +651,6 @@ select {
     .newsletter {
         padding-TOP: 50px;
     }
+        
 
 }

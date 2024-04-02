@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="myaccount.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
 </head>
+
 <body>
-        <!-- top navbar -->
+    <!-- top navbar -->
     <header>
 
         <div class="top-navbar">
@@ -78,58 +80,63 @@
     </header>
 
 
-<!-- hero section -->
+    <!-- hero section -->
 
-<div class="container">
+    <div class="container">
 
-    <div class="myaccount">
-        <div class="profile-pic">
-            <img src="/images/myaccount/myaccount.jpg" alt=""><br><br>
-            <p>Profile Pic</p>
+        <div class="myaccount">
+            <div class="profile-pic">
+                <img src="/images/myaccount/myaccount.jpg" alt=""><br><br>
+                <input type="file" name="" id="" placeholder="Chose Your Pic">
+                <p>Profile Pic</p>
+            </div>
+            <div class="form-div">
+                <form action="#" action="#">
+
+                    <label for="fname"><span>Full Name : </span></label>
+                    <input type="text" name="fname" id="fname" value="COZA STORE">
+          
+                    <label for="email"><span> Email : </span></label>
+                    <input type="email" name="email" id="email" value="cozastire123@gmail.com"><br>
+         
+                    <label for="username"> <span>Username : </span></label>
+                    <input type="text" name="username" id="username" value="cozastore@123">
+                    
+                    <label for="phone"> <span>Mobile :</span></label>
+                    <input type="tel" name="phone" id="phone" value="+915896372158"> <br>
+
+                    <label for="psd"><span> Password :</span></label>
+                    <input type="password" name="psd" id="psd" value="Cozastore123@123">
+
+                    <label for="psd"> <span>Confirm Password :</span></label>
+                    <input type="password" name="psd" id="psd" value="Cozastore123@123"><br>
+
+                    <label for="state"><span>State : </span></label>
+                    <input type="text" name="state" id="state">
+
+                    <label for="city"> <span>City : </span></label>
+                    <input type="text" name="city" id="city"><br>
+
+                    <label for="pin-code"><span> Pin Code : </span> </label>
+                    <input type="number" name="pin-code" id="pin-code">
+
+                    <label for="gender"><span> Gender : </span></label>
+                    <input type="radio" name="gender" id="male" value="Male" checked> Male
+                    <br><br>
+                    <div class="btn">
+                    <label for="update-btn"></label>
+                    <input type="button" name="update-btn" id="update-btn" value=" Update details">
+
+                    <label for="reset-btn"></label>
+                    <input type="button" name="reset-btn" id="reset-btn" value="Reset Password">
+                </div>
+                </form>
+            </div>
+
         </div>
-        <form action="#" action="#">
 
-            <label for="fname"><span>Full Name : </span></label> 
-            <input type="text" name="fname" id="fname" value="COZA STORE">
-          
-            <label for="username"> <span>Username : </span></label>
-            <input type="text" name="username" id="username" value="cozastore@123"> <br>
-            
-            <label for="email"><span> Email : </span></label>
-            <input type="email" name="email" id="email" value="cozastire123@gmail.com"> 
-           
-            <label for="phone"> <span>Mobile :</span></label>
-            <input type="tel" name="phone" id="phone" value="+915896372158"> <br>
-            
-            <label for="psd"><span> Password :</span></label>
-            <input type="password" name="psd" id="psd" value="Cozastore123@123">
-            
-            <label for="psd"> <span>Confirm Password :</span></label>
-            <input type="password" name="psd" id="psd" value="Cozastore123@123"><br> 
-           
-            <label for="state"><span>State : </span></label>
-            <input type="text" name="state" id="state">
-
-            <label for="city"> <span>City : </span></label>
-            <input type="text" name="city" id="city"><br>
-
-            <label for="pin-code"><span> Pin Code : </span> </label>
-            <input type="number" name="pin-code" id="pin-code">
-          
-            <label for="gender"><span> Gender : </span></label>
-            <input type="radio" name="gender" id="male" value="Male" checked> Male
-            <br><br>
-
-            <label for="update-btn"></label>
-            <input type="button" name="update-btn" id="update-btn" value=" Update details">
-
-            <label for="reset-btn"></label>
-            <input type="button" name="reset-btn" id="reset-btn" value="Reset Password">
-
-          
     </div>
 
-</div>
-
 </body>
+
 </html>

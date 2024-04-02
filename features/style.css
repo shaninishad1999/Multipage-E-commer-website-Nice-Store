@@ -151,7 +151,6 @@ header {
 /* navbar header close  */
 .hero-home {
   position: relative;
-  height: 35vh;
   color: black;
   top: 150px;
   padding-left: 160px;
@@ -178,9 +177,9 @@ header {
 }
 
 #product {
+  margin-top: 30vh;
   display: grid;
   grid-template-columns: 70% 30%;
-  height: 100vh;
 }
 
 .product-cart {
@@ -370,8 +369,8 @@ footer {
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   padding-left: 160px;
   padding-right: 160px;
 }
@@ -486,6 +485,93 @@ select {
 }
 
 /* footer section close */
+@media screen and (max-width: 768px) {
+  .top-navbar {
+    display: none;
+  }
+  /* humburgar menu */
+  .nav-content label {
+    display: block;
+  }
+  .nav-content ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    display: none;
+    background-color: #717FE0;
+    color: white;
+    z-index: 2;
+  }
+  .nav-content ul li {
+    margin: 5px;
+  }
+  .nav-content ul li a {
+    color: white;
+  }
+  .nav-content ul li a:hover {
+    color: #717FE0;
+  }
+  #click:checked ~ .nav-content ul {
+    display: flex;
+  }
+  /* humbergar menu */
+  /* login-ragister */
+  .login-ragister {
+    display: block;
+  }
+  .login-ragister-desktop {
+    display: none;
+  }
+  /* login-ragister close */
+  /* logo */
+  .nav-icons {
+    display: block;
+    position: relative;
+    left: 70px;
+  }
+  #product {
+    margin-top: 30vh;
+    grid-template-columns: 1fr 1fr;
+  }
+  .product-cart {
+    height: 80vh;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid #ccc;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .product-cart-total {
+    margin-top: 30px;
+    border: 2px solid #ccc;
+    width: 80%;
+    position: relative;
+    left: 65px;
+    padding: 30px 30px 30px;
+    align-content: center;
+  }
+  footer {
+    height: auto;
+  }
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    width: auto;
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+  .categories {
+    padding-bottom: 50px;
+  }
+  .help {
+    padding-bottom: 50px;
+  }
+  .newsletter {
+    padding-TOP: 50px;
+  }
+}
 /* mobile view  500px*/
 @media screen and (max-width: 500px) {
   .top-navbar {
@@ -543,83 +629,49 @@ select {
     width: auto;
     padding-left: 20px;
   }
-  footer {
-    display: block;
-    height: auto;
+  #product {
+    margin-top: 30vh;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
-  .footer {
-    grid-template-columns: auto;
-    height: auto;
-    display: block;
-    padding-left: 30px;
+  .product-cart {
+    height: 103vh;
+    grid-template-columns: 1fr;
+    border: 2px solid #ccc;
+    margin-right: 20px;
   }
-  .categories {
-    padding-bottom: 50px;
-  }
-  .help {
-    padding-bottom: 50px;
-  }
-  .newsletter {
-    padding-TOP: 50px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .top-navbar {
-    display: none;
-  }
-  /* humburgar menu */
-  .nav-content label {
-    display: block;
-  }
-  .nav-content ul {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    display: none;
-    background-color: #717FE0;
-    color: white;
-    z-index: 2;
-  }
-  .nav-content ul li {
-    margin: 5px;
-  }
-  .nav-content ul li a {
-    color: white;
-  }
-  .nav-content ul li a:hover {
-    color: #717FE0;
-  }
-  #click:checked ~ .nav-content ul {
-    display: flex;
-  }
-  /* humbergar menu */
-  /* login-ragister */
-  .login-ragister {
-    display: block;
-  }
-  .login-ragister-desktop {
-    display: none;
-  }
-  /* login-ragister close */
-  /* logo */
-  .nav-icons {
-    display: block;
+  .product-cart-total {
+    margin-top: 30px;
+    border: 2px solid #ccc;
+    width: 80%;
+    padding: 30px 30px 30px;
+    align-content: center;
     position: relative;
-    left: 70px;
+    left: 50px;
+  }
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  product-cart-1 {
+    padding-left: 15px;
+  }
+  .btn-section {
+    text-align: left;
+    margin-right: 5px;
+  }
+  .btn-section #coupon {
+    padding-left: 0px;
   }
   footer {
     display: block;
     height: auto;
   }
   .footer {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr;
     height: auto;
-    width: auto;
+    display: block;
     padding-left: 30px;
-    padding-right: 50px;
   }
   .categories {
     padding-bottom: 50px;

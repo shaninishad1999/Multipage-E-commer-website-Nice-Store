@@ -250,6 +250,103 @@ input[type=password], select {
   color: #717FE0;
 }
 
+@media screen and (max-width: 768px) {
+  .top-navbar {
+    display: none;
+    text-align: center;
+  }
+  /* humburgar menu */
+  .nav-content label {
+    display: block;
+  }
+  .nav-content ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    display: none;
+    background-color: black;
+    z-index: 2;
+  }
+  .nav-content ul li {
+    margin: 5px;
+  }
+  .nav-content ul li a {
+    color: white;
+  }
+  .nav-content ul li a:hover {
+    color: #717FE0;
+  }
+  #click:checked ~ .nav-content ul {
+    display: flex;
+  }
+  /* humbergar menu */
+  /* login-ragister */
+  .login-ragister {
+    display: block;
+  }
+  .login-ragister-desktop {
+    display: none;
+  }
+  /* login-ragister close */
+  /* logo */
+  .logo {
+    margin-left: -100px;
+  }
+  /* logo */
+  .nav-icons {
+    display: flex;
+    position: relative;
+    left: 70px;
+  }
+  .top-bar2 {
+    display: block;
+    display: flex;
+    justify-content: left;
+  }
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+  }
+  input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+  }
+  input[type=tel], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+  }
+  input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+  }
+}
 /* mobile view 500px */
 @media screen and (max-width: 500px) {
   .top-navbar {
@@ -314,103 +411,6 @@ input[type=password], select {
     display: flex;
     position: relative;
     left: 70px;
-  }
-  input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-  }
-  input[type=email], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-  }
-  input[type=tel], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-  }
-  input[type=password], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .top-navbar {
-    display: none;
-    text-align: center;
-  }
-  /* humburgar menu */
-  .nav-content label {
-    display: block;
-  }
-  .nav-content ul {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    display: none;
-    background-color: black;
-    z-index: 2;
-  }
-  .nav-content ul li {
-    margin: 5px;
-  }
-  .nav-content ul li a {
-    color: white;
-  }
-  .nav-content ul li a:hover {
-    color: #717FE0;
-  }
-  #click:checked ~ .nav-content ul {
-    display: flex;
-  }
-  /* humbergar menu */
-  /* login-ragister */
-  .login-ragister {
-    display: block;
-  }
-  .login-ragister-desktop {
-    display: none;
-  }
-  /* login-ragister close */
-  /* logo */
-  .logo {
-    margin-left: -100px;
-  }
-  /* logo */
-  .nav-icons {
-    display: flex;
-    position: relative;
-    left: 70px;
-  }
-  .top-bar2 {
-    display: block;
-    display: flex;
-    justify-content: left;
   }
   input[type=text], select {
     width: 100%;

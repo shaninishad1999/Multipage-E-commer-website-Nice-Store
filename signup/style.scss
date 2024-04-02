@@ -216,7 +216,7 @@ background-color: $white-color;
 
 }
 .item{
-    position: relative;
+
     align-content: center;
     text-align: center;
     justify-content: center;
@@ -293,6 +293,104 @@ text-decoration: none;
 }
 
 
+
+
+// media query 768px
+
+@media screen and  (max-width:768px) {
+    .top-navbar{
+        display: none;
+        text-align: center;
+    }
+
+    /* humburgar menu */
+    .nav-content label{
+        display: block;
+       
+        
+    }
+    .nav-content ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: black;
+        z-index: 2;
+       
+
+    }
+    .nav-content ul li {
+        margin: 5px;
+      
+    }
+    .nav-content ul li a{
+        color: white;
+    }
+    .nav-content ul li a:hover{
+        color: #717FE0;
+    }
+   
+
+    #click:checked ~ .nav-content ul{
+        display: flex;
+    }
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister{
+        display: block;
+    }
+
+    .login-ragister-desktop{
+        display: none;
+    }
+    /* login-ragister close */
+    
+/* logo */
+    .logo{
+        margin-left: -100px;
+    }
+
+    /* logo */
+  .nav-icons{
+    display: flex;
+    position: relative;
+    left: 70px;
+  }
+
+  .top-bar2{
+    display: block;
+    display: flex;
+    justify-content: left;
+  }
+
+  input[type=text], select {
+    @include input-mobile-property;
+     
+     }
+     input[type=email], select {
+         @include input-mobile-property;
+     }
+     input[type=tel], select {
+     @include input-mobile-property;
+     }
+     input[type=password], select {
+         @include input-mobile-property;
+     
+     }
+     .gender{
+         text-align: left;
+         margin-left: 10px;
+         font-size: 20px;
+         color: black;
+         
+         }
+     
+}
 
 
 /* mobile view 500px */
@@ -412,101 +510,6 @@ text-decoration: none;
 }
 
 
-// media query 768px
 
-@media screen and  (max-width:768px) {
-    .top-navbar{
-        display: none;
-        text-align: center;
-    }
-
-    /* humburgar menu */
-    .nav-content label{
-        display: block;
-       
-        
-    }
-    .nav-content ul{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        display: none;
-        background-color: black;
-        z-index: 2;
-       
-
-    }
-    .nav-content ul li {
-        margin: 5px;
-      
-    }
-    .nav-content ul li a{
-        color: white;
-    }
-    .nav-content ul li a:hover{
-        color: #717FE0;
-    }
-   
-
-    #click:checked ~ .nav-content ul{
-        display: flex;
-    }
-    /* humbergar menu */
-
-
-    /* login-ragister */
-    .login-ragister{
-        display: block;
-    }
-
-    .login-ragister-desktop{
-        display: none;
-    }
-    /* login-ragister close */
-    
-/* logo */
-    .logo{
-        margin-left: -100px;
-    }
-
-    /* logo */
-  .nav-icons{
-    display: flex;
-    position: relative;
-    left: 70px;
-  }
-
-  .top-bar2{
-    display: block;
-    display: flex;
-    justify-content: left;
-  }
-
-  input[type=text], select {
-    @include input-mobile-property;
-     
-     }
-     input[type=email], select {
-         @include input-mobile-property;
-     }
-     input[type=tel], select {
-     @include input-mobile-property;
-     }
-     input[type=password], select {
-         @include input-mobile-property;
-     
-     }
-     .gender{
-         text-align: left;
-         margin-left: 10px;
-         font-size: 20px;
-         color: black;
-         
-         }
-     
-}
 
 

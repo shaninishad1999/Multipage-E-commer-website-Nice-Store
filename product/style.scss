@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-$background-color: $background-color;
+$background-color: black;
 $white-color: white;
 $button-bgcolor: #717FE0;
 
@@ -202,7 +202,6 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 1200px;
-    height: 80vh;
     background-color: #ccc;
     position: relative;
     top: 120px;
@@ -210,6 +209,7 @@ header {
 
     .item {
         display: grid;
+        grid-template-columns: repeat(3, 1fr);
         align-items: center;
         justify-content: center;
 
@@ -254,6 +254,8 @@ header {
     font-size: 20px;
 }
 
+
+
 label {
     font-size: 17px;
 }
@@ -273,6 +275,10 @@ select#size option {
     @include select-list;
 
 }
+.color select {
+    @include select-list;
+
+}
 
 
 /* hero section close */
@@ -280,7 +286,6 @@ select#size option {
 
 .numbers {
     margin-left: 60px;
-    // width: 300px;
     display: flex;
     margin-top: 30px;
     text-align: center;
@@ -291,7 +296,6 @@ select#size option {
     margin: 2px;
     width: 50px;
     height: 50px;
-    position: relative;
     align-content: center;
     text-align: center;
     background-color: #555;
@@ -311,8 +315,9 @@ select#size option {
 }
 
 .btn {
-    margin-left: 50px;
-    margin-top: 50px;
+    // margin-left: 50px;
+    // margin-top: 50px;
+    margin: 50px 0px 0px 50px;
 }
 
 .btn a button {
@@ -353,7 +358,83 @@ select#size option {
 
 
 
+// media query 768px
 
+@media screen and (max-width:768px) {
+    .top-navbar {
+        display: none;
+        text-align: center;
+    }
+
+    /* humburgar menu */
+    .nav-content label {
+        display: block;
+
+
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $background-color;
+        z-index: 2;
+
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -100px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        position: relative;
+        left: 70px;
+    }
+
+
+
+
+}
 
 
 /* mobile view 500px */
@@ -433,88 +514,39 @@ select#size option {
         left: 70px;
     }
 
+    .container {
+        grid-template-columns: 1fr;
+        background-color: #ccc;
+        width: 600px;
 
-}
+        .item {
+            grid-template-columns: auto;
+            text-align: center;
 
 
+        }
+        .item img {
+            width: 280px;
+            height: 280px;
+            padding: 5px;
+        }
 
-// media query 768px
-
-@media screen and (max-width:768px) {
-    .top-navbar {
-        display: none;
+    }
+    .item2{
         text-align: center;
     }
-
-    /* humburgar menu */
-    .nav-content label {
-        display: block;
-
-
-    }
-
-    .nav-content ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        display: none;
-        background-color: $background-color;
-        z-index: 2;
-
+   
+      
+        .numbers {
+            margin-left: 190px;
+            display: flex;
+            margin-top: 30px;
+            text-align: center;
+        
 
     }
 
-    .nav-content ul li {
-        margin: 5px;
-
-    }
-
-    .nav-content ul li a {
-        color: $white-color;
-    }
-
-    .nav-content ul li a:hover {
-        color: $button-bgcolor;
-    }
 
 
-    #click:checked~.nav-content ul {
-        display: flex;
-    }
-
-    /* humbergar menu */
-
-
-    /* login-ragister */
-    .login-ragister {
-        display: block;
-    }
-
-    .login-ragister-desktop {
-        display: none;
-    }
-
-    /* login-ragister close */
-
-    /* logo */
-    .logo {
-        margin-left: -100px;
-    }
-
-    /* logo */
-    .nav-icons {
-        display: flex;
-        position: relative;
-        left: 70px;
-    }
-
-    .container {
-        grid-template-columns: auto auto;
-        width: 100%;
-        height: 100%;
-    }
 
 }

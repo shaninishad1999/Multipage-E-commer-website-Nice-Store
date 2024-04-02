@@ -6,8 +6,9 @@
 
 $background-color: black;
 $white-color: white;
+$para-font-size: 17px;
 $button-bgcolor: #717FE0;
-
+$border-color: 2px solid rgb(160, 155, 155);
 
 @mixin content-center {
     align-items: center;
@@ -17,24 +18,6 @@ $button-bgcolor: #717FE0;
 @mixin flexproperty {
     display: flex;
     justify-content: space-between;
-}
-@mixin input-property{
-    width: 50%;
-    margin: 8px 0px;
-    padding: 12px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-@mixin input-mobile-property{
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background-color: transparent;
-        font-size: 17px;
-        
 }
 
 /* top navbar */
@@ -47,7 +30,6 @@ $button-bgcolor: #717FE0;
     z-index: 8;
     padding-left: 40px;
     padding-right: 50px;
-    top: 0px;
 
 }
 
@@ -59,8 +41,9 @@ $button-bgcolor: #717FE0;
 }
 
 .top-navbar-head {
-  @include flexproperty;
+    display: flex;
     height: 5vh;
+    justify-content: space-between;
     align-items: center;
     margin: 0px 100px;
     padding: 0px 15px;
@@ -87,12 +70,13 @@ $button-bgcolor: #717FE0;
 
 .top-navbar-list ul li a {
     text-decoration: none;
-    color: $background-color;
+    color: black;
     padding: auto;
     font-size: 15px;
     color: $white-color;
 
 }
+
 .top-bar2 {
     display: none;
     margin-top: 10px;
@@ -120,6 +104,7 @@ header {
     padding-left: 130px;
     padding-right: 160px;
     top: 30px;
+
     
 }
 
@@ -153,7 +138,7 @@ header {
     text-decoration: none;
     padding: 0px 5px;
     justify-content: center;
-    color: $background-color;
+    color: black;
     position: relative;
     z-index: 5;
 }
@@ -171,7 +156,7 @@ header {
 
 .nav-icons a {
     margin: 10px;
-    color: $background-color;
+    color: black;
 }
 
 .nav-icons a i {
@@ -194,110 +179,205 @@ header {
 .nav-content label {
     display: none;
 }
+
+
 /* navbar header close  */
 
-
-
-
-/* container css */
-
 body{
-    background-color: $white-color;
+    /* background-color: lightblue; */
+    // background: url(/images/milad-fakurian-bexwsdM5BCw-unsplash.jpg) no-repeat center center/cover;
+    // background-color: white;
 }
-
 .container{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-   position: relative;
-   top: 150px;
-    border-radius: 25px;
-    text-align: center;
-    width: 50%;
+    width: 810px;
+    // background-color: #ccc;
+    border-radius: 25px; 
     margin: auto;
+    background-color: #717FE0;
+   
+  
 }
-
-input[type=text] , select{
-    @include input-property;
+.myaccount{
+    padding-top: 120px;
 
 }
-input[type=password] , select{
-  @include input-property;
+.nav-icons{
+    font-size: 20px;
     
 }
-.hero h1{
-    padding-top: 30px;
-    margin-bottom: 30px;
+.nav-icons a{
+    text-decoration: none;
+}
+
+.profile-pic{
     text-align: center;
 }
-#form-btn{
-    margin-top: 30px;
-    padding: 10px 30px 10px 30px;
+.profile-pic img  {
+    width:100% ;
+    height : 100% ;
+    max-width: 200px ;  
+    max-height: 250px ; 
+    border-radius: 50%;
+    
+}
+.profile-pic p{
     font-size: 20px;
-    border: none;
+    color: rgb(6, 9, 16);
+    padding-top: 10px;
+    border-bottom: 4px solid black;
+}
+
+.form-div{
+    text-align: left;
+}
+.username{
+    // margin-left: 10px;
+}
+input[type=text] , select{
+    width: 30%;
+    display: inline-block;
+    margin: 8px 0px;
+    padding: 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+
+}
+
+input[type=email] , select{
+    width: 30%;
+    display: inline-block;
+    margin: 8px 0px;
+    padding: 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+
+}
+input[type=tel] , select{
+    width: 30%;
+    display: inline-block;
+    margin: 8px 0px;
+    padding: 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+    color: rgb(14, 17, 22);
+  
+
+}
+input[type=psd] , select{
+    width: 30%;
+    display: inline-block;
+    margin: 8px 0px;
+    padding: 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+   
+
+}
+::placeholder{
+    background-color: bisque;
+}
+input[type=password] , select{
+    width: 30%;
+    display: inline-block;
+    margin: 8px 0px;
+    padding: 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+  
+
+}
+input[type=state] , select{
+    width: 30%;
+    display: inline-block;
+    margin: 8px 0px;
+    padding: 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+  
+  
+
+}
+input[type=city] , select{
+    width: 30%;
+    display: inline-block;
+    margin: 8px 0px;
+    padding: 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+    
+  
+
+}
+input[type=number] , select{
+    width: 30%;
+    display: inline-block;
+    margin: 8px 0px;
+    padding: 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+
+  
+  
+
+}
+
+.btn{
+    text-align: center;
+    padding-bottom: 50px;
+}
+#update-btn{
+    padding: 10px 20px 10px 20px;
     border-radius: 20px;
+    background-color: white;
+    border: none;
     cursor: pointer;
-    background-color: #ccc;
+    background-color: springgreen;
+    font-weight: bold;
+    font-size: 17px;
+
+    
 }
-#form-btn:hover{
-    background-color: $button-bgcolor;
+#reset-btn{
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    background-color: brown;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+
 }
 
-/* container */
-
-.container h1{
-    font-size: 40px ;
-    color: $background-color;
-}
-.container-main-rmr{
+span{
     font-size: 20px;
 }
-.container-main-rmr, checkbox{
-font-size: 20px;
-}
-.reset-section{
-    margin-top: 30px;
-    font-size: 20px;
-   
-   
-}
-.reset-section a{
-    text-decoration: none;
-    color: $background-color;
-}
-.reset-section a:hover{
-    color: rgba(0, 255, 8, 0.845);
-    border-bottom: 2px solid rgba(0, 255, 8, 0.845);
-}
-.reset-section span a:hover{
-    color: red;
-    border-bottom: 2px solid red;
-}
-#create-account{
-    font-size: 20px;
-    margin-top: 20px;
-   
-}
-#create-account p a{
-    color:rgb(239, 160, 13);
-    font-weight: 900px;
-    font-style: italic;
-
-}
-#create-account p a:hover{
-    color: $button-bgcolor;
-}
 
 
 
-
-// media query 768px
 
 @media screen and  (max-width:768px) {
     .top-navbar{
         display: none;
         text-align: center;
     }
-
     /* humburgar menu */
     .nav-content label{
         display: block;
@@ -325,7 +405,7 @@ font-size: 20px;
         color: white;
     }
     .nav-content ul li a:hover{
-        color: #717FE0;
+        color: blue;
     }
    
 
@@ -363,42 +443,27 @@ font-size: 20px;
     justify-content: left;
   }
 
-  input[type=text], select {
-    @include input-mobile-property;
-     
-     }
-     input[type=email], select {
-         @include input-mobile-property;
-     }
-     input[type=tel], select {
-     @include input-mobile-property;
-     }
-     input[type=password], select {
-         @include input-mobile-property;
-     
-     }
-   
-     
+    
 }
 
 
 
-/* mobile view 500px */
+
+
+/* mobile view */
 
 @media screen and  (max-width:500px) {
 
     .top-navbar{
         display: none;
-
     }
-
     /* humburgar menu */
-    .nav-content label {
+    .nav-content label{
         display: block;
-
+       
+        
     }
-
-    .nav-content ul {
+    .nav-content ul{
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -406,66 +471,44 @@ font-size: 20px;
         left: 0;
         width: 100%;
         display: none;
-        background-color: $button-bgcolor;
-        color: $white-color;
+        background-color: black;
         z-index: 2;
+       
+        
 
     }
-
     .nav-content ul li {
         margin: 5px;
-
+      
     }
-
-    .nav-content ul li a {
-        color: $white-color;
+    .nav-content ul li a{
+        color: white;
     }
-
-    .nav-content ul li a:hover {
-        color: $button-bgcolor;
+    .nav-content ul li a:hover{
+        color: blue;
     }
+   
 
-    #click:checked~.nav-content ul {
+    #click:checked ~ .nav-content ul{
         display: flex;
     }
-
     /* humbergar menu */
 
 
     /* login-ragister */
-    .login-ragister {
+    .login-ragister{
         display: block;
     }
 
-    .login-ragister-desktop {
+    .login-ragister-desktop{
         display: none;
     }
-
     /* login-ragister close */
 
-    /* logo */
-    .logo {
-        margin-left: -140px;
+/* logo */
+    .logo{
+        margin-left: -100px;
     }
-
-    /* logo */
-    .nav-icons {
-        display: flex;
-        position: relative;
-        left: 70px;
-    }
-
-    .hero {
-        width: 100%;
-
-
-    }
-    .items img {
-        // width: 500px;
-        width: 100%;
-        height: 100vh;
-    }
-
 
     /* logo */
   .nav-icons{
@@ -473,23 +516,7 @@ font-size: 20px;
     position: relative;
     left: 70px;
   }
-
-
-  input[type=text], select {
-   @include input-mobile-property;
-    
-    }
-    input[type=email], select {
-        @include input-mobile-property;
-    }
-    input[type=tel], select {
-    @include input-mobile-property;
-    }
-    input[type=password], select {
-        @include input-mobile-property;
-    
-    }
-   
+  
     
 }
 
