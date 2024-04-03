@@ -233,7 +233,7 @@ header {
 }
 .right-content input[type=text],
 .right-content select {
-  width: 100%;
+  width: 55%;
   position: relative;
   padding: 12px 20px;
   border-radius: 25px;
@@ -256,7 +256,7 @@ header {
 }
 .right-content .categories ul li a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .right-content .right-image {
   display: flex;
@@ -279,7 +279,7 @@ header {
   list-style: none;
 }
 .right-content .archive ul li > a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 .right-content .archive ul li span {

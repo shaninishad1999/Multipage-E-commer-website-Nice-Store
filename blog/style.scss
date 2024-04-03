@@ -295,7 +295,7 @@ padding: 4px;
 
     input[type=text],
     select {
-        width: 100%;
+        width:55%;
         position: relative;
         padding: 12px 20px;
         border-radius: 25px;
@@ -322,7 +322,7 @@ padding: 4px;
 
     .categories ul li a {
         text-decoration: none;
-        color: $white-color;
+        color:$background-color;
     }
 
     .right-image {
@@ -352,7 +352,7 @@ padding: 4px;
         list-style: none;
 
         >a {
-            color: $white-color;
+            color: $background-color;
             text-decoration: none;
 
         }
