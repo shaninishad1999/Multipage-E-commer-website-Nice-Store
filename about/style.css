@@ -12,6 +12,7 @@
   z-index: 8;
   padding-left: 40px;
   padding-right: 50px;
+  top: 0px;
 }
 
 .top-navbar-head p {
@@ -22,8 +23,8 @@
 
 .top-navbar-head {
   display: flex;
-  height: 5vh;
   justify-content: space-between;
+  height: 5vh;
   align-items: center;
   margin: 0px 100px;
   padding: 0px 15px;
@@ -58,6 +59,7 @@
 }
 
 .top-navbar-list ul li a:hover {
+  cursor: pointer;
   color: #717FE0;
 }
 
@@ -109,10 +111,10 @@ header {
 }
 
 .nav-content ul li a {
-  text-decoration: none;
-  padding: 0px 5px;
   align-items: center;
   text-align: center;
+  text-decoration: none;
+  padding: 0px 5px;
   justify-content: center;
   color: black;
   position: relative;
@@ -120,7 +122,7 @@ header {
 }
 
 .nav-content ul li a:hover {
-  color: rgba(0, 0, 255, 0.653);
+  color: #717FE0;
 }
 
 .nav-icons {
@@ -139,8 +141,15 @@ header {
   font-size: 23px;
 }
 
+.nav-icons a i span {
+  color: white;
+  background-color: #717FE0;
+  font-size: 10px;
+  padding: 4px;
+}
+
 .nav-icons a:hover {
-  color: rgba(0, 0, 255, 0.653);
+  color: #717FE0;
 }
 
 .login-ragister {
@@ -155,6 +164,7 @@ header {
   display: none;
 }
 
+/* navbar header close  */
 /* hero section */
 .hero {
   background: url(/images/about/about-img.jpg) no-repeat center center/cover;
@@ -398,7 +408,20 @@ select {
 
 /* footer section close */
 /* mobile view */
+.top-navbar-head-2 {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
+  .top-navbar-head-2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+  }
   .top-navbar {
     display: none;
   }

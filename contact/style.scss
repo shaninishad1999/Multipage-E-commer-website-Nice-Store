@@ -481,11 +481,24 @@ select {
 /* footer section close */
 
 
-
+.top-navbar-head-2{
+    display: none;
+}
 
 
 /* mobile view 768px  */
 @media screen and (max-width:768px) {
+
+    .top-navbar-head-2{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        background-color: black;
+        color: white;
+  
+    }
 
     .top-navbar {
         display: none;

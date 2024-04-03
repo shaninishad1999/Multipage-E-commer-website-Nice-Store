@@ -4,27 +4,69 @@
     box-sizing: border-box;
 }
 
+$background-color: black;
+$white-color: white;
+$para-font-size: 17px;
+$button-bgcolor: #717FE0;
+$border-color: 2px solid rgb(160, 155, 155);
+
+@mixin content-center {
+    align-items: center;
+    text-align: center;
+}
+
+@mixin flexproperty {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin input-property {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+}
+
+@mixin input-mobile-property {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+
+}
+
 /* top navbar */
+
+// new changes
 .top-navbar {
-    background-color: black;
+    background-color: $background-color;
     position: fixed;
     width: 100%;
     z-index: 8;
     padding-left: 40px;
     padding-right: 50px;
+    top: 0px;
 
 }
 
+// new changes
 .top-navbar-head p {
-    color: white;
+    color: $white-color;
     font-size: 15px;
     opacity: 0.8;
 }
 
 .top-navbar-head {
-    display: flex;
+    @include flexproperty;
     height: 5vh;
-    justify-content: space-between;
     align-items: center;
     margin: 0px 100px;
     padding: 0px 15px;
@@ -39,14 +81,14 @@
 
 .top-navbar-list ul {
     list-style: none;
-    border-left: 2px solid white;
+    border-left: 2px solid $white-color;
     opacity: 0.8;
 
 }
 
 .top-navbar-list ul li {
     padding: 10px 20px 10px 20px;
-    border-right: 2px solid white;
+    border-right: 2px solid $white-color;
 }
 .top-navbar-list ul li:hover{
     cursor: pointer;
@@ -54,14 +96,15 @@
 
 .top-navbar-list ul li a {
     text-decoration: none;
-    color: black;
+    color: $background-color;
     padding: auto;
     font-size: 15px;
-    color: white;
+    color: $white-color;
 
 }
 .top-navbar-list ul li a:hover{
-    color: #717FE0;
+    cursor: pointer;
+    color: $button-bgcolor;
 }
 
 .top-bar2 {
@@ -76,11 +119,12 @@
 header {
     background: none;
 
+
 }
 
+// changese below
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    @include flexproperty;
     align-items: center;
     height: 80px;
     position: fixed;
@@ -92,6 +136,8 @@ header {
     top: 30px;
 
 }
+
+// change above
 
 .nav-content {
     display: flex;
@@ -117,36 +163,35 @@ header {
 }
 
 .nav-content ul li a {
+    @include content-center;
     text-decoration: none;
     padding: 0px 5px;
-    align-items: center;
-    text-align: center;
     justify-content: center;
-    color: black;
+    color: $background-color;
     position: relative;
     z-index: 5;
 }
 
 .nav-content ul li a:hover {
-    color: rgba(0, 0, 255, 0.653);
+    color: $button-bgcolor;
 
 }
 
 .nav-icons {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    @include content-center;
 }
 
 .nav-icons a {
     margin: 10px;
-    color: black;
+    color: $background-color;
 }
 
 .nav-icons a i {
     font-size: 23px;
 }
+
 .nav-icons a i span {
     color: $white-color;
     background-color: #717FE0;
@@ -154,7 +199,7 @@ header {
 padding: 4px;
 }
 .nav-icons a:hover {
-    color: rgba(0, 0, 255, 0.653);
+    color: $button-bgcolor;
 
 }
 
@@ -170,6 +215,7 @@ padding: 4px;
     display: none;
 }
 
+/* navbar header close  */
 
 /* hero section */
 
@@ -448,10 +494,25 @@ select {
 
 /* mobile view */
 
-
+.top-navbar-head-2 {
+    display: none;
+}
 
 
 @media screen and (max-width:768px) {
+
+
+    .top-navbar-head-2 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        background-color: black;
+        color: white;
+
+    }
+
 
     .top-navbar {
         display: none;
@@ -462,7 +523,8 @@ select {
         display: block;
 
     }
-    .navbar{
+
+    .navbar {
         top: 0;
     }
 
@@ -652,9 +714,10 @@ select {
 
     }
 
-    .navbar{
+    .navbar {
         top: 0;
     }
+
     .nav-content ul {
         display: flex;
         flex-direction: column;
@@ -710,13 +773,15 @@ select {
         position: relative;
         left: 70px;
     }
+
     /* hero  section*/
 
     .hero {
         height: 55vh;
         width: auto;
     }
-    .hero-heading{
+
+    .hero-heading {
         padding-bottom: 50px;
     }
 
