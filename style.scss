@@ -90,6 +90,9 @@ $border-color: 2px solid rgb(160, 155, 155);
     padding: 10px 20px 10px 20px;
     border-right: 2px solid $white-color;
 }
+.top-navbar-list ul li:hover{
+    cursor: pointer;
+}
 
 .top-navbar-list ul li a {
     text-decoration: none;
@@ -98,6 +101,10 @@ $border-color: 2px solid rgb(160, 155, 155);
     font-size: 15px;
     color: $white-color;
 
+}
+.top-navbar-list ul li a:hover{
+    cursor: pointer;
+    color: $button-bgcolor;
 }
 
 .top-bar2 {
@@ -185,6 +192,12 @@ header {
     font-size: 23px;
 }
 
+.nav-icons a i span {
+    color: $white-color;
+    background-color: #717FE0;
+    font-size: 10px;
+padding: 4px;
+}
 .nav-icons a:hover {
     color: $button-bgcolor;
 
@@ -718,6 +731,7 @@ select {
 
 }
 
+
 /* newsletter button */
 
 .newsletter button {
@@ -841,7 +855,9 @@ select {
         display: flex;
         left: 70px;
     }
-
+    sup span sup{
+        color: red;
+    }
 
     /* banner section */
     .banner {
