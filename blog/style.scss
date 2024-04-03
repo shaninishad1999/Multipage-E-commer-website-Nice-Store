@@ -4,17 +4,38 @@
     box-sizing: border-box;
 }
 
-$bgcolor: black;
+$background-color: black;
+$white-color: white;
+$para-font-size: 17px;
+$button-bgcolor: #717FE0;
+$border-color: 2px solid rgb(160, 155, 155);
 
+@mixin content-center {
+    align-items: center;
+    text-align: center;
+}
+
+@mixin flexproperty {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* top navbar */
+
+// new changes
 .top-navbar {
-    background-color: $bgcolor;
+    background-color: $background-color;
+    position: fixed;
+    width: 100%;
+    z-index: 8;
+    padding-left: 40px;
+    padding-right: 50px;
 
 }
 
+// new changes
 .top-navbar-head p {
-    color: white;
+    color: $white-color;
     font-size: 15px;
     opacity: 0.8;
 }
@@ -37,23 +58,27 @@ $bgcolor: black;
 
 .top-navbar-list ul {
     list-style: none;
-    border-left: 2px solid white;
+    border-left: 2px solid $white-color;
     opacity: 0.8;
 
 }
 
 .top-navbar-list ul li {
     padding: 10px 20px 10px 20px;
-    border-right: 2px solid white;
+    border-right: 2px solid $white-color;
+    cursor: pointer;
 }
 
 .top-navbar-list ul li a {
     text-decoration: none;
-    color: $bgcolor;
+    color: black;
     padding: auto;
     font-size: 15px;
-    color: white;
+    color: $white-color;
 
+}
+.top-navbar-list ul li a:hover{
+    color: $button-bgcolor;
 }
 
 .top-bar2 {
@@ -67,17 +92,27 @@ $bgcolor: black;
 
 header {
     background: none;
+ 
 
 }
 
+// changese below
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 80px;
-    padding: 0px 15px;
+    @include flexproperty;
     align-items: center;
-    height: 70px;
+    height: 80px;
+    position: fixed;
+    background-color: #ccc;
+    width: 100%;
+    z-index: 5;
+    padding-left: 130px;
+    padding-right: 160px;
+    top: 30px;
+
+    
 }
+
+// change above
 
 .nav-content {
     display: flex;
@@ -103,31 +138,29 @@ header {
 }
 
 .nav-content ul li a {
+    @include content-center;
     text-decoration: none;
     padding: 0px 5px;
-    align-items: center;
-    text-align: center;
     justify-content: center;
-    color: $bgcolor;
+    color: black;
     position: relative;
     z-index: 5;
 }
 
 .nav-content ul li a:hover {
-    color: rgba(0, 0, 255, 0.653);
+    color: $button-bgcolor;
 
 }
 
 .nav-icons {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+   @include content-center;
 }
 
 .nav-icons a {
     margin: 10px;
-    color: $bgcolor;
+    color: black;
 }
 
 .nav-icons a i {
@@ -135,7 +168,7 @@ header {
 }
 
 .nav-icons a:hover {
-    color: rgba(0, 0, 255, 0.653);
+    color: $button-bgcolor;
 
 }
 
@@ -152,11 +185,13 @@ header {
 }
 
 
+/* navbar header close  */
+
 /* hero section */
 
 .hero {
     background: url(/images/blog/blog.webp) no-repeat center center/cover;
-    height: 35vh;
+    height: 55vh;
     align-content: center;
 }
 
@@ -282,7 +317,7 @@ header {
 
     .categories ul li a {
         text-decoration: none;
-        color: $bgcolor;
+        color: $white-color;
     }
 
     .right-image {
@@ -312,7 +347,7 @@ header {
         list-style: none;
 
         >a {
-            color: $bgcolor;
+            color: $white-color;
             text-decoration: none;
 
         }
@@ -519,7 +554,9 @@ select {
         display: block;
 
     }
-
+.navbar{
+    top: 0px;
+}
     .nav-content ul {
         display: flex;
         flex-direction: column;
@@ -528,7 +565,7 @@ select {
         left: 0;
         width: 100%;
         display: none;
-        background-color: $bgcolor;
+        background-color: $button-bgcolor;
         z-index: 2;
 
     }
@@ -576,10 +613,6 @@ select {
         left: 70px;
     }
 
-    .hero {
-        width: auto;
-        height: auto;
-    }
 
     .items img {
         width: 500px;
@@ -627,16 +660,109 @@ select {
 @media screen and (max-width:500px) {
 
 
+    .blog-section {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 100px;
+        text-align: center;
 
+    }
+
+
+
+    .top-navbar {
+        display: none;
+    }
+
+    /* humburgar menu */
+    .nav-content label {
+        display: block;
+
+    }
+
+    .navbar{
+        top: 0px;
+    }
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: white;
+    }
+
+    .nav-content ul li a:hover {
+        color: blue;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -100px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        position: relative;
+        left: 70px;
+    }
+
+
+    .items img {
+        width: 500px;
+        height: auto;
+    }
+
+    input[type=text],
+    select {
+        width: 100%;
+        position: relative;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-size: 20px;
+        border: 2px solid whitesmoke;
+    }
     footer {
         display: block;
         height: auto;
     }
 
     .footer {
-        grid-template-columns: auto;
+        grid-template-columns: repeat(1,1fr);
         height: auto;
-        display: block;
         padding-left: 30px;
     }
 
@@ -651,6 +777,6 @@ select {
     .newsletter {
         padding-TOP: 50px;
     }
-        
 
 }
+

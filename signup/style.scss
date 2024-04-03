@@ -301,6 +301,7 @@ text-decoration: none;
     .top-navbar{
         display: none;
         text-align: center;
+        top: 65px;
     }
 
     /* humburgar menu */
@@ -309,15 +310,18 @@ text-decoration: none;
        
         
     }
+    .navbar{
+        top: 0;
+    }
     .nav-content ul{
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 105px;
         left: 0;
         width: 100%;
         display: none;
-        background-color: black;
+        background-color: #717FE0;
         z-index: 2;
        
 
@@ -407,7 +411,9 @@ text-decoration: none;
         display: block;
 
     }
-
+.navbar{
+    top: 0;
+}
     .nav-content ul {
         display: flex;
         flex-direction: column;

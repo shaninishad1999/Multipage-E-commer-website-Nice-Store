@@ -296,6 +296,10 @@ font-size: 20px;
     .top-navbar{
         display: none;
         text-align: center;
+        top: 65px;
+    padding-left: 0px;
+    z-index: -1;
+        
     }
 
     /* humburgar menu */
@@ -304,15 +308,19 @@ font-size: 20px;
        
         
     }
+    .navbar{
+        position: relative;
+        top: 0px;
+    }
     .nav-content ul{
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 105px;
         left: 0;
         width: 100%;
         display: none;
-        background-color: black;
+        background-color: $button-bgcolor;
         z-index: 2;
        
 
@@ -389,7 +397,7 @@ font-size: 20px;
 
     .top-navbar{
         display: none;
-
+        
     }
 
     /* humburgar menu */

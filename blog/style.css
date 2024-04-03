@@ -7,6 +7,11 @@
 /* top navbar */
 .top-navbar {
   background-color: black;
+  position: fixed;
+  width: 100%;
+  z-index: 8;
+  padding-left: 40px;
+  padding-right: 50px;
 }
 
 .top-navbar-head p {
@@ -38,6 +43,7 @@
 .top-navbar-list ul li {
   padding: 10px 20px 10px 20px;
   border-right: 2px solid white;
+  cursor: pointer;
 }
 
 .top-navbar-list ul li a {
@@ -46,6 +52,10 @@
   padding: auto;
   font-size: 15px;
   color: white;
+}
+
+.top-navbar-list ul li a:hover {
+  color: #717FE0;
 }
 
 .top-bar2 {
@@ -62,10 +72,15 @@ header {
 .navbar {
   display: flex;
   justify-content: space-between;
-  margin: 0px 80px;
-  padding: 0px 15px;
   align-items: center;
-  height: 70px;
+  height: 80px;
+  position: fixed;
+  background-color: #ccc;
+  width: 100%;
+  z-index: 5;
+  padding-left: 130px;
+  padding-right: 160px;
+  top: 30px;
 }
 
 .nav-content {
@@ -91,10 +106,10 @@ header {
 }
 
 .nav-content ul li a {
-  text-decoration: none;
-  padding: 0px 5px;
   align-items: center;
   text-align: center;
+  text-decoration: none;
+  padding: 0px 5px;
   justify-content: center;
   color: black;
   position: relative;
@@ -102,7 +117,7 @@ header {
 }
 
 .nav-content ul li a:hover {
-  color: rgba(0, 0, 255, 0.653);
+  color: #717FE0;
 }
 
 .nav-icons {
@@ -122,7 +137,7 @@ header {
 }
 
 .nav-icons a:hover {
-  color: rgba(0, 0, 255, 0.653);
+  color: #717FE0;
 }
 
 .login-ragister {
@@ -137,10 +152,11 @@ header {
   display: none;
 }
 
+/* navbar header close  */
 /* hero section */
 .hero {
   background: url(/images/blog/blog.webp) no-repeat center center/cover;
-  height: 35vh;
+  height: 55vh;
   align-content: center;
 }
 
@@ -233,7 +249,7 @@ header {
 }
 .right-content .categories ul li a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .right-content .right-image {
   display: flex;
@@ -256,7 +272,7 @@ header {
   list-style: none;
 }
 .right-content .archive ul li > a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 .right-content .archive ul li span {
@@ -424,6 +440,9 @@ select {
   .nav-content label {
     display: block;
   }
+  .navbar {
+    top: 0px;
+  }
   .nav-content ul {
     display: flex;
     flex-direction: column;
@@ -432,7 +451,7 @@ select {
     left: 0;
     width: 100%;
     display: none;
-    background-color: black;
+    background-color: #717FE0;
     z-index: 2;
   }
   .nav-content ul li {
@@ -465,10 +484,6 @@ select {
     display: flex;
     position: relative;
     left: 70px;
-  }
-  .hero {
-    width: auto;
-    height: auto;
   }
   .items img {
     width: 500px;
@@ -504,14 +519,85 @@ select {
 }
 /* mobile view */
 @media screen and (max-width: 500px) {
+  .blog-section {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 100px;
+    text-align: center;
+  }
+  .top-navbar {
+    display: none;
+  }
+  /* humburgar menu */
+  .nav-content label {
+    display: block;
+  }
+  .navbar {
+    top: 0px;
+  }
+  .nav-content ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    display: none;
+    background-color: #717FE0;
+    z-index: 2;
+  }
+  .nav-content ul li {
+    margin: 5px;
+  }
+  .nav-content ul li a {
+    color: white;
+  }
+  .nav-content ul li a:hover {
+    color: blue;
+  }
+  #click:checked ~ .nav-content ul {
+    display: flex;
+  }
+  /* humbergar menu */
+  /* login-ragister */
+  .login-ragister {
+    display: block;
+  }
+  .login-ragister-desktop {
+    display: none;
+  }
+  /* login-ragister close */
+  /* logo */
+  .logo {
+    margin-left: -100px;
+  }
+  /* logo */
+  .nav-icons {
+    display: flex;
+    position: relative;
+    left: 70px;
+  }
+  .items img {
+    width: 500px;
+    height: auto;
+  }
+  input[type=text],
+  select {
+    width: 100%;
+    position: relative;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 20px;
+    border: 2px solid whitesmoke;
+  }
   footer {
     display: block;
     height: auto;
   }
   .footer {
-    grid-template-columns: auto;
+    grid-template-columns: repeat(1, 1fr);
     height: auto;
-    display: block;
     padding-left: 30px;
   }
   .categories {

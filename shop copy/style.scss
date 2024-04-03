@@ -19,6 +19,29 @@ $border-color: 2px solid rgb(160, 155, 155);
     display: flex;
     justify-content: space-between;
 }
+@mixin input-property{
+    width: 60%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+background-color: transparent;
+font-size: 17px;
+}
+@mixin input-mobile-property{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: transparent;
+        font-size: 17px;
+        
+}
+
+/* top navbar */
 
 // new changes
 .top-navbar {
@@ -40,9 +63,8 @@ $border-color: 2px solid rgb(160, 155, 155);
 }
 
 .top-navbar-head {
-    display: flex;
+  @include flexproperty;
     height: 5vh;
-    justify-content: space-between;
     align-items: center;
     margin: 0px 100px;
     padding: 0px 15px;
@@ -69,13 +91,12 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 .top-navbar-list ul li a {
     text-decoration: none;
-    color: black;
+    color: $background-color;
     padding: auto;
     font-size: 15px;
     color: $white-color;
 
 }
-
 .top-bar2 {
     display: none;
     margin-top: 10px;
@@ -103,7 +124,6 @@ header {
     padding-left: 130px;
     padding-right: 160px;
     top: 30px;
-
     
 }
 
@@ -137,7 +157,7 @@ header {
     text-decoration: none;
     padding: 0px 5px;
     justify-content: center;
-    color: black;
+    color: $background-color;
     position: relative;
     z-index: 5;
 }
@@ -155,7 +175,7 @@ header {
 
 .nav-icons a {
     margin: 10px;
-    color: black;
+    color: $background-color;
 }
 
 .nav-icons a i {
@@ -178,9 +198,6 @@ header {
 .nav-content label {
     display: none;
 }
-
-
-
 /* navbar header close  */
 
 
@@ -200,9 +217,8 @@ header {
 
 .product-main-section {
     @include flexproperty;
-    height: auto;
     padding: 0px 0px 52px;
-    position: relative;
+  
 }
 
 .product-btn {
@@ -214,8 +230,9 @@ header {
     background: transparent;
     border: none;
     font-size: 15px;
-    position: relative;
     cursor: pointer;
+    padding-bottom: 5px;
+    position: relative;
 }
 
 .product-btn button:before {
@@ -239,7 +256,7 @@ header {
 /* product search */
 .product-search {
     margin: 20px;
-    font-size: $para-font-size;
+    font-size: 17px;
     display: flex;
 }
 
@@ -260,6 +277,7 @@ header {
     opacity: 0.9;
 }
 
+
 input[type=text],
 select {
     padding-left: 10px;
@@ -270,13 +288,14 @@ select {
 }
 
 .product-search label {
-    position: relative;
+
     align-content: center;
     text-align: center;
     border: $button-bgcolor;
     opacity: 0.5;
     width: 10%;
     cursor: pointer;
+    border: 2px solid #ccc;
 }
 
 .product-search label:hover {
@@ -286,10 +305,36 @@ select {
 
 /* product search  */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* product image */
 .product-item-image {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    text-align: center;
 }
 
 .product-image img {
@@ -297,15 +342,30 @@ select {
     height: 350px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* product image all */
 .product-rate {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
     margin-bottom: 40px;
-    position: relative;
     align-content: center;
     align-items: center;
+    padding-left: 30px;
 }
 
 .product-image button {
@@ -314,7 +374,6 @@ select {
     border-radius: 25px;
     cursor: pointer;
     border: none;
-    position: relative;
     align-content: center;
     justify-content: center;
     text-align: center;
@@ -336,7 +395,6 @@ select {
 
 .product-rate .fa-heart {
     font-size: 20px;
-    position: relative;
     cursor: pointer;
     align-content: center;
 }
@@ -383,7 +441,8 @@ select {
 
 /* footer section  start */
 footer {
-    height: 70vh;
+    height: 72vh;
+    max-width: 100%;
     background-color: rgba(0, 0, 0, 0.896);
     color: $white-color;
     padding-top: 80px;
@@ -391,7 +450,8 @@ footer {
 }
 
 .footer {
-    @include flexproperty;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding-left: 160px;
     padding-right: 160px;
 }
@@ -512,144 +572,6 @@ select {
 
 
 
-
-
-/* mobile view  500px*/
-
-@media screen and (max-width:500px) {
-
-    .top-navbar{
-        display: none;
-
-    }
-    
-
-    /* humburgar menu */
-    .nav-content label {
-        display: block;
-    }
-
-    .nav-content ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        display: none;
-        background-color: $background-color;
-        z-index: 2;
-       
-    }
-
-    .nav-content ul li {
-        margin: 5px;
-    }
-
-    .nav-content ul li a {
-        color: $white-color;
-    }
-
-    .nav-content ul li a:hover {
-        color: $button-bgcolor;
-    }
-
-    #click:checked~.nav-content ul {
-        display: flex;
-    }
-
-    /* humbergar menu */
-
-    /* login-ragister */
-    .login-ragister {
-        display: block;
-    }
-
-    .login-ragister-desktop {
-        display: none;
-    }
-
-    /* login-ragister close */
-
-
-
-    /* logo */
-    .nav-icons {
-        // flex
-        display: block;
-        position: relative;
-        left: 70px;
-    }
-
-    /* product main section */
-    .product-main-section {
-        display: block;
-        height: auto;
-    }
-
-    #product-overview {
-        margin-left: 20px;
-        margin-right: 20px;
-        /* height: 100vh; */
-    }
-
-    .product-item-image {
-        padding: 0px 0px 52px;
-        display: block;
-        height: auto;
-        grid-template-columns: auto;
-        width: 100%;
-        margin: auto;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        align-content: center;
-        gap: 30px;
-    }
-
-    /* img section  */
-  
-  
-
-    /* img section close */
-
-    /* load more btn */
-    .load-more-btn {
-        margin-top: 40px;
-        text-align: center;
-        padding-bottom: 100px;
-    }
-
-    // footer section 
-    footer {
-        display: block;
-        height: auto;
-    }
-
-    .footer {
-        height: auto;
-        grid-template-columns: auto;
-        display: block;
-        padding-left: 30px;
-
-    }
-
-    .categories {
-        padding-bottom: 50px;
-    }
-
-    .help {
-        padding-bottom: 50px;
-    }
-
-    .newsletter {
-        padding-TOP: 50px;
-    }
-
-    // footer section close
-}
-
-
 /* mobile view  768px*/
 
 @media screen and (max-width:768px) {
@@ -661,6 +583,9 @@ select {
     .nav-content label {
         display: block;
     }
+    .navbar{
+        top: 0;
+    }
 
     .nav-content ul {
         display: flex;
@@ -670,7 +595,7 @@ select {
         left: 0;
         width: 100%;
         display: none;
-        background-color: $background-color;
+        background-color: $button-bgcolor;
         z-index: 2;
     }
 
@@ -719,6 +644,14 @@ select {
         margin-right: 20px;
     }
 
+
+// container
+
+
+
+
+
+
     .product-item-image {
         padding: 0px 0px 52px;
         height: auto;
@@ -726,10 +659,14 @@ select {
         width: auto;
         padding: 0px 15px 30px;
         gap: 30px;
+        text-align: center;
     }
 
+
+
+
     .product-image img {
-        width: 330px;
+        // width: 330px;
         height: 450px;
     }
 
@@ -739,14 +676,14 @@ select {
         padding-bottom: 100px;
     }
 
-    footer {
-        display: block;
-        height: auto;
 
+
+
+    footer {
+        height: auto;
     }
 
     .footer {
-        height: auto;
         grid-template-columns: auto auto;
         width: auto;
         padding-left: 30px;
@@ -766,3 +703,150 @@ select {
     }
 
 }
+
+/* mobile view  500px*/
+
+@media screen and (max-width:500px) {
+
+    .top-navbar{
+        display: none;
+
+    }
+
+
+    /* humburgar menu */
+    .nav-content label {
+        display: block;
+
+    }
+    .navbar{
+        top: 0;
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        color: $white-color;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -140px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        left: 70px;
+    }
+
+
+    /* product main section */
+    .product-main-section {
+        display: block;
+        height: auto;
+    }
+
+    #product-overview {
+        margin-left: 20px;
+        margin-right: 20px;
+        /* height: 100vh; */
+    }
+
+    .product-item-image {
+        padding: 0px 0px 52px;
+        height: auto;
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+        gap: 30px;
+    }
+
+    /* img section  */
+    .product-image img {
+        width: 330px;
+        height: 450px;
+    }
+  
+
+    /* img section close */
+
+    /* load more btn */
+    .load-more-btn {
+        margin-top: 40px;
+        text-align: center;
+        padding-bottom: 100px;
+    }
+
+    // footer section 
+    footer {
+       grid-template-columns: 1fr;
+       
+    }
+
+    .footer {
+        grid-template-columns: auto;
+        // padding-left: 30px;
+
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+   
+
+    // footer section close
+}
+
+

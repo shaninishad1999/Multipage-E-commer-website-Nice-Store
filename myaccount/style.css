@@ -43,6 +43,7 @@
 .top-navbar-list ul li {
   padding: 10px 20px 10px 20px;
   border-right: 2px solid white;
+  cursor: pointer;
 }
 
 .top-navbar-list ul li a {
@@ -51,6 +52,10 @@
   padding: auto;
   font-size: 15px;
   color: white;
+}
+
+.top-navbar-list ul li a:hover {
+  color: #717FE0;
 }
 
 .top-bar2 {
@@ -148,10 +153,6 @@ header {
 }
 
 /* navbar header close  */
-body {
-  /* background-color: lightblue; */
-}
-
 .container {
   width: 810px;
   border-radius: 25px;
@@ -326,7 +327,9 @@ span {
 @media screen and (max-width: 768px) {
   .top-navbar {
     display: none;
-    text-align: center;
+    z-index: -5;
+    position: relative;
+    top: -15px;
   }
   /* humburgar menu */
   .nav-content label {
@@ -340,7 +343,8 @@ span {
     left: 0;
     width: 100%;
     display: none;
-    background-color: black;
+    background-color: #717FE0;
+    color: white;
     z-index: 2;
   }
   .nav-content ul li {
@@ -350,7 +354,7 @@ span {
     color: white;
   }
   .nav-content ul li a:hover {
-    color: blue;
+    color: #717FE0;
   }
   #click:checked ~ .nav-content ul {
     display: flex;
@@ -365,12 +369,8 @@ span {
   }
   /* login-ragister close */
   /* logo */
-  .logo {
-    margin-left: -100px;
-  }
-  /* logo */
   .nav-icons {
-    display: flex;
+    display: block;
     position: relative;
     left: 70px;
   }
@@ -397,7 +397,8 @@ span {
     left: 0;
     width: 100%;
     display: none;
-    background-color: black;
+    background-color: #717FE0;
+    color: white;
     z-index: 2;
   }
   .nav-content ul li {
@@ -407,7 +408,7 @@ span {
     color: white;
   }
   .nav-content ul li a:hover {
-    color: blue;
+    color: #717FE0;
   }
   #click:checked ~ .nav-content ul {
     display: flex;
@@ -423,12 +424,11 @@ span {
   /* login-ragister close */
   /* logo */
   .logo {
-    margin-left: -100px;
+    margin-left: -140px;
   }
   /* logo */
   .nav-icons {
     display: flex;
-    position: relative;
     left: 70px;
   }
 }/*# sourceMappingURL=style.css.map */

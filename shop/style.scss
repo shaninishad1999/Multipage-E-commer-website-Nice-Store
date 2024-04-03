@@ -20,6 +20,31 @@ $border-color: 2px solid rgb(160, 155, 155);
     justify-content: space-between;
 }
 
+@mixin input-property {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+}
+
+@mixin input-mobile-property {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+
+}
+
+/* top navbar */
+
 // new changes
 .top-navbar {
     background-color: $background-color;
@@ -40,9 +65,8 @@ $border-color: 2px solid rgb(160, 155, 155);
 }
 
 .top-navbar-head {
-    display: flex;
+    @include flexproperty;
     height: 5vh;
-    justify-content: space-between;
     align-items: center;
     margin: 0px 100px;
     padding: 0px 15px;
@@ -69,7 +93,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 .top-navbar-list ul li a {
     text-decoration: none;
-    color: black;
+    color: $background-color;
     padding: auto;
     font-size: 15px;
     color: $white-color;
@@ -87,7 +111,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 header {
     background: none;
- 
+
 
 }
 
@@ -104,7 +128,6 @@ header {
     padding-right: 160px;
     top: 30px;
 
-    
 }
 
 // change above
@@ -137,7 +160,7 @@ header {
     text-decoration: none;
     padding: 0px 5px;
     justify-content: center;
-    color: black;
+    color: $background-color;
     position: relative;
     z-index: 5;
 }
@@ -150,12 +173,12 @@ header {
 .nav-icons {
     display: flex;
     justify-content: center;
-   @include content-center;
+    @include content-center;
 }
 
 .nav-icons a {
     margin: 10px;
-    color: black;
+    color: $background-color;
 }
 
 .nav-icons a i {
@@ -179,8 +202,6 @@ header {
     display: none;
 }
 
-
-
 /* navbar header close  */
 
 
@@ -201,7 +222,7 @@ header {
 .product-main-section {
     @include flexproperty;
     padding: 0px 0px 52px;
-  
+
 }
 
 .product-btn {
@@ -214,6 +235,8 @@ header {
     border: none;
     font-size: 15px;
     cursor: pointer;
+    padding-bottom: 5px;
+    position: relative;
 }
 
 .product-btn button:before {
@@ -237,7 +260,7 @@ header {
 /* product search */
 .product-search {
     margin: 20px;
-    font-size: $para-font-size;
+    font-size: 17px;
     display: flex;
 }
 
@@ -257,6 +280,7 @@ header {
     color: $white-color;
     opacity: 0.9;
 }
+
 
 input[type=text],
 select {
@@ -283,6 +307,121 @@ select {
 }
 
 /* product search  */
+
+
+// container start
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #ccc;
+    padding-left: 40px;
+    padding-top: 40px;
+    justify-items: flex-start;
+    margin-bottom: 40px;
+    margin: 0px 15px 50px 15px;
+}
+
+.item h1 {
+    font-size: 20px;
+}
+
+.item {
+    padding: 0px 15px 27px 0px;
+}
+
+.item ul {
+    padding-top: 15px;
+}
+
+.item ul li {
+
+    list-style: none;
+    line-height: 1.5;
+    font-size: 17px;
+
+}
+
+.item ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.496);
+    font-weight: 400px;
+}
+
+.item ul li a:hover {
+    color: #717FE0;
+    border-bottom: 2px solid #717FE0;
+    transition: all  ease;
+}
+
+
+.tags h1 {
+    padding-bottom: 15px;
+
+}
+
+.tags {
+    width: 40%;
+
+}
+
+.tag-list {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tag-list a button {
+    padding: 10px 30px 10px 30px;
+    margin: 5px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.tag-list a button:hover {
+    background-color: #717FE0;
+
+}
+
+.fixed-list-color li a {
+    color: #717FE0;
+    border-bottom: 2px solid #717FE0;
+}
+
+
+.black {
+    color: black;
+}
+
+.blue {
+    color: blue;
+}
+
+.grey {
+    color: grey;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.white {
+    color: white;
+}
+
+
+// container  close
+
+
+
+
+
+
+
 
 /* product image */
 .product-item-image {
@@ -523,6 +662,10 @@ select {
         display: block;
     }
 
+    .navbar {
+        top: 0;
+    }
+
     .nav-content ul {
         display: flex;
         flex-direction: column;
@@ -531,7 +674,7 @@ select {
         left: 0;
         width: 100%;
         display: none;
-        background-color: $background-color;
+        background-color: $button-bgcolor;
         z-index: 2;
     }
 
@@ -579,6 +722,13 @@ select {
         margin-left: 20px;
         margin-right: 20px;
     }
+
+    // filter
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // filter close
 
     .product-item-image {
         padding: 0px 0px 52px;
@@ -630,15 +780,20 @@ select {
 
 @media screen and (max-width:500px) {
 
-    .top-navbar{
+    .top-navbar {
         display: none;
 
     }
-    
+
 
     /* humburgar menu */
     .nav-content label {
         display: block;
+
+    }
+
+    .navbar {
+        top: 0;
     }
 
     .nav-content ul {
@@ -649,13 +804,15 @@ select {
         left: 0;
         width: 100%;
         display: none;
-        background-color: $background-color;
+        background-color: $button-bgcolor;
+        color: $white-color;
         z-index: 2;
-       
+
     }
 
     .nav-content ul li {
         margin: 5px;
+
     }
 
     .nav-content ul li a {
@@ -672,6 +829,7 @@ select {
 
     /* humbergar menu */
 
+
     /* login-ragister */
     .login-ragister {
         display: block;
@@ -683,15 +841,17 @@ select {
 
     /* login-ragister close */
 
-
+    /* logo */
+    .logo {
+        margin-left: -140px;
+    }
 
     /* logo */
     .nav-icons {
-        // flex
-        display: block;
-        position: relative;
+        display: flex;
         left: 70px;
     }
+
 
     /* product main section */
     .product-main-section {
@@ -703,6 +863,12 @@ select {
         margin-left: 20px;
         margin-right: 20px;
         /* height: 100vh; */
+    }
+
+    // filter
+
+    .container {
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .product-item-image {
@@ -723,7 +889,7 @@ select {
         width: 330px;
         height: 450px;
     }
-  
+
 
     /* img section close */
 
@@ -736,8 +902,8 @@ select {
 
     // footer section 
     footer {
-       grid-template-columns: 1fr;
-       
+        grid-template-columns: 1fr;
+
     }
 
     .footer {
@@ -757,11 +923,7 @@ select {
     .newsletter {
         padding-TOP: 50px;
     }
-    .get-in-touch{
 
-    }
 
     // footer section close
 }
-
-

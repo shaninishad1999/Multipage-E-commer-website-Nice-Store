@@ -44,12 +44,20 @@
   border-right: 2px solid white;
 }
 
+.top-navbar-list ul li:hover {
+  cursor: pointer;
+}
+
 .top-navbar-list ul li a {
   text-decoration: none;
   color: black;
   padding: auto;
   font-size: 15px;
   color: white;
+}
+
+.top-navbar-list ul li a:hover {
+  color: #717FE0;
 }
 
 .top-bar2 {
@@ -387,6 +395,9 @@ select {
   .nav-content label {
     display: block;
   }
+  .navbar {
+    top: 0px;
+  }
   .nav-content ul {
     display: flex;
     flex-direction: column;
@@ -395,7 +406,7 @@ select {
     left: 0;
     width: 100%;
     display: none;
-    background-color: black;
+    background-color: #717FE0;
     z-index: 2;
   }
   .nav-content ul li {
@@ -493,15 +504,18 @@ select {
   .nav-content label {
     display: block;
   }
+  .navbar {
+    top: 0px;
+  }
   .nav-content ul {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 75px;
     left: 0;
     width: 100%;
     display: none;
-    background-color: black;
+    background-color: #717FE0;
     z-index: 2;
   }
   .nav-content ul li {

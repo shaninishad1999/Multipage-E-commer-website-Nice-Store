@@ -66,6 +66,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 .top-navbar-list ul li {
     padding: 10px 20px 10px 20px;
     border-right: 2px solid $white-color;
+    cursor: pointer;
 }
 
 .top-navbar-list ul li a {
@@ -75,6 +76,9 @@ $border-color: 2px solid rgb(160, 155, 155);
     font-size: 15px;
     color: $white-color;
 
+}
+.top-navbar-list ul li a:hover{
+    color: $button-bgcolor;
 }
 
 .top-bar2 {
@@ -183,11 +187,11 @@ header {
 
 /* navbar header close  */
 
-body{
-    /* background-color: lightblue; */
-    // background: url(/images/milad-fakurian-bexwsdM5BCw-unsplash.jpg) no-repeat center center/cover;
-    // background-color: white;
-}
+// body{
+    // /* background-color: lightblue; */
+    // // background: url(/images/milad-fakurian-bexwsdM5BCw-unsplash.jpg) no-repeat center center/cover;
+    // // background-color: white;
+// }
 .container{
     width: 810px;
     // background-color: #ccc;
@@ -230,9 +234,9 @@ body{
 .form-div{
     text-align: left;
 }
-.username{
-    // margin-left: 10px;
-}
+// .username{
+//     margin-left: 10px;
+// }
 input[type=text] , select{
     width: 30%;
     display: inline-block;
@@ -374,17 +378,21 @@ span{
 
 
 @media screen and  (max-width:768px) {
+
+  
     .top-navbar{
         display: none;
-        text-align: center;
+        z-index: -5;
+        position: relative;
+        top: -15px;
+
     }
     /* humburgar menu */
-    .nav-content label{
+    .nav-content label {
         display: block;
-       
-        
     }
-    .nav-content ul{
+
+    .nav-content ul {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -392,50 +400,48 @@ span{
         left: 0;
         width: 100%;
         display: none;
-        background-color: black;
+        background-color: $button-bgcolor;
+        color: $white-color;
         z-index: 2;
-       
 
     }
+
     .nav-content ul li {
         margin: 5px;
-      
     }
-    .nav-content ul li a{
-        color: white;
-    }
-    .nav-content ul li a:hover{
-        color: blue;
-    }
-   
 
-    #click:checked ~ .nav-content ul{
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
         display: flex;
     }
+
     /* humbergar menu */
 
-
     /* login-ragister */
-    .login-ragister{
+    .login-ragister {
         display: block;
     }
 
-    .login-ragister-desktop{
+    .login-ragister-desktop {
         display: none;
     }
+
     /* login-ragister close */
-    
-/* logo */
-    .logo{
-        margin-left: -100px;
-    }
 
     /* logo */
-  .nav-icons{
-    display: flex;
-    position: relative;
-    left: 70px;
-  }
+    .nav-icons {
+        display: block;
+        position: relative;
+        left: 70px;
+    }
+
 
   .top-bar2{
     display: block;
@@ -456,14 +462,17 @@ span{
 
     .top-navbar{
         display: none;
+
     }
+
+
     /* humburgar menu */
-    .nav-content label{
+    .nav-content label {
         display: block;
-       
-        
+
     }
-    .nav-content ul{
+
+    .nav-content ul {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -471,52 +480,54 @@ span{
         left: 0;
         width: 100%;
         display: none;
-        background-color: black;
+        background-color: $button-bgcolor;
+        color: $white-color;
         z-index: 2;
-       
-        
 
     }
+
     .nav-content ul li {
         margin: 5px;
-      
-    }
-    .nav-content ul li a{
-        color: white;
-    }
-    .nav-content ul li a:hover{
-        color: blue;
-    }
-   
 
-    #click:checked ~ .nav-content ul{
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
         display: flex;
     }
+
     /* humbergar menu */
 
 
     /* login-ragister */
-    .login-ragister{
+    .login-ragister {
         display: block;
     }
 
-    .login-ragister-desktop{
+    .login-ragister-desktop {
         display: none;
     }
+
     /* login-ragister close */
 
-/* logo */
-    .logo{
-        margin-left: -100px;
+    /* logo */
+    .logo {
+        margin-left: -140px;
     }
 
     /* logo */
-  .nav-icons{
-    display: flex;
-    position: relative;
-    left: 70px;
-  }
-  
+    .nav-icons {
+        display: flex;
+        left: 70px;
+    }
+
     
 }
 

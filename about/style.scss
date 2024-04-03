@@ -48,6 +48,9 @@
     padding: 10px 20px 10px 20px;
     border-right: 2px solid white;
 }
+.top-navbar-list ul li:hover{
+    cursor: pointer;
+}
 
 .top-navbar-list ul li a {
     text-decoration: none;
@@ -56,6 +59,9 @@
     font-size: 15px;
     color: white;
 
+}
+.top-navbar-list ul li a:hover{
+    color: #717FE0;
 }
 
 .top-bar2 {
@@ -451,6 +457,9 @@ select {
         display: block;
 
     }
+    .navbar{
+        top: 0;
+    }
 
     .nav-content ul {
         display: flex;
@@ -460,7 +469,7 @@ select {
         left: 0;
         width: 100%;
         display: none;
-        background-color: black;
+        background-color: #717FE0;
         z-index: 2;
 
     }
@@ -638,6 +647,9 @@ select {
 
     }
 
+    .navbar{
+        top: 0;
+    }
     .nav-content ul {
         display: flex;
         flex-direction: column;
@@ -646,7 +658,7 @@ select {
         left: 0;
         width: 100%;
         display: none;
-        background-color: black;
+        background-color: #717FE0;
         z-index: 2;
 
     }
@@ -693,12 +705,14 @@ select {
         position: relative;
         left: 70px;
     }
+    /* hero  section*/
 
     .hero {
-        height: 100vh;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
+        height: 55vh;
+        width: auto;
+    }
+    .hero-heading{
+        padding-bottom: 50px;
     }
 
 
