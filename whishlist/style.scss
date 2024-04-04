@@ -20,6 +20,29 @@ $border-color: 2px solid rgb(160, 155, 155);
     justify-content: space-between;
 }
 
+@mixin input-property {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+}
+
+@mixin input-mobile-property {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 17px;
+
+}
+
 /* top navbar */
 
 // new changes
@@ -30,6 +53,7 @@ $border-color: 2px solid rgb(160, 155, 155);
     z-index: 8;
     padding-left: 40px;
     padding-right: 50px;
+    top: 0px;
 
 }
 
@@ -41,9 +65,8 @@ $border-color: 2px solid rgb(160, 155, 155);
 }
 
 .top-navbar-head {
-    display: flex;
+    @include flexproperty;
     height: 5vh;
-    justify-content: space-between;
     align-items: center;
     margin: 0px 100px;
     padding: 0px 15px;
@@ -66,18 +89,23 @@ $border-color: 2px solid rgb(160, 155, 155);
 .top-navbar-list ul li {
     padding: 10px 20px 10px 20px;
     border-right: 2px solid $white-color;
+}
+
+.top-navbar-list ul li:hover {
     cursor: pointer;
 }
 
 .top-navbar-list ul li a {
     text-decoration: none;
-    color: black;
+    color: $background-color;
     padding: auto;
     font-size: 15px;
     color: $white-color;
 
 }
-.top-navbar-list ul li a:hover{
+
+.top-navbar-list ul li a:hover {
+    cursor: pointer;
     color: $button-bgcolor;
 }
 
@@ -92,7 +120,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 header {
     background: none;
- 
+
 
 }
 
@@ -109,7 +137,6 @@ header {
     padding-right: 160px;
     top: 30px;
 
-    
 }
 
 // change above
@@ -142,7 +169,7 @@ header {
     text-decoration: none;
     padding: 0px 5px;
     justify-content: center;
-    color: black;
+    color: $background-color;
     position: relative;
     z-index: 5;
 }
@@ -155,16 +182,23 @@ header {
 .nav-icons {
     display: flex;
     justify-content: center;
-   @include content-center;
+    @include content-center;
 }
 
 .nav-icons a {
     margin: 10px;
-    color: black;
+    color: $background-color;
 }
 
 .nav-icons a i {
     font-size: 23px;
+}
+
+.nav-icons a i span {
+    color: $white-color;
+    background-color: #717FE0;
+    font-size: 10px;
+    padding: 4px;
 }
 
 .nav-icons a:hover {
@@ -184,212 +218,205 @@ header {
     display: none;
 }
 
-
 /* navbar header close  */
 
-// body{
-    // /* background-color: lightblue; */
-    // // background: url(/images/milad-fakurian-bexwsdM5BCw-unsplash.jpg) no-repeat center center/cover;
-    // // background-color: white;
-// }
-.container{
-    width: 810px;
-    // background-color: #ccc;
-    border-radius: 25px; 
-    margin: auto;
-    background-color: #717FE0;
-   
-  
-}
-.myaccount{
-    padding-top: 120px;
-
-}
-.nav-icons{
-    font-size: 20px;
-    
-}
-.nav-icons a{
-    text-decoration: none;
-}
-
-.profile-pic{
-    text-align: center;
-}
-.profile-pic img  {
-    width:100% ;
-    height : 100% ;
-    max-width: 200px ;  
-    max-height: 250px ; 
-    border-radius: 50%;
-    
-}
-.profile-pic p{
-    font-size: 20px;
-    color: rgb(6, 9, 16);
-    padding-top: 10px;
-    border-bottom: 4px solid black;
-}
-
-.form-div{
-    text-align: left;
-}
-// .username{
-//     margin-left: 10px;
-// }
-input[type=text] , select{
-    width: 30%;
-    display: inline-block;
-    margin: 8px 0px;
-    padding: 12px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-
-}
-
-input[type=email] , select{
-    width: 30%;
-    display: inline-block;
-    margin: 8px 0px;
-    padding: 12px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-
-}
-input[type=tel] , select{
-    width: 30%;
-    display: inline-block;
-    margin: 8px 0px;
-    padding: 12px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-    color: rgb(14, 17, 22);
-  
-
-}
-input[type=psd] , select{
-    width: 30%;
-    display: inline-block;
-    margin: 8px 0px;
-    padding: 12px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-   
-
-}
-::placeholder{
-    background-color: bisque;
-}
-input[type=password] , select{
-    width: 30%;
-    display: inline-block;
-    margin: 8px 0px;
-    padding: 12px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-  
-
-}
-input[type=state] , select{
-    width: 30%;
-    display: inline-block;
-    margin: 8px 0px;
-    padding: 12px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-  
-  
-
-}
-input[type=city] , select{
-    width: 30%;
-    display: inline-block;
-    margin: 8px 0px;
-    padding: 12px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-    
-  
-
-}
-input[type=number] , select{
-    width: 30%;
-    display: inline-block;
-    margin: 8px 0px;
-    padding: 12px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-
-  
-  
-
-}
-
-.btn{
-    text-align: center;
-    padding-bottom: 50px;
-}
-#update-btn{
-    padding: 10px 20px 10px 20px;
-    border-radius: 20px;
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    background-color: springgreen;
-    font-weight: bold;
-    font-size: 17px;
-
-    
-}
-#reset-btn{
-    padding: 10px 20px 10px 20px;
-    border-radius: 20px;
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    background-color: brown;
-    color: white;
-    font-weight: bold;
-    font-size: 17px;
-
-}
-
-span{
-    font-size: 20px;
-}
 
 
 
+/* container css */
 
-@media screen and  (max-width:768px) {
+.hero {
+    margin-top: 120px;
+    height: 100%;
 
-  
-    .top-navbar{
-        display: none;
-        z-index: -5;
-        position: relative;
-        top: -15px;
+    >h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 10px;
+
 
     }
+
+}
+
+.hero h6 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-head {
+    display: flex;
+    justify-content: center;
+
+    button {
+        padding: 10px 20px;
+        border-radius: 20px;
+        margin: 10px;
+        cursor: pointer;
+        background-color: transparent;
+        font-size: 18px;
+
+
+
+    }
+
+    button:hover {
+        background-color: #717FE0;
+        color: white;
+    }
+
+}
+
+.container-main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: auto;
+    font-weight: bold;
+    font-size: 20px;
+    width: 70%;
+
+}
+
+.item {
+    border: 2px solid #ccc;
+    text-align: center;
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.item img {
+    width: 80px;
+    height: 80px;
+
+}
+
+.item p {
+    font-size: 12px;
+}
+
+.unit-price {
+    font-size: 25px;
+
+}
+
+input[type=number],
+select {
+    padding: 6px 10px;
+    font-size: 17px;
+    width: 40%;
+}
+
+.item a button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 17px;
+
+}
+
+.item a button:hover {
+    background-color: #717FE0;
+    color: white;
+}
+
+.stock-status {
+    color: rgb(7, 241, 7);
+    font-size: 17px;
+
+}
+
+.stock-status-2 {
+    color: red;
+
+}
+
+.item i {
+    font-size: 25px;
+    color: #717FE0;
+}
+
+.btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 30px;
+    padding-bottom: 100px;
+    width: 50%;
+    margin: auto;
+}
+
+
+.btn a button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 17px;
+
+}
+
+.btn a button:hover {
+    background-color: #717FE0;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-navbar-head-2 {
+    display: none;
+}
+
+// media query 768px
+
+@media screen and (max-width:768px) {
+
+
+    .top-navbar-head-2 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        background-color: black;
+        color: white;
+
+    }
+
+
+    .top-navbar {
+        display: none;
+        text-align: center;
+        top: 65px;
+        padding-left: 0px;
+        z-index: -1;
+
+    }
+
     /* humburgar menu */
     .nav-content label {
         display: block;
+
+
+    }
+
+    .navbar {
+        position: relative;
+        top: 0px;
     }
 
     .nav-content ul {
@@ -401,28 +428,31 @@ span{
         width: 100%;
         display: none;
         background-color: $button-bgcolor;
-        color: $white-color;
         z-index: 2;
+
 
     }
 
     .nav-content ul li {
         margin: 5px;
+
     }
 
     .nav-content ul li a {
-        color: $white-color;
+        color: white;
     }
 
     .nav-content ul li a:hover {
-        color: $button-bgcolor;
+        color: #717FE0;
     }
+
 
     #click:checked~.nav-content ul {
         display: flex;
     }
 
     /* humbergar menu */
+
 
     /* login-ragister */
     .login-ragister {
@@ -436,35 +466,49 @@ span{
     /* login-ragister close */
 
     /* logo */
+    .logo {
+        margin-left: -100px;
+    }
+
+    /* logo */
     .nav-icons {
-        display: block;
+        display: flex;
         position: relative;
         left: 70px;
     }
 
+    .top-bar2 {
+        display: block;
+        display: flex;
+        justify-content: left;
+    }
+    .hero {
+        margin-top: 20px;
+    }
 
-  .top-bar2{
-    display: block;
-    display: flex;
-    justify-content: left;
-  }
+    .container-main {
+        overflow: hidden;
+        margin: auto;
+        font-weight: bold;
+        font-size: 20px;
+        width: 70%;
 
-    
+    }
+
+  
+
 }
 
 
 
+/* mobile view 500px */
 
+@media screen and (max-width:500px) {
 
-/* mobile view */
-
-@media screen and  (max-width:500px) {
-
-    .top-navbar{
+    .top-navbar {
         display: none;
 
     }
-
 
     /* humburgar menu */
     .nav-content label {
@@ -525,10 +569,30 @@ span{
     /* logo */
     .nav-icons {
         display: flex;
+        position: relative;
         left: 70px;
     }
 
-    
+    .hero {
+        width: 100%;
+
+
+    }
+
+    .items img {
+        // width: 500px;
+        width: 100%;
+        height: 100vh;
+    }
+
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        position: relative;
+        left: 70px;
+    }
+
+
+
 }
-
-

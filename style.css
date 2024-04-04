@@ -176,6 +176,7 @@ header {
   position: relative;
   justify-content: center;
   align-content: center;
+  height: 100vh;
 }
 
 .items {
