@@ -24,7 +24,6 @@
 .top-navbar-head {
   display: flex;
   justify-content: space-between;
-  height: 5vh;
   align-items: center;
   margin: 0px 100px;
   padding: 0px 15px;
@@ -32,7 +31,7 @@
 
 .top-navbar-list ul {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .top-navbar-list ul {
@@ -53,7 +52,6 @@
 .top-navbar-list ul li a {
   text-decoration: none;
   color: black;
-  padding: auto;
   font-size: 15px;
   color: white;
 }
@@ -66,6 +64,10 @@
 .top-bar2 {
   display: none;
   margin-top: 10px;
+}
+
+.top-navbar-head-2 {
+  display: none;
 }
 
 /* top navbar close */
@@ -160,7 +162,7 @@ header {
   display: none;
 }
 
-.nav-content label {
+.nav-bar label {
   display: none;
 }
 
@@ -285,15 +287,15 @@ span {
 /* story section close */
 /* footer section  start */
 footer {
-  height: 75vh;
   background-color: rgba(0, 0, 0, 0.896);
   color: white;
-  padding-top: 100px;
+  padding-top: 80px;
+  margin-top: 150px;
 }
 
 .footer {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
   padding-left: 160px;
   padding-right: 160px;
 }
@@ -331,7 +333,8 @@ footer {
 
 /* get in touch */
 .get-in-touch {
-  width: 400px;
+  width: 380px;
+  padding: 20px;
 }
 
 /*  */
@@ -376,8 +379,8 @@ select {
 }
 
 .newsletter button:hover {
-  background-color: white;
   color: #717FE0;
+  background-color: white;
   cursor: pointer;
 }
 
@@ -407,12 +410,162 @@ select {
 }
 
 /* footer section close */
-/* mobile view */
-.top-navbar-head-2 {
-  display: none;
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+  .top-navbar {
+    display: none;
+  }
+  .nav-bar {
+    font-size: 20px;
+  }
+  .top-navbar-head-2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+  }
+  .top-navbar {
+    display: none;
+  }
+  /* humburgar menu */
+  .nav-bar label {
+    display: block;
+  }
+  .navbar {
+    top: 0;
+  }
+  .nav-content ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    display: none;
+    background-color: #717FE0;
+    color: white;
+    z-index: 2;
+  }
+  .nav-content ul li {
+    margin: 5px;
+    border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+    padding-bottom: 5px;
+  }
+  .nav-content ul li a {
+    color: white;
+  }
+  .nav-content ul li a:hover {
+    color: #717FE0;
+  }
+  #click:checked ~ .nav-content ul {
+    display: flex;
+  }
+  /* humbergar menu */
+  /* login-ragister */
+  .login-ragister {
+    display: block;
+  }
+  .login-ragister-desktop {
+    display: none;
+  }
+  /* login-ragister close */
+  /* logo */
+  .logo {
+    margin-left: -140px;
+  }
+  /* logo */
+  .nav-icons {
+    display: flex;
+    left: 70px;
+  }
+  /* hero  section*/
+  .hero {
+    height: 55vh;
+    width: auto;
+  }
+  .hero {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  #story {
+    grid-template-columns: 1fr;
+    flex-direction: column-reverse;
+  }
+  .story-main-section {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 40px;
+    margin-right: 0px;
+    padding: 75px 0px 20px;
+  }
+  .story-imag1 {
+    background-color: #717FE0;
+    height: 400px;
+    width: 380px;
+  }
+  .story-imag1 img {
+    width: 100%;
+    height: 370px;
+    padding: 20px;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .story-1 h1 {
+    margin-bottom: 20px;
+  }
+  .story-1 p {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .story-main-section2 {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 0px;
+    height: 100%;
+  }
+  .story-2 p {
+    width: 100%;
+  }
+  .story-2-para {
+    margin-top: 20px;
+  }
+  footer {
+    display: block;
+  }
+  .footer {
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+  .categories {
+    padding-bottom: 50px;
+  }
+  .help {
+    padding-bottom: 50px;
+  }
+  .newsletter {
+    padding-TOP: 50px;
+  }
 }
-
+/* mobile view */
 @media screen and (max-width: 768px) {
+  .top-navbar {
+    display: none;
+  }
+  .nav-bar {
+    padding-right: 100px;
+    font-size: 20px;
+  }
+  /* humburgar menu */
+  .nav-bar label {
+    display: block;
+  }
   .top-navbar-head-2 {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -441,16 +594,19 @@ select {
     width: 100%;
     display: none;
     background-color: #717FE0;
+    color: white;
     z-index: 2;
   }
   .nav-content ul li {
     margin: 5px;
+    border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+    padding-bottom: 5px;
   }
   .nav-content ul li a {
     color: white;
   }
   .nav-content ul li a:hover {
-    color: blue;
+    color: #717FE0;
   }
   #click:checked ~ .nav-content ul {
     display: flex;
@@ -466,12 +622,11 @@ select {
   /* login-ragister close */
   /* logo */
   .logo {
-    margin-left: -100px;
+    margin-left: -140px;
   }
   /* logo */
   .nav-icons {
     display: flex;
-    position: relative;
     left: 70px;
   }
   /* hero  section*/
@@ -480,18 +635,18 @@ select {
     width: auto;
   }
   .hero {
-    height: 100vh;
+    height: 55vh;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
   }
   #story {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     height: auto;
     flex-direction: column-reverse;
   }
   .story-main-section {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     margin-left: 40px;
     margin-right: 0px;
     padding: 75px 0px 20px;
@@ -519,7 +674,120 @@ select {
     padding-bottom: 20px;
   }
   .story-main-section2 {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
+    margin-left: 40px;
+    margin-right: 0px;
+    padding: 75px 0px 120px;
+    height: 100%;
+  }
+  .story-2 p {
+    width: 100%;
+  }
+  .story-2-para {
+    margin-top: 20px;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+  .categories {
+    padding-bottom: 50px;
+  }
+  .help {
+    padding-bottom: 50px;
+  }
+  .newsletter {
+    padding-TOP: 50px;
+  }
+}
+/* mobile view  501  617px*/
+@media screen and (min-width: 501px) and (max-width: 617px) {
+  .top-navbar {
+    display: none;
+  }
+  .nav-bar {
+    padding-right: 30px;
+    font-size: 20px;
+  }
+  /* humburgar menu */
+  .nav-bar label {
+    display: block;
+  }
+  .navbar {
+    top: 0;
+  }
+  .nav-content ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    display: none;
+    background-color: #717FE0;
+    color: white;
+    z-index: 2;
+  }
+  .nav-content ul li {
+    margin: 5px;
+  }
+  .nav-content ul li a {
+    color: white;
+  }
+  .nav-content ul li a:hover {
+    color: #717FE0;
+  }
+  #click:checked ~ .nav-content ul {
+    display: flex;
+  }
+  /* humbergar menu */
+  /* login-ragister */
+  .login-ragister {
+    display: block;
+  }
+  .login-ragister-desktop {
+    display: none;
+  }
+  /* login-ragister close */
+  /* logo */
+  .logo {
+    margin-left: -140px;
+  }
+  /* logo */
+  .nav-icons {
+    display: flex;
+    left: 70px;
+  }
+  /* hero  section*/
+  .hero {
+    height: 55vh;
+    width: auto;
+  }
+  .hero-heading {
+    padding-bottom: 50px;
+  }
+  #story {
+    grid-template-columns: 1fr;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+  .story-main-section {
+    grid-template-columns: 1fr;
+    margin-left: 40px;
+    margin-right: 0px;
+    padding: 75px 0px 20px;
+  }
+  .story-1 h1 {
+    margin-bottom: 20px;
+  }
+  .story-1 p {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .story-main-section2 {
+    grid-template-columns: 1fr;
     margin-left: 40px;
     margin-right: 0px;
     padding: 75px 0px 120px;
@@ -530,15 +798,10 @@ select {
   .story-2-para {
     margin-top: 20px;
   }
-  footer {
-    height: auto;
-    padding-top: 50px;
-  }
   .footer {
-    grid-template-columns: auto auto;
-    height: auto;
+    grid-template-columns: 1fr 1fr;
+    display: block;
     padding-left: 30px;
-    padding-right: 50px;
   }
   .categories {
     padding-bottom: 50px;
@@ -555,8 +818,12 @@ select {
   .top-navbar {
     display: none;
   }
+  .nav-bar {
+    padding-right: 30px;
+    font-size: 20px;
+  }
   /* humburgar menu */
-  .nav-content label {
+  .nav-bar label {
     display: block;
   }
   .navbar {
@@ -571,6 +838,7 @@ select {
     width: 100%;
     display: none;
     background-color: #717FE0;
+    color: white;
     z-index: 2;
   }
   .nav-content ul li {
@@ -580,7 +848,7 @@ select {
     color: white;
   }
   .nav-content ul li a:hover {
-    color: blue;
+    color: #717FE0;
   }
   #click:checked ~ .nav-content ul {
     display: flex;
@@ -596,12 +864,11 @@ select {
   /* login-ragister close */
   /* logo */
   .logo {
-    margin-left: -100px;
+    margin-left: -140px;
   }
   /* logo */
   .nav-icons {
     display: flex;
-    position: relative;
     left: 70px;
   }
   /* hero  section*/
@@ -613,12 +880,12 @@ select {
     padding-bottom: 50px;
   }
   #story {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     height: auto;
     flex-direction: column-reverse;
   }
   .story-main-section {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     margin-left: 40px;
     margin-right: 0px;
     padding: 75px 0px 20px;
@@ -631,7 +898,7 @@ select {
     padding-bottom: 20px;
   }
   .story-main-section2 {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     margin-left: 40px;
     margin-right: 0px;
     padding: 75px 0px 120px;

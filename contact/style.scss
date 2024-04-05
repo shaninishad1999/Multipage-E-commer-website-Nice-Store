@@ -44,6 +44,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 }
 
 /* top navbar */
+/* top navbar */
 
 // new changes
 .top-navbar {
@@ -66,7 +67,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 .top-navbar-head {
     @include flexproperty;
-    height: 5vh;
+    // height: 5vh;
     align-items: center;
     margin: 0px 100px;
     padding: 0px 15px;
@@ -75,7 +76,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 .top-navbar-list ul {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
 
 }
 
@@ -90,19 +91,21 @@ $border-color: 2px solid rgb(160, 155, 155);
     padding: 10px 20px 10px 20px;
     border-right: 2px solid $white-color;
 }
-.top-navbar-list ul li:hover{
+
+.top-navbar-list ul li:hover {
     cursor: pointer;
 }
 
 .top-navbar-list ul li a {
     text-decoration: none;
     color: $background-color;
-    padding: auto;
+    // padding: auto;
     font-size: 15px;
     color: $white-color;
 
 }
-.top-navbar-list ul li a:hover{
+
+.top-navbar-list ul li a:hover {
     cursor: pointer;
     color: $button-bgcolor;
 }
@@ -112,6 +115,10 @@ $border-color: 2px solid rgb(160, 155, 155);
     margin-top: 10px;
 }
 
+.top-navbar-head-2 {
+    display: none;
+}
+
 /* top navbar close */
 
 /* navbar header  */
@@ -119,11 +126,12 @@ $border-color: 2px solid rgb(160, 155, 155);
 header {
     background: none;
 
+
 }
 
+// changese below
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    @include flexproperty;
     align-items: center;
     height: 80px;
     position: fixed;
@@ -133,7 +141,10 @@ header {
     padding-left: 130px;
     padding-right: 160px;
     top: 30px;
+
 }
+
+// change above
 
 .nav-content {
     display: flex;
@@ -159,44 +170,44 @@ header {
 }
 
 .nav-content ul li a {
+    @include content-center;
     text-decoration: none;
     padding: 0px 5px;
-    align-items: center;
-    text-align: center;
     justify-content: center;
-    color: black;
+    color: $background-color;
     position: relative;
     z-index: 5;
 }
 
 .nav-content ul li a:hover {
-    color: rgba(0, 0, 255, 0.653);
+    color: $button-bgcolor;
 
 }
 
 .nav-icons {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    @include content-center;
 }
 
 .nav-icons a {
     margin: 10px;
-    color: black;
+    color: $background-color;
 }
 
 .nav-icons a i {
     font-size: 23px;
 }
+
 .nav-icons a i span {
     color: $white-color;
     background-color: #717FE0;
     font-size: 10px;
-padding: 4px;
+    padding: 4px;
 }
+
 .nav-icons a:hover {
-    color: rgba(0, 0, 255, 0.653);
+    color: $button-bgcolor;
 
 }
 
@@ -204,15 +215,19 @@ padding: 4px;
     display: none;
 }
 
+// humbargar menu
+
 #click {
     display: none;
 }
 
-.nav-content label {
+.nav-bar label {
     display: none;
 }
 
+// humbargar menu
 
+/* navbar header close  */
 
 
 
@@ -224,7 +239,7 @@ padding: 4px;
     height: 50vh;
     align-content: center;
     padding-top: 100px;
-    
+
 }
 
 .hero-heading {
@@ -346,16 +361,16 @@ textarea {
 /* footer section  start */
 
 footer {
-    height: 75vh;
+    // height: 75vh;
     background-color: rgba(0, 0, 0, 0.896);
-    color: white;
-    padding-top: 100px;
-
+    color: $white-color;
+    padding-top: 80px;
+ 
 }
 
 .footer {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
     padding-left: 160px;
     padding-right: 160px;
 
@@ -376,12 +391,12 @@ footer {
 
 .footer-list ul li a {
     text-decoration: none;
-    color: white;
+    color: $white-color;
     opacity: 0.7;
 }
 
 .footer-list ul li a:hover {
-    color: #717FE0;
+    color: $button-bgcolor;
 }
 
 /* new change */
@@ -395,7 +410,8 @@ footer {
 
 /* get in touch */
 .get-in-touch {
-    width: 400px;
+    width: 380px;
+    padding: 20px;
 }
 
 /*  */
@@ -410,13 +426,13 @@ footer {
 .get-in-touch i {
     margin-top: 20px;
     margin: 10px;
-    color: white;
+    color: $white-color;
     font-size: 17px;
 
 }
 
 .get-in-touch i:hover {
-    color: #717FE0;
+    color: $button-bgcolor;
 }
 
 input[type=email],
@@ -427,11 +443,12 @@ select {
     border: 1px solid #ccc;
     background: transparent;
     border: none;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid $white-color;
     opacity: 0.7;
     margin-bottom: 15px;
 
 }
+
 
 /* newsletter button */
 
@@ -439,15 +456,15 @@ select {
     padding: 15px 50px 15px 50px;
     font-size: 17px;
     border-radius: 25px;
-    background-color: #717FE0;
-    color: white;
+    background-color: $button-bgcolor;
+    color: $white-color;
     border: none;
 
 }
 
 .newsletter button:hover {
-    background-color: white;
-    color: #717FE0;
+    color: $button-bgcolor;
+    background-color: $white-color;
     cursor: pointer;
 }
 
@@ -481,15 +498,25 @@ select {
 /* footer section close */
 
 
-.top-navbar-head-2{
-    display: none;
-}
 
 
-/* mobile view 768px  */
-@media screen and (max-width:768px) {
 
-    .top-navbar-head-2{
+// mobile view 769 1300
+
+@media screen and (min-width:769px) and (max-width:1300px) {
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        // padding-right: 30px;
+        font-size: 20px;
+    }
+
+  
+
+    .top-navbar-head-2 {
         padding-top: 5px;
         padding-bottom: 5px;
         display: flex;
@@ -497,20 +524,24 @@ select {
         font-size: 17px;
         background-color: black;
         color: white;
-  
+
     }
+
 
     .top-navbar {
         display: none;
+
     }
 
+
     /* humburgar menu */
-    .nav-content label {
+    .nav-bar label {
         display: block;
 
     }
-    .navbar{
-        top: 0px;
+
+    .navbar {
+        top: 0;
     }
 
     .nav-content ul {
@@ -521,25 +552,31 @@ select {
         left: 0;
         width: 100%;
         display: none;
-        background-color:#717FE0;
+        background-color: $button-bgcolor;
+        color: $white-color;
         z-index: 2;
 
     }
 
     .nav-content ul li {
         margin: 5px;
+        border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+        padding-bottom: 5px;
 
     }
+
     .nav-content ul li a {
-        color: white;
+        color: $white-color;
     }
+
     .nav-content ul li a:hover {
-        color: blue;
+        color: $button-bgcolor;
     }
 
     #click:checked~.nav-content ul {
         display: flex;
     }
+
     /* humbergar menu */
 
 
@@ -556,28 +593,25 @@ select {
 
     /* logo */
     .logo {
-        margin-left: -100px;
+        margin-left: -140px;
     }
 
     /* logo */
     .nav-icons {
         display: flex;
-        position: relative;
         left: 70px;
     }
-    /* hero  section*/
-    .hero {
-        height: 35vh;
-        width: auto;
-    }
+
+// nav header close 
+
 
 
     // contact form
     .contact {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         margin: 20px;
         padding: 0px 15px;
-        background-color:white;
+        background-color: white;
     }
 
     .item {
@@ -617,85 +651,131 @@ select {
     }
 
     // footer 
-    footer {
-   
-        height: auto;
-        padding-top: 50px;
-      
-    }
 
-    .footer {
-       grid-template-columns: auto auto;
-        height: auto;
-        padding-left: 30px;
-    
-        padding-right: 50px;
-    }
 
-    .categories {
-        padding-bottom: 50px;
-    }
 
-    .help {
-        padding-bottom: 50px;
-    }
 
-    .newsletter {
-        padding-TOP: 50px;
-       
-    }
+
+
+
+// footer
+
+footer {
+    display: block;
+
+
+}
+
+.footer {
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 30px;
+    padding-right: 50px;
+}
+
+.categories {
+    padding-bottom: 50px;
+}
+
+.help {
+    padding-bottom: 50px;
+}
+
+.newsletter {
+    padding-TOP: 50px;
+}
+
 
 }
 
 
 
 
-
-
-
-/* mobile view  500px*/
-
-@media screen and (max-width:500px) {
+/* mobile view 768px  */
+@media screen and (max-width:768px) {
 
     .top-navbar {
         display: none;
+
     }
+
+    .nav-bar {
+        padding-right: 100px;
+        font-size: 20px;
+    }
+
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+
+
+
+
+
+
+    .top-navbar-head-2 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        background-color: black;
+        color: white;
+
+    }
+
+
+    .top-navbar {
+        display: none;
+
+    }
+
 
     /* humburgar menu */
     .nav-content label {
         display: block;
 
     }
-.navbar{
-    top: 0px;
-}
+
+    .navbar {
+        top: 0;
+    }
+
     .nav-content ul {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 75px;
+        top: 70px;
         left: 0;
         width: 100%;
         display: none;
-        background-color:#717FE0;
+        background-color: $button-bgcolor;
+        color: $white-color;
         z-index: 2;
 
     }
 
     .nav-content ul li {
         margin: 5px;
+        border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+        padding-bottom: 5px;
 
     }
+
     .nav-content ul li a {
-        color: white;
+        color: $white-color;
     }
+
     .nav-content ul li a:hover {
-        color: blue;
+        color: $button-bgcolor;
     }
 
     #click:checked~.nav-content ul {
         display: flex;
     }
+
     /* humbergar menu */
 
 
@@ -712,15 +792,298 @@ select {
 
     /* logo */
     .logo {
-        margin-left: -100px;
+        margin-left: -140px;
     }
 
     /* logo */
     .nav-icons {
         display: flex;
-        position: relative;
         left: 70px;
     }
+
+    // nav header close
+    /* hero  section*/
+    .hero {
+        height: 35vh;
+        width: auto;
+    }
+
+
+    // contact form
+    .contact {
+        grid-template-columns: 1fr;
+        margin: 20px;
+        padding: 0px 15px;
+        background-color: white;
+    }
+
+    .item {
+        text-align: center;
+        border: none;
+
+    }
+
+
+
+    .address {
+        text-align: center;
+    }
+
+
+    #form-btn {
+
+        padding: 15px 100px 15px 100px;
+        margin: 20px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        font-size: 20px;
+        color: white;
+        font-size: 17px;
+        background-color: black;
+
+    }
+
+    #form-btn:hover {
+        background-color: #717FE0;
+    }
+
+
+    .contact-map {
+        height: auto;
+    }
+
+    // footer 
+    
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 30px;
+        padding-right: 50px;
+        // display: block;
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+
+
+
+}
+
+
+
+
+/* mobile view  501  617px*/
+
+@media screen and (min-width:501px) and (max-width:617px) {
+
+
+
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
+
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+    .navbar {
+        top: 0;
+
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        color: $white-color;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -140px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        left: 70px;
+    }
+
+
+
+
+
+    // footer 
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        // height: auto;
+        display: block;
+        padding-left: 30px;
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+
+    // footer section close
+
+}
+
+
+/* mobile view  500px*/
+
+@media screen and (max-width:500px) {
+
+
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
+
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+    .navbar {
+        top: 0;
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        color: $white-color;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -140px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        left: 70px;
+    }
+
+
+
+
+    // nav header close
+
+
+
     /* hero  section*/
     .hero {
         height: 35vh;
@@ -733,7 +1096,7 @@ select {
         grid-template-columns: auto;
         margin: 20px;
         padding: 0px 15px;
-        background-color:white;
+        background-color: white;
     }
 
     .item {
@@ -772,18 +1135,11 @@ select {
         height: auto;
     }
 
-    // footer 
-    footer {
-        height: auto;
-        padding-top: 50px;
-    }
-
+    //    footer
     .footer {
+        grid-template-columns: 1fr;
         display: block;
-        height: auto;
         padding-left: 30px;
-        width: 100%;
-
     }
 
     .categories {
@@ -798,20 +1154,7 @@ select {
         padding-TOP: 50px;
     }
 
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*  */
 
 

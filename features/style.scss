@@ -42,9 +42,8 @@ $border-color: 2px solid rgb(160, 155, 155);
 }
 
 .top-navbar-head {
-    display: flex;
-    height: 5vh;
-    justify-content: space-between;
+    @include flexproperty;
+    // height: 5vh;
     align-items: center;
     margin: 0px 100px;
     padding: 0px 15px;
@@ -53,7 +52,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 .top-navbar-list ul {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
 
 }
 
@@ -75,20 +74,25 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 .top-navbar-list ul li a {
     text-decoration: none;
-    color: black;
-    padding: auto;
+    color: $background-color;
+    // padding: auto;
     font-size: 15px;
     color: $white-color;
 
 }
 
 .top-navbar-list ul li a:hover {
+    cursor: pointer;
     color: $button-bgcolor;
 }
 
 .top-bar2 {
     display: none;
     margin-top: 10px;
+}
+
+.top-navbar-head-2 {
+    display: none;
 }
 
 /* top navbar close */
@@ -113,7 +117,6 @@ header {
     padding-left: 130px;
     padding-right: 160px;
     top: 30px;
-
 
 }
 
@@ -147,7 +150,7 @@ header {
     text-decoration: none;
     padding: 0px 5px;
     justify-content: center;
-    color: black;
+    color: $background-color;
     position: relative;
     z-index: 5;
 }
@@ -171,11 +174,12 @@ header {
 .nav-icons a i {
     font-size: 23px;
 }
+
 .nav-icons a i span {
     color: $white-color;
     background-color: #717FE0;
     font-size: 10px;
-padding: 4px;
+    padding: 4px;
 }
 
 .nav-icons a:hover {
@@ -187,14 +191,17 @@ padding: 4px;
     display: none;
 }
 
+// humbargar menu
+
 #click {
     display: none;
 }
 
-.nav-content label {
+.nav-bar label {
     display: none;
 }
 
+// humbargar menu
 
 /* navbar header close  */
 
@@ -515,10 +522,11 @@ padding: 4px;
 // product section close
 
 
+
 /* footer section  start */
 
 footer {
-    height: 75vh;
+    // height: 75vh;
     background-color: rgba(0, 0, 0, 0.896);
     color: $white-color;
     padding-top: 80px;
@@ -526,8 +534,7 @@ footer {
 }
 
 .footer {
-    // @include flexproperty;
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(4, 1fr);
     padding-left: 160px;
     padding-right: 160px;
@@ -607,6 +614,7 @@ select {
 
 }
 
+
 /* newsletter button */
 
 .newsletter button {
@@ -657,13 +665,21 @@ select {
 
 
 
-.top-navbar-head-2 {
-    display: none;
-}
 
-// mobile view 768
+// mobile view 769 1300
 
-@media screen and (max-width:768px) {
+@media screen and (min-width:769px) and (max-width:1300px) {
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        // padding-right: 30px;
+        font-size: 20px;
+    }
+
+
 
     .top-navbar-head-2 {
         padding-top: 5px;
@@ -682,9 +698,11 @@ select {
 
     }
 
+
     /* humburgar menu */
-    .nav-content label {
+    .nav-bar label {
         display: block;
+
     }
 
     .navbar {
@@ -707,6 +725,9 @@ select {
 
     .nav-content ul li {
         margin: 5px;
+        border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+        padding-bottom: 5px;
+
     }
 
     .nav-content ul li a {
@@ -723,6 +744,7 @@ select {
 
     /* humbergar menu */
 
+
     /* login-ragister */
     .login-ragister {
         display: block;
@@ -735,12 +757,209 @@ select {
     /* login-ragister close */
 
     /* logo */
+    .logo {
+        margin-left: -140px;
+    }
+
+    /* logo */
     .nav-icons {
-        display: block;
-        position: relative;
+        display: flex;
         left: 70px;
     }
 
+    // nav header close 
+
+    
+    #product {
+        margin-top: 32vh;
+        grid-template-columns: 1fr;
+        text-align: left;
+
+
+    }
+
+    .product-cart {
+        height: 130vh;
+        grid-template-columns: 1fr;
+        border: 2px solid #ccc;
+        margin-right: 20px;
+        position: relative;
+        left: -135px;
+        width: 90%;
+
+    }
+
+    .product-cart-total {
+        margin-top: 30px;
+        border: 2px solid #ccc;
+        width: 90%;
+        padding: 30px 30px 30px;
+        align-content: center;
+        position: relative;
+        left: 40px;
+
+
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .btn-section product-cart-1 {
+        padding-left: 15px;
+    }
+
+    .btn-section {
+        text-align: left;
+        margin-right: 5px;
+
+        #coupon {
+            padding-left: 0px;
+        }
+    }
+
+
+
+    //footer start
+    footer {
+        display: block;
+
+
+    }
+
+    .footer {
+        grid-template-columns: repeat(4, 1fr);
+        padding-left: 30px;
+        padding-right: 50px;
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+
+
+}
+
+// mobile view 768
+
+@media screen and (max-width:768px) {
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        padding-right: 100px;
+        font-size: 20px;
+    }
+
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+
+
+
+    .top-navbar-head-2 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        background-color: black;
+        color: white;
+
+    }
+
+
+    .top-navbar {
+        display: none;
+
+    }
+
+
+    /* humburgar menu */
+    .nav-content label {
+        display: block;
+
+    }
+
+    .navbar {
+        top: 0;
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        color: $white-color;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+        border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+        padding-bottom: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -140px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        left: 70px;
+    }
+
+    // nav header close
     // product section
     .hero-home {
         height: auto;
@@ -804,17 +1023,12 @@ select {
 
     // footer
 
-    footer {
-        height: auto;
-
-    }
-
     .footer {
-        grid-template-columns: 1fr 1fr;
-        height: auto;
-        width: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         padding-left: 30px;
         padding-right: 50px;
+        // display: block;
     }
 
     .categories {
@@ -830,6 +1044,174 @@ select {
     }
 
 
+
+}
+
+
+
+/* mobile view  501  617px*/
+
+@media screen and (min-width:501px) and (max-width:617px) {
+
+
+
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
+
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+    .navbar {
+        top: 0;
+
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        color: $white-color;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -140px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        left: 70px;
+    }
+
+
+ 
+    #product {
+        margin-top: 32vh;
+        grid-template-columns: 1fr;
+        text-align: left;
+        justify-content: center;
+
+
+    }
+
+    .product-cart {
+        height:120vh;
+        grid-template-columns: 1fr;
+        border: 2px solid #ccc;
+        margin-right: 20px;
+        position: relative;
+        left: -130px;
+        width: 90%;
+
+    }
+
+    .product-cart-total {
+        margin-top: 30px;
+        border: 2px solid #ccc;
+        width: 90%;
+        padding: 30px 30px 30px;
+        align-content: center;
+        position: relative;
+        left: 40px;
+
+
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .btn-section product-cart-1 {
+        padding-left: 15px;
+    }
+
+    .btn-section {
+        text-align: left;
+        margin-right: 5px;
+
+        #coupon {
+            padding-left: 0px;
+        }
+    }
+
+
+
+
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        // height: auto;
+        display: block;
+        padding-left: 30px;
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+
+    // footer section close
+
 }
 
 
@@ -841,9 +1223,14 @@ select {
 
     }
 
+    .nav-bar {
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
 
     /* humburgar menu */
-    .nav-content label {
+    .nav-bar label {
         display: block;
 
     }
@@ -905,9 +1292,10 @@ select {
     /* logo */
     .nav-icons {
         display: flex;
-        position: relative;
         left: 70px;
     }
+
+
 
     .hero-home {
         height: auto;
@@ -929,7 +1317,7 @@ select {
         height: 103vh;
         grid-template-columns: 1fr;
         border: 2px solid #ccc;
-        left: -135px;
+        left: -150px;
 
 
     }
@@ -961,8 +1349,10 @@ select {
     }
 
     .btn-section {
-        text-align: left;
+        // text-align: left;
+        // justify-content: center;
         margin-right: 5px;
+     
 
         #coupon {
             padding-left: 0px;
@@ -971,14 +1361,9 @@ select {
 
 
     // footer section start
-    footer {
-        display: block;
-        height: auto;
-    }
 
     .footer {
         grid-template-columns: 1fr;
-        height: auto;
         display: block;
         padding-left: 30px;
     }
@@ -994,6 +1379,7 @@ select {
     .newsletter {
         padding-TOP: 50px;
     }
+
 
     // footer section close
 

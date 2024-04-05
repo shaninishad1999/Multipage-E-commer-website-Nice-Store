@@ -307,7 +307,112 @@ select {
 
 
 
+// container start
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #ccc;
+    padding-left: 40px;
+    padding-top: 40px;
+    justify-items: flex-start;
+    margin-bottom: 40px;
+    margin: 0px 15px 50px 15px;
+}
 
+.item h1 {
+    font-size: 20px;
+}
+
+.item {
+    padding: 0px 15px 27px 0px;
+}
+
+.item ul {
+    padding-top: 15px;
+}
+
+.item ul li {
+
+    list-style: none;
+    line-height: 1.5;
+    font-size: 17px;
+
+}
+
+.item ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.496);
+    font-weight: 400px;
+}
+
+.item ul li a:hover {
+    color: #717FE0;
+    border-bottom: 2px solid #717FE0;
+    transition: all 1s ease;
+}
+
+
+.tags h1 {
+    padding-bottom: 15px;
+
+}
+
+.tags {
+    width: 40%;
+
+}
+
+.tag-list {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tag-list a button {
+    padding: 10px 30px 10px 30px;
+    margin: 5px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.tag-list a button:hover {
+    background-color: #717FE0;
+
+}
+
+.fixed-list-color li a {
+    color: #717FE0;
+    border-bottom: 2px solid #717FE0;
+}
+
+
+.black {
+    color: black;
+}
+
+.blue {
+    color: blue;
+}
+
+.grey {
+    color: grey;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.white {
+    color: white;
+}
+
+
+// container  close
 
 
 

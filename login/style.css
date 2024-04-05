@@ -24,7 +24,6 @@
 .top-navbar-head {
   display: flex;
   justify-content: space-between;
-  height: 5vh;
   align-items: center;
   margin: 0px 100px;
   padding: 0px 15px;
@@ -32,7 +31,7 @@
 
 .top-navbar-list ul {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .top-navbar-list ul {
@@ -53,7 +52,6 @@
 .top-navbar-list ul li a {
   text-decoration: none;
   color: black;
-  padding: auto;
   font-size: 15px;
   color: white;
 }
@@ -66,6 +64,10 @@
 .top-bar2 {
   display: none;
   margin-top: 10px;
+}
+
+.top-navbar-head-2 {
+  display: none;
 }
 
 /* top navbar close */
@@ -160,7 +162,7 @@ header {
   display: none;
 }
 
-.nav-content label {
+.nav-bar label {
   display: none;
 }
 
@@ -276,7 +278,13 @@ input[type=password], select {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+  .top-navbar {
+    display: none;
+  }
+  .nav-bar {
+    font-size: 20px;
+  }
   .top-navbar-head-2 {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -288,18 +296,13 @@ input[type=password], select {
   }
   .top-navbar {
     display: none;
-    text-align: center;
-    top: 65px;
-    padding-left: 0px;
-    z-index: -1;
   }
   /* humburgar menu */
-  .nav-content label {
+  .nav-bar label {
     display: block;
   }
   .navbar {
-    position: relative;
-    top: 0px;
+    top: 0;
   }
   .nav-content ul {
     display: flex;
@@ -310,10 +313,13 @@ input[type=password], select {
     width: 100%;
     display: none;
     background-color: #717FE0;
+    color: white;
     z-index: 2;
   }
   .nav-content ul li {
     margin: 5px;
+    border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+    padding-bottom: 5px;
   }
   .nav-content ul li a {
     color: white;
@@ -335,18 +341,88 @@ input[type=password], select {
   /* login-ragister close */
   /* logo */
   .logo {
-    margin-left: -100px;
+    margin-left: -140px;
   }
   /* logo */
   .nav-icons {
     display: flex;
-    position: relative;
     left: 70px;
   }
-  .top-bar2 {
+}
+@media screen and (max-width: 768px) {
+  .top-navbar {
+    display: none;
+  }
+  .nav-bar {
+    padding-right: 100px;
+    font-size: 20px;
+  }
+  /* humburgar menu */
+  .nav-bar label {
     display: block;
+  }
+  .top-navbar-head-2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+  }
+  .top-navbar {
+    display: none;
+  }
+  /* humburgar menu */
+  .nav-content label {
+    display: block;
+  }
+  .navbar {
+    top: 0;
+  }
+  .nav-content ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    display: none;
+    background-color: #717FE0;
+    color: white;
+    z-index: 2;
+  }
+  .nav-content ul li {
+    margin: 5px;
+    border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+    padding-bottom: 5px;
+  }
+  .nav-content ul li a {
+    color: white;
+  }
+  .nav-content ul li a:hover {
+    color: #717FE0;
+  }
+  #click:checked ~ .nav-content ul {
+    display: flex;
+  }
+  /* humbergar menu */
+  /* login-ragister */
+  .login-ragister {
+    display: block;
+  }
+  .login-ragister-desktop {
+    display: none;
+  }
+  /* login-ragister close */
+  /* logo */
+  .logo {
+    margin-left: -140px;
+  }
+  /* logo */
+  .nav-icons {
+    display: flex;
+    left: 70px;
   }
   input[type=text], select {
     width: 100%;
@@ -389,14 +465,20 @@ input[type=password], select {
     font-size: 17px;
   }
 }
-/* mobile view 500px */
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 501px) and (max-width: 617px) {
   .top-navbar {
     display: none;
   }
+  .nav-bar {
+    padding-right: 30px;
+    font-size: 20px;
+  }
   /* humburgar menu */
-  .nav-content label {
+  .nav-bar label {
     display: block;
+  }
+  .navbar {
+    top: 0;
   }
   .nav-content ul {
     display: flex;
@@ -438,20 +520,65 @@ input[type=password], select {
   /* logo */
   .nav-icons {
     display: flex;
-    position: relative;
     left: 70px;
   }
-  .hero {
-    width: 100%;
+}
+/* mobile view 500px */
+@media screen and (max-width: 500px) {
+  .top-navbar {
+    display: none;
   }
-  .items img {
+  .nav-bar {
+    padding-right: 30px;
+    font-size: 20px;
+  }
+  /* humburgar menu */
+  .nav-bar label {
+    display: block;
+  }
+  .navbar {
+    top: 0;
+  }
+  .nav-content ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 100%;
-    height: 100vh;
+    display: none;
+    background-color: #717FE0;
+    color: white;
+    z-index: 2;
+  }
+  .nav-content ul li {
+    margin: 5px;
+  }
+  .nav-content ul li a {
+    color: white;
+  }
+  .nav-content ul li a:hover {
+    color: #717FE0;
+  }
+  #click:checked ~ .nav-content ul {
+    display: flex;
+  }
+  /* humbergar menu */
+  /* login-ragister */
+  .login-ragister {
+    display: block;
+  }
+  .login-ragister-desktop {
+    display: none;
+  }
+  /* login-ragister close */
+  /* logo */
+  .logo {
+    margin-left: -140px;
   }
   /* logo */
   .nav-icons {
     display: flex;
-    position: relative;
     left: 70px;
   }
   input[type=text], select {

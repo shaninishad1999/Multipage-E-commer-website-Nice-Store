@@ -43,7 +43,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 }
 
-/* top navbar */
+// * top navbar */
 
 // new changes
 .top-navbar {
@@ -66,7 +66,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 .top-navbar-head {
     @include flexproperty;
-    height: 5vh;
+    // height: 5vh;
     align-items: center;
     margin: 0px 100px;
     padding: 0px 15px;
@@ -75,7 +75,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 .top-navbar-list ul {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
 
 }
 
@@ -98,7 +98,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 .top-navbar-list ul li a {
     text-decoration: none;
     color: $background-color;
-    padding: auto;
+    // padding: auto;
     font-size: 15px;
     color: $white-color;
 
@@ -112,6 +112,10 @@ $border-color: 2px solid rgb(160, 155, 155);
 .top-bar2 {
     display: none;
     margin-top: 10px;
+}
+
+.top-navbar-head-2 {
+    display: none;
 }
 
 /* top navbar close */
@@ -210,16 +214,19 @@ header {
     display: none;
 }
 
+// humbargar menu
+
 #click {
     display: none;
 }
 
-.nav-content label {
+.nav-bar label {
     display: none;
 }
 
-/* navbar header close  */
+// humbargar menu
 
+/* navbar header close  */
 
 
 
@@ -364,22 +371,121 @@ select {
 }
 
 
+// mobile view 769 1300
+
+@media screen and (min-width:769px) and (max-width:1300px) {
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        // padding-right: 30px;
+        font-size: 20px;
+    }
 
 
+    .top-navbar-head-2 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        background-color: black;
+        color: white;
+
+    }
 
 
+    .top-navbar {
+        display: none;
+
+    }
 
 
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+    .navbar {
+        top: 0;
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        color: $white-color;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+        border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+        padding-bottom: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
 
 
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
 
+    .login-ragister-desktop {
+        display: none;
+    }
 
+    /* login-ragister close */
 
+    /* logo */
+    .logo {
+        margin-left: -140px;
+    }
 
+    /* logo */
+    .nav-icons {
+        display: flex;
+        left: 70px;
+    }
 
-.top-navbar-head-2 {
-    display: none;
+    .hero {
+        overflow-x: auto;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
 
 // media query 768px
 
@@ -407,16 +513,54 @@ select {
 
     }
 
+
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        padding-right: 100px;
+        font-size: 20px;
+    }
+
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+
+
+
+
+
+    .top-navbar-head-2 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        background-color: black;
+        color: white;
+
+    }
+
+
+    .top-navbar {
+        display: none;
+
+    }
+
+
     /* humburgar menu */
     .nav-content label {
         display: block;
 
-
     }
 
     .navbar {
-        position: relative;
-        top: 0px;
+        top: 0;
     }
 
     .nav-content ul {
@@ -428,24 +572,25 @@ select {
         width: 100%;
         display: none;
         background-color: $button-bgcolor;
+        color: $white-color;
         z-index: 2;
-
 
     }
 
     .nav-content ul li {
         margin: 5px;
+        border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+        padding-bottom: 5px;
 
     }
 
     .nav-content ul li a {
-        color: white;
+        color: $white-color;
     }
 
     .nav-content ul li a:hover {
-        color: #717FE0;
+        color: $button-bgcolor;
     }
-
 
     #click:checked~.nav-content ul {
         display: flex;
@@ -467,36 +612,17 @@ select {
 
     /* logo */
     .logo {
-        margin-left: -100px;
+        margin-left: -140px;
     }
 
     /* logo */
     .nav-icons {
         display: flex;
-        position: relative;
         left: 70px;
     }
-
-    .top-bar2 {
-        display: block;
-        display: flex;
-        justify-content: left;
+    .hero{
+        overflow-x:auto ;
     }
-    .hero {
-        margin-top: 20px;
-    }
-
-    .container-main {
-        overflow: hidden;
-        margin: auto;
-        font-weight: bold;
-        font-size: 20px;
-        width: 70%;
-
-    }
-
-  
-
 }
 
 
@@ -510,10 +636,20 @@ select {
 
     }
 
+    .nav-bar {
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
+
     /* humburgar menu */
-    .nav-content label {
+    .nav-bar label {
         display: block;
 
+    }
+
+    .navbar {
+        top: 0;
     }
 
     .nav-content ul {
@@ -569,13 +705,13 @@ select {
     /* logo */
     .nav-icons {
         display: flex;
-        position: relative;
         left: 70px;
     }
 
+
     .hero {
         width: 100%;
-
+overflow-x: auto;
 
     }
 

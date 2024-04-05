@@ -24,7 +24,6 @@
 .top-navbar-head {
   display: flex;
   justify-content: space-between;
-  height: 5vh;
   align-items: center;
   margin: 0px 100px;
   padding: 0px 15px;
@@ -32,7 +31,7 @@
 
 .top-navbar-list ul {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .top-navbar-list ul {
@@ -53,18 +52,22 @@
 .top-navbar-list ul li a {
   text-decoration: none;
   color: black;
-  padding: auto;
   font-size: 15px;
   color: white;
 }
 
 .top-navbar-list ul li a:hover {
+  cursor: pointer;
   color: #717FE0;
 }
 
 .top-bar2 {
   display: none;
   margin-top: 10px;
+}
+
+.top-navbar-head-2 {
+  display: none;
 }
 
 /* top navbar close */
@@ -159,7 +162,7 @@ header {
   display: none;
 }
 
-.nav-content label {
+.nav-bar label {
   display: none;
 }
 
@@ -201,7 +204,8 @@ body {
   opacity: 0.8;
 }
 
-input[type=text], select {
+input[type=text],
+select {
   width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -212,7 +216,8 @@ input[type=text], select {
   font-size: 17px;
 }
 
-input[type=email], select {
+input[type=email],
+select {
   width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -223,7 +228,8 @@ input[type=email], select {
   font-size: 17px;
 }
 
-input[type=tel], select {
+input[type=tel],
+select {
   width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -234,7 +240,8 @@ input[type=tel], select {
   font-size: 17px;
 }
 
-input[type=password], select {
+input[type=password],
+select {
   width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -295,7 +302,16 @@ input[type=password], select {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+  .top-navbar {
+    display: none;
+  }
+  .nav-bar {
+    font-size: 20px;
+  }
+  .banner-main3 {
+    grid-column: 1/span 2;
+  }
   .top-navbar-head-2 {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -307,11 +323,9 @@ input[type=password], select {
   }
   .top-navbar {
     display: none;
-    text-align: center;
-    top: 65px;
   }
   /* humburgar menu */
-  .nav-content label {
+  .nav-bar label {
     display: block;
   }
   .navbar {
@@ -326,10 +340,13 @@ input[type=password], select {
     width: 100%;
     display: none;
     background-color: #717FE0;
+    color: white;
     z-index: 2;
   }
   .nav-content ul li {
     margin: 5px;
+    border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+    padding-bottom: 5px;
   }
   .nav-content ul li a {
     color: white;
@@ -351,12 +368,90 @@ input[type=password], select {
   /* login-ragister close */
   /* logo */
   .logo {
-    margin-left: -100px;
+    margin-left: -140px;
   }
   /* logo */
   .nav-icons {
     display: flex;
-    position: relative;
+    left: 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top-navbar {
+    display: none;
+  }
+  .nav-bar {
+    padding-right: 100px;
+    font-size: 20px;
+  }
+  /* humburgar menu */
+  .nav-bar label {
+    display: block;
+  }
+  .banner-main3 {
+    grid-column: 1/span 2;
+  }
+  .top-navbar-head-2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+  }
+  .top-navbar {
+    display: none;
+  }
+  /* humburgar menu */
+  .nav-content label {
+    display: block;
+  }
+  .navbar {
+    top: 0;
+  }
+  .nav-content ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    display: none;
+    background-color: #717FE0;
+    color: white;
+    z-index: 2;
+  }
+  .nav-content ul li {
+    margin: 5px;
+    border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+    padding-bottom: 5px;
+  }
+  .nav-content ul li a {
+    color: white;
+  }
+  .nav-content ul li a:hover {
+    color: #717FE0;
+  }
+  #click:checked ~ .nav-content ul {
+    display: flex;
+  }
+  /* humbergar menu */
+  /* login-ragister */
+  .login-ragister {
+    display: block;
+  }
+  .login-ragister-desktop {
+    display: none;
+  }
+  /* login-ragister close */
+  /* logo */
+  .logo {
+    margin-left: -140px;
+  }
+  /* logo */
+  .nav-icons {
+    display: flex;
     left: 70px;
   }
   .top-bar2 {
@@ -364,7 +459,8 @@ input[type=password], select {
     display: flex;
     justify-content: left;
   }
-  input[type=text], select {
+  input[type=text],
+  select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -374,7 +470,8 @@ input[type=password], select {
     background-color: transparent;
     font-size: 17px;
   }
-  input[type=email], select {
+  input[type=email],
+  select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -384,7 +481,8 @@ input[type=password], select {
     background-color: transparent;
     font-size: 17px;
   }
-  input[type=tel], select {
+  input[type=tel],
+  select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -394,7 +492,8 @@ input[type=password], select {
     background-color: transparent;
     font-size: 17px;
   }
-  input[type=password], select {
+  input[type=password],
+  select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -411,13 +510,17 @@ input[type=password], select {
     color: black;
   }
 }
-/* mobile view 500px */
-@media screen and (max-width: 500px) {
+/* mobile view  501  617px*/
+@media screen and (min-width: 501px) and (max-width: 617px) {
   .top-navbar {
     display: none;
   }
+  .nav-bar {
+    padding-right: 30px;
+    font-size: 20px;
+  }
   /* humburgar menu */
-  .nav-content label {
+  .nav-bar label {
     display: block;
   }
   .navbar {
@@ -463,23 +566,69 @@ input[type=password], select {
   /* logo */
   .nav-icons {
     display: flex;
-    position: relative;
     left: 70px;
   }
-  .hero {
-    width: 100%;
+}
+/* mobile view 500px */
+@media screen and (max-width: 500px) {
+  .top-navbar {
+    display: none;
   }
-  .items img {
+  .nav-bar {
+    padding-right: 30px;
+    font-size: 20px;
+  }
+  /* humburgar menu */
+  .nav-bar label {
+    display: block;
+  }
+  .navbar {
+    top: 0;
+  }
+  .nav-content ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 100%;
-    height: 100vh;
+    display: none;
+    background-color: #717FE0;
+    color: white;
+    z-index: 2;
+  }
+  .nav-content ul li {
+    margin: 5px;
+  }
+  .nav-content ul li a {
+    color: white;
+  }
+  .nav-content ul li a:hover {
+    color: #717FE0;
+  }
+  #click:checked ~ .nav-content ul {
+    display: flex;
+  }
+  /* humbergar menu */
+  /* login-ragister */
+  .login-ragister {
+    display: block;
+  }
+  .login-ragister-desktop {
+    display: none;
+  }
+  /* login-ragister close */
+  /* logo */
+  .logo {
+    margin-left: -140px;
   }
   /* logo */
   .nav-icons {
     display: flex;
-    position: relative;
     left: 70px;
   }
-  input[type=text], select {
+  input[type=text],
+  select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -489,7 +638,8 @@ input[type=password], select {
     background-color: transparent;
     font-size: 17px;
   }
-  input[type=email], select {
+  input[type=email],
+  select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -499,7 +649,8 @@ input[type=password], select {
     background-color: transparent;
     font-size: 17px;
   }
-  input[type=tel], select {
+  input[type=tel],
+  select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -509,7 +660,8 @@ input[type=password], select {
     background-color: transparent;
     font-size: 17px;
   }
-  input[type=password], select {
+  input[type=password],
+  select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;

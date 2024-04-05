@@ -6,8 +6,9 @@
 
 $background-color: black;
 $white-color: white;
+$para-font-size: 17px;
 $button-bgcolor: #717FE0;
-
+$border-color: 2px solid rgb(160, 155, 155);
 
 @mixin content-center {
     align-items: center;
@@ -30,7 +31,6 @@ $button-bgcolor: #717FE0;
 }
 
 @mixin nav-content-list {}
-
 /* top navbar */
 
 // new changes
@@ -38,10 +38,10 @@ $button-bgcolor: #717FE0;
     background-color: $background-color;
     position: fixed;
     width: 100%;
+    z-index: 8;
     padding-left: 40px;
     padding-right: 50px;
     top: 0px;
-    z-index: 8;
 
 }
 
@@ -54,7 +54,7 @@ $button-bgcolor: #717FE0;
 
 .top-navbar-head {
     @include flexproperty;
-    height: 5vh;
+    // height: 5vh;
     align-items: center;
     margin: 0px 100px;
     padding: 0px 15px;
@@ -63,7 +63,7 @@ $button-bgcolor: #717FE0;
 
 .top-navbar-list ul {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
 
 }
 
@@ -79,18 +79,31 @@ $button-bgcolor: #717FE0;
     border-right: 2px solid $white-color;
 }
 
+.top-navbar-list ul li:hover {
+    cursor: pointer;
+}
+
 .top-navbar-list ul li a {
     text-decoration: none;
     color: $background-color;
-    padding: auto;
+    // padding: auto;
     font-size: 15px;
     color: $white-color;
 
 }
 
+.top-navbar-list ul li a:hover {
+    cursor: pointer;
+    color: $button-bgcolor;
+}
+
 .top-bar2 {
     display: none;
     margin-top: 10px;
+}
+
+.top-navbar-head-2 {
+    display: none;
 }
 
 /* top navbar close */
@@ -111,10 +124,11 @@ header {
     position: fixed;
     background-color: #ccc;
     width: 100%;
+    z-index: 5;
     padding-left: 130px;
     padding-right: 160px;
     top: 30px;
-    z-index: 5;
+
 }
 
 // change above
@@ -145,9 +159,9 @@ header {
 .nav-content ul li a {
     @include content-center;
     text-decoration: none;
-    color: $background-color;
     padding: 0px 5px;
     justify-content: center;
+    color: $background-color;
     position: relative;
     z-index: 5;
 }
@@ -171,12 +185,14 @@ header {
 .nav-icons a i {
     font-size: 23px;
 }
+
 .nav-icons a i span {
     color: $white-color;
     background-color: #717FE0;
     font-size: 10px;
-padding: 4px;
+    padding: 4px;
 }
+
 .nav-icons a:hover {
     color: $button-bgcolor;
 
@@ -186,13 +202,17 @@ padding: 4px;
     display: none;
 }
 
+// humbargar menu
+
 #click {
     display: none;
 }
 
-.nav-content label {
+.nav-bar label {
     display: none;
 }
+
+// humbargar menu
 
 /* navbar header close  */
 
@@ -280,6 +300,7 @@ select#size option {
     @include select-list;
 
 }
+
 .color select {
     @include select-list;
 
@@ -357,117 +378,34 @@ select#size option {
     color: $button-bgcolor;
 }
 
-
-
-
-.top-navbar-head-2{
+.top-navbar-head-2 {
     display: none;
 }
 
 
+
 // media query 768px
 
-@media screen and (max-width:768px) {
-
-    .top-navbar-head-2{
-        padding-top: 5px;
-        padding-bottom: 5px;
-        display: flex;
-        justify-content: center;
-        font-size: 17px;
-        background-color: black;
-        color: white;
-  
-    }
-    
+@media screen and (min-width:76px) and (max-width:1000px) {
     .top-navbar {
         display: none;
-        text-align: center;
+
     }
+
+    .nav-bar {
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
 
     /* humburgar menu */
-    .nav-content label {
+    .nav-bar label {
         display: block;
 
-
     }
 
-    .nav-content ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        display: none;
-        background-color: $background-color;
-        z-index: 2;
-
-
-    }
-
-    .nav-content ul li {
-        margin: 5px;
-
-    }
-
-    .nav-content ul li a {
-        color: $white-color;
-    }
-
-    .nav-content ul li a:hover {
-        color: $button-bgcolor;
-    }
-
-
-    #click:checked~.nav-content ul {
-        display: flex;
-    }
-
-    /* humbergar menu */
-
-
-    /* login-ragister */
-    .login-ragister {
-        display: block;
-    }
-
-    .login-ragister-desktop {
-        display: none;
-    }
-
-    /* login-ragister close */
-
-    /* logo */
-    .logo {
-        margin-left: -100px;
-    }
-
-    /* logo */
-    .nav-icons {
-        display: flex;
-        position: relative;
-        left: 70px;
-    }
-
-
-
-
-}
-
-
-/* mobile view 500px */
-
-@media screen and (max-width:500px) {
-
-    .top-navbar {
-        display: none;
-    }
-
-    /* humburgar menu */
-    .nav-content label {
-        display: block;
-
+    .navbar {
+        top: 0;
     }
 
     .nav-content ul {
@@ -479,13 +417,14 @@ select#size option {
         width: 100%;
         display: none;
         background-color: $button-bgcolor;
-        z-index: 2;
         color: $white-color;
+        z-index: 2;
 
     }
 
     .nav-content ul li {
         margin: 5px;
+
     }
 
     .nav-content ul li a {
@@ -522,15 +461,253 @@ select#size option {
     /* logo */
     .nav-icons {
         display: flex;
-        position: relative;
         left: 70px;
+    }
+
+
+    // container
+    .container {
+        grid-template-columns: 1fr;
+        background-color: #ccc;
+        width: 600px;
+
+        .item {
+            grid-template-columns: 1fr;
+            text-align: center;
+
+        }
+
+        .item img {
+            width: 280px;
+            height: 280px;
+            padding: 5px;
+        }
+
+    }
+
+    .item2 {
+        text-align: center;
+    }
+
+
+    .numbers {
+        margin-left: 190px;
+        display: flex;
+        margin-top: 30px;
+        text-align: center;
+
+
+    }
+
+}
+
+
+
+// media query 768px
+
+@media screen and (max-width:768px) {
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
+
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+    .navbar {
+        top: 0;
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        color: $white-color;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -140px;
     }
 
     /* logo */
     .nav-icons {
         display: flex;
-        position: relative;
         left: 70px;
+    }
+
+
+    //  container
+    .container {
+        grid-template-columns: 1fr;
+        background-color: #ccc;
+        width: 600px;
+
+        .item {
+            grid-template-columns: 1fr;
+            text-align: center;
+
+        }
+
+        .item img {
+            width: 280px;
+            height: 280px;
+            padding: 5px;
+        }
+
+    }
+
+    .item2 {
+        text-align: center;
+    }
+
+
+    .numbers {
+        margin-left: 190px;
+        display: flex;
+        margin-top: 30px;
+        text-align: center;
+
+
+    }
+
+}
+
+
+
+/* mobile view 500px */
+
+@media screen and (max-width:500px) {
+
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
+
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+    .navbar {
+        top: 0;
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        color: $white-color;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -140px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        left: 70px;
+    }
+
+
+
+
+    .hero {
+        height: auto;
     }
 
     .container {
@@ -539,11 +716,11 @@ select#size option {
         width: 600px;
 
         .item {
-            grid-template-columns: auto;
+            grid-template-columns: 1fr;
             text-align: center;
 
-
         }
+
         .item img {
             width: 280px;
             height: 280px;
@@ -551,21 +728,19 @@ select#size option {
         }
 
     }
-    .item2{
+
+    .item2 {
         text-align: center;
     }
-   
-      
-        .numbers {
-            margin-left: 190px;
-            display: flex;
-            margin-top: 30px;
-            text-align: center;
-        
+
+
+    .numbers {
+        margin-left: 190px;
+        display: flex;
+        margin-top: 30px;
+        text-align: center;
+
 
     }
-
-
-
 
 }

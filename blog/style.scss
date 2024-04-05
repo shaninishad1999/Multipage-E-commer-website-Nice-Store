@@ -30,6 +30,7 @@ $border-color: 2px solid rgb(160, 155, 155);
     z-index: 8;
     padding-left: 40px;
     padding-right: 50px;
+    top: 0px;
 
 }
 
@@ -41,9 +42,8 @@ $border-color: 2px solid rgb(160, 155, 155);
 }
 
 .top-navbar-head {
-    display: flex;
-    height: 5vh;
-    justify-content: space-between;
+    @include flexproperty;
+    // height: 5vh;
     align-items: center;
     margin: 0px 100px;
     padding: 0px 15px;
@@ -52,7 +52,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 
 .top-navbar-list ul {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
 
 }
 
@@ -66,18 +66,23 @@ $border-color: 2px solid rgb(160, 155, 155);
 .top-navbar-list ul li {
     padding: 10px 20px 10px 20px;
     border-right: 2px solid $white-color;
+}
+
+.top-navbar-list ul li:hover {
     cursor: pointer;
 }
 
 .top-navbar-list ul li a {
     text-decoration: none;
-    color: black;
-    padding: auto;
+    color: $background-color;
+    // padding: auto;
     font-size: 15px;
     color: $white-color;
 
 }
-.top-navbar-list ul li a:hover{
+
+.top-navbar-list ul li a:hover {
+    cursor: pointer;
     color: $button-bgcolor;
 }
 
@@ -86,13 +91,17 @@ $border-color: 2px solid rgb(160, 155, 155);
     margin-top: 10px;
 }
 
+.top-navbar-head-2 {
+    display: none;
+}
+
 /* top navbar close */
 
 /* navbar header  */
 
 header {
     background: none;
- 
+
 
 }
 
@@ -109,7 +118,6 @@ header {
     padding-right: 160px;
     top: 30px;
 
-    
 }
 
 // change above
@@ -142,7 +150,7 @@ header {
     text-decoration: none;
     padding: 0px 5px;
     justify-content: center;
-    color: black;
+    color: $background-color;
     position: relative;
     z-index: 5;
 }
@@ -155,23 +163,25 @@ header {
 .nav-icons {
     display: flex;
     justify-content: center;
-   @include content-center;
+    @include content-center;
 }
 
 .nav-icons a {
     margin: 10px;
-    color: black;
+    color: $background-color;
 }
 
 .nav-icons a i {
     font-size: 23px;
 }
+
 .nav-icons a i span {
     color: $white-color;
     background-color: #717FE0;
     font-size: 10px;
-padding: 4px;
+    padding: 4px;
 }
+
 .nav-icons a:hover {
     color: $button-bgcolor;
 
@@ -181,14 +191,17 @@ padding: 4px;
     display: none;
 }
 
+// humbargar menu
+
 #click {
     display: none;
 }
 
-.nav-content label {
+.nav-bar label {
     display: none;
 }
 
+// humbargar menu
 
 /* navbar header close  */
 
@@ -260,6 +273,8 @@ padding: 4px;
     }
 
     .page-change-btn button {
+        margin: 20px;
+        width: 7%;
         padding: 10px;
         border-radius: 50%;
         margin: 10px;
@@ -286,16 +301,12 @@ padding: 4px;
 }
 
 
-
-
-
-
 .right-content {
     padding: 0px 50px 50px 50px;
 
     input[type=text],
     select {
-        width:55%;
+        // width: 55%;
         position: relative;
         padding: 12px 20px;
         border-radius: 25px;
@@ -322,7 +333,7 @@ padding: 4px;
 
     .categories ul li a {
         text-decoration: none;
-        color:$background-color;
+        color: $background-color;
     }
 
     .right-image {
@@ -401,7 +412,6 @@ padding: 4px;
 /* footer section  start */
 
 footer {
-    height: 65vh;
     background-color: rgba(0, 0, 0, 0.896);
     color: white;
     padding-top: 100px;
@@ -409,8 +419,8 @@ footer {
 }
 
 .footer {
-   display: grid;
-   grid-template-columns: repeat(4,1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding-left: 160px;
     padding-right: 160px;
 
@@ -534,16 +544,24 @@ select {
 }
 
 /* footer section close */
-.top-navbar-head-2{
-    display: none;
-}
-
-/* mobile view */
 
 
-@media screen and (max-width:768px) {
 
-  .top-navbar-head-2{
+// mobile view 769 1300
+
+@media screen and (min-width:769px) and (max-width:1300px) {
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        // padding-right: 30px;
+        font-size: 20px;
+    }
+
+
+    .top-navbar-head-2 {
         padding-top: 5px;
         padding-bottom: 5px;
         display: flex;
@@ -551,33 +569,26 @@ select {
         font-size: 17px;
         background-color: black;
         color: white;
-  
-    }
-
-
-    .blog-section {
-        grid-template-columns: 1fr;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 100px;
-        text-align: center;
 
     }
-
 
 
     .top-navbar {
         display: none;
+
     }
 
+
     /* humburgar menu */
-    .nav-content label {
+    .nav-bar label {
         display: block;
 
     }
-.navbar{
-    top: 0px;
-}
+
+    .navbar {
+        top: 0;
+    }
+
     .nav-content ul {
         display: flex;
         flex-direction: column;
@@ -587,21 +598,24 @@ select {
         width: 100%;
         display: none;
         background-color: $button-bgcolor;
+        color: $white-color;
         z-index: 2;
 
     }
 
     .nav-content ul li {
         margin: 5px;
+        border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+        padding-bottom: 5px;
 
     }
 
     .nav-content ul li a {
-        color: white;
+        color: $white-color;
     }
 
     .nav-content ul li a:hover {
-        color: blue;
+        color: $button-bgcolor;
     }
 
     #click:checked~.nav-content ul {
@@ -624,38 +638,210 @@ select {
 
     /* logo */
     .logo {
-        margin-left: -100px;
+        margin-left: -140px;
     }
 
     /* logo */
     .nav-icons {
         display: flex;
-        position: relative;
         left: 70px;
     }
 
+    // nav header close 
+// bog section
+    .blog-section {
 
-    .items img {
-        width: 500px;
-        height: auto;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 30px;
+        column-gap: 10px;
+        width: 100%;
+    
+    
     }
+
+
+
+
+
+    // footer
+
+    footer {
+        display: block;
+
+
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 50px;
+        padding-right: 30px;
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+
+}
+
+
+/* mobile view */
+
+@media screen and (max-width:768px) {
+
+
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        padding-right: 100px;
+        font-size: 20px;
+    }
+
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+
+
+
+
+
+    .top-navbar-head-2 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        background-color: black;
+        color: white;
+
+    }
+
+
+    .top-navbar {
+        display: none;
+
+    }
+
+
+    /* humburgar menu */
+    .nav-content label {
+        display: block;
+
+    }
+
+    .navbar {
+        top: 0;
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        color: $white-color;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+        border-bottom: 2px solid rgba(22, 4, 4, 0.3);
+        padding-bottom: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -140px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        left: 70px;
+    }
+    // nav header close
+
+
+// blog section
+
+.blog-section {
+
+    grid-template-columns: 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+    column-gap: 10px;
+    width: 100%;
+
+
+
+}
+
+
 
     input[type=text],
     select {
-        width: 100%;
+        // width: 100%;
         position: relative;
         padding: 12px 20px;
         border-radius: 25px;
         font-size: 20px;
         border: 2px solid whitesmoke;
     }
+
     footer {
         display: block;
         height: auto;
     }
 
     .footer {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         height: auto;
         padding-left: 30px;
     }
@@ -672,7 +858,160 @@ select {
         padding-TOP: 50px;
     }
 
+
+
+    // footer
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 30px;
+        padding-right: 50px;
+        // display: block;
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+
 }
+
+
+/* mobile view  501  617px*/
+
+@media screen and (min-width:501px) and (max-width:617px) {
+
+
+
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
+
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+    .navbar {
+        top: 0;
+
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        color: $white-color;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -140px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        left: 70px;
+    }
+
+
+// blog section
+.blog-section {
+
+    grid-template-columns: 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    column-gap: 10px;
+    width: 100%;
+
+
+
+}
+
+
+    // footer
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        // height: auto;
+        display: block;
+        padding-left: 30px;
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+
+    // footer section close
+
+
+}
+
+
+
 
 
 
@@ -680,31 +1019,27 @@ select {
 /* mobile view */
 @media screen and (max-width:500px) {
 
-
-    .blog-section {
-        grid-template-columns: 1fr;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 100px;
-        text-align: center;
-
-    }
-
-
-
     .top-navbar {
         display: none;
+
     }
 
+    .nav-bar {
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
+
     /* humburgar menu */
-    .nav-content label {
+    .nav-bar label {
         display: block;
 
     }
 
-    .navbar{
-        top: 0px;
+    .navbar {
+        top: 0;
     }
+
     .nav-content ul {
         display: flex;
         flex-direction: column;
@@ -714,6 +1049,7 @@ select {
         width: 100%;
         display: none;
         background-color: $button-bgcolor;
+        color: $white-color;
         z-index: 2;
 
     }
@@ -724,11 +1060,11 @@ select {
     }
 
     .nav-content ul li a {
-        color: white;
+        color: $white-color;
     }
 
     .nav-content ul li a:hover {
-        color: blue;
+        color: $button-bgcolor;
     }
 
     #click:checked~.nav-content ul {
@@ -751,21 +1087,31 @@ select {
 
     /* logo */
     .logo {
-        margin-left: -100px;
+        margin-left: -140px;
     }
 
     /* logo */
     .nav-icons {
         display: flex;
-        position: relative;
         left: 70px;
     }
 
 
-    .items img {
-        width: 500px;
-        height: auto;
+    .blog-section {
+
+        grid-template-columns: 1fr;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        column-gap: 10px;
+        width: 100%;
+    
+    
+    
     }
+    
+
+
 
     input[type=text],
     select {
@@ -776,13 +1122,14 @@ select {
         font-size: 20px;
         border: 2px solid whitesmoke;
     }
+
     footer {
         display: block;
         height: auto;
     }
 
     .footer {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         height: auto;
         padding-left: 30px;
     }
@@ -800,4 +1147,3 @@ select {
     }
 
 }
-
