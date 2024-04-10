@@ -230,150 +230,230 @@ header {
 
 
 
-/* container css */
+/* hero css */
 
-.hero {
+
+.hero-heading {
     margin-top: 120px;
-    height: 100%;
-   
-
-    >h1 {
-        font-size: 40px;
-        text-align: center;
-        margin-bottom: 10px;
-
-
-    }
-
-}
-
-.hero h6 {
     text-align: center;
-    font-size: 20px;
-    font-weight: bold;
     margin-bottom: 10px;
-}
-
-.hero-head {
-    display: flex;
-    justify-content: center;
-
-    button {
-        padding: 10px 20px;
-        border-radius: 20px;
-        margin: 10px;
-        cursor: pointer;
-        background-color: transparent;
-        font-size: 18px;
-
-
-
-    }
-
-    button:hover {
-        background-color: #717FE0;
-        color: white;
-    }
-
-}
-.container{
-    position: static;
-    overflow: auto;
-}
-.container-main {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    margin: auto;
-    font-weight: bold;
-    font-size: 20px;
-    width: 70%;
-    position: static;
 
 }
 
-.item {
-    border: 2px solid #ccc;
-    text-align: center;
-    padding: 10px;
-    justify-content: center;
-    align-content: center;
+.hero-heading p a{
+    text-decoration: none;
+    color: black;
 }
-
-.item img {
-    width: 80px;
-    height: 80px;
-
-}
-
-.item p {
-    font-size: 12px;
-}
-
-.unit-price {
-    font-size: 25px;
-
-}
-
-input[type=number],
-select {
-    padding: 6px 10px;
-    font-size: 17px;
-    width: 40%;
-}
-
-.item a button {
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 17px;
-
-}
-
-.item a button:hover {
-    background-color: #717FE0;
-    color: white;
-}
-
-.stock-status {
-    color: rgb(7, 241, 7);
-    font-size: 17px;
-
-}
-
-.stock-status-2 {
-    color: red;
-
-}
-
-.item i {
-    font-size: 25px;
+.hero-heading p a:hover{
     color: #717FE0;
 }
 
-.btn {
+.hero-heading p i{
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.hero-heading p i:hover{
+    color: #717FE0;
+}
+
+.container{
+
+   width: 800px;
+   height: 400px;
+   margin: auto;
+
+}
+
+.item{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-top: 30px;
-    padding-bottom: 100px;
-    width: 50%;
-    margin: auto;
+    grid-template-columns: repeat(5,1fr);
+    text-align: center;
+    border: 1px solid #ccc;
+    align-items: center;
+
+}
+.item-list{
+    // border: 1px solid red;
+    padding: 20px;
+    font-size: 17px;
+}
+.item-list img{
+    width: 60px;
+    height: 60px;
+}
+.item ul{
+    display: flex;
+}
+.item h4{
+    color: #717FE0;
+}
+.item a button{
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+.item a button:hover{
+    color: white;
+    background-color: #717FE0;
+    cursor: pointer;
+}
+.item-list a i{
+    font-size: 25px;
+    color: black;
+}
+.item-list a i:hover{
+    color: #717FE0;
 }
 
 
-.btn a button {
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: transparent;
-    cursor: pointer;
+// close
+
+
+
+/* footer section  start */
+
+footer {
+    // height: 75vh;
+    background-color: rgba(0, 0, 0, 0.896);
+    color: $white-color;
+    padding-top: 80px;
+    margin-top: 150px;
+}
+
+.footer {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 160px;
+    padding-right: 160px;
+
+}
+
+.footer-heading h1 {
+    font-size: 20px;
+    font-weight: 800px;
+    margin-bottom: 30px;
+
+}
+
+/* footer-list */
+.footer-list ul li {
+    line-height: 2.5;
+    list-style: none;
+}
+
+.footer-list ul li a {
+    text-decoration: none;
+    color: $white-color;
+    opacity: 0.7;
+}
+
+.footer-list ul li a:hover {
+    color: $button-bgcolor;
+}
+
+/* new change */
+.categories {
+    width: 300px;
+}
+
+.help {
+    width: 200px;
+}
+
+/* get in touch */
+.get-in-touch {
+    width: 380px;
+    padding: 20px;
+}
+
+/*  */
+
+.get-in-touch p {
+    line-height: 2.0;
+    font-size: 17px;
+    opacity: 0.7;
+
+}
+
+.get-in-touch i {
+    margin-top: 20px;
+    margin: 10px;
+    color: $white-color;
     font-size: 17px;
 
 }
 
-.btn a button:hover {
-    background-color: #717FE0;
-    color: white;
+.get-in-touch i:hover {
+    color: $button-bgcolor;
 }
+
+input[type=email],
+select {
+    width: 100%;
+    font-size: 17px;
+    display: inline-block;
+    background: transparent;
+    outline: none;
+    margin-bottom: 15px;
+    color: white;
+    height: 15%;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.46);
+
+}
+
+
+/* newsletter button */
+
+.newsletter button {
+    padding: 15px 50px 15px 50px;
+    font-size: 17px;
+    border-radius: 25px;
+    background-color: $button-bgcolor;
+    color: $white-color;
+    border: none;
+
+}
+
+.newsletter button:hover {
+    color: $button-bgcolor;
+    background-color: $white-color;
+    cursor: pointer;
+}
+
+/* cards */
+
+.card {
+    margin-top: 110px;
+    text-align: center;
+
+}
+
+.copyrights {
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.copyrights p a {
+    text-decoration: none;
+    color: aqua;
+}
+
+.copyrights p i {
+    background: transparent;
+    border: 1px solid rgb(0, 255, 13);
+    color: red;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+/* footer section close */
+
+
 
 
 // mobile view 769 1300
@@ -477,11 +557,34 @@ select {
         left: 70px;
     }
 
-    .hero {
-        overflow-x: auto;
+   
+    // footer 
+    footer {
+        display: block;
+
+
+    }
+
+    .footer {
+        grid-template-columns: repeat(4, 1fr);
+        padding-left: 30px;
+        padding-right: 50px;
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
     }
 
 }
+
 
 
 
@@ -535,10 +638,6 @@ select {
         display: block;
 
     }
-
-
-
-
 
 
     .top-navbar-head-2 {
@@ -626,10 +725,157 @@ select {
         display: flex;
         left: 70px;
     }
-    .hero{
-        overflow-x:auto ;
+
+    .container{
+
+       width: auto;
+       height: auto;
+     
+     }
+     .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 30px;
+        padding-right: 50px;
+        // display: block;
     }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+
 }
+
+
+
+
+/* mobile view  501  617px*/
+
+@media screen and (min-width:501px) and (max-width:617px) {
+
+
+
+    .top-navbar {
+        display: none;
+
+    }
+
+    .nav-bar {
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
+
+    /* humburgar menu */
+    .nav-bar label {
+        display: block;
+
+    }
+
+    .navbar {
+        top: 0;
+
+    }
+
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: $button-bgcolor;
+        color: $white-color;
+        z-index: 2;
+
+    }
+
+    .nav-content ul li {
+        margin: 5px;
+
+    }
+
+    .nav-content ul li a {
+        color: $white-color;
+    }
+
+    .nav-content ul li a:hover {
+        color: $button-bgcolor;
+    }
+
+    #click:checked~.nav-content ul {
+        display: flex;
+    }
+
+    /* humbergar menu */
+
+
+    /* login-ragister */
+    .login-ragister {
+        display: block;
+    }
+
+    .login-ragister-desktop {
+        display: none;
+    }
+
+    /* login-ragister close */
+
+    /* logo */
+    .logo {
+        margin-left: -140px;
+    }
+
+    /* logo */
+    .nav-icons {
+        display: flex;
+        left: 70px;
+    }
+
+
+
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        // height: auto;
+        display: block;
+        padding-left: 30px;
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+
+    
+}
+// footer section close
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -717,7 +963,7 @@ select {
 
     .hero {
         width: 100%;
-overflow-x: auto;
+        overflow-x: auto;
 
     }
 
@@ -734,6 +980,25 @@ overflow-x: auto;
         position: relative;
         left: 70px;
     }
+    .footer {
+        grid-template-columns: 1fr;
+        display: block;
+        padding-left: 30px;
+    }
+
+    .categories {
+        padding-bottom: 50px;
+    }
+
+    .help {
+        padding-bottom: 50px;
+    }
+
+    .newsletter {
+        padding-TOP: 50px;
+    }
+
+
 
 
 

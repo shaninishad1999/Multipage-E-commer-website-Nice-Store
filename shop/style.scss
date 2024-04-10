@@ -615,14 +615,15 @@ footer {
 input[type=email],
 select {
     width: 100%;
-    font-size: $para-font-size;
+    font-size: 17px;
     display: inline-block;
-    border: 1px solid #ccc;
     background: transparent;
-    border: none;
-    border-bottom: 2px solid $white-color;
-    opacity: 0.7;
+    outline: none;
     margin-bottom: 15px;
+    color: white;
+    height: 15%;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.46);
 }
 
 /* newsletter button */
