@@ -251,7 +251,7 @@ header {
 /* story section  start*/
 
 #story {
-    height: 180vh;
+  
     padding-top: 50px;
 }
 
@@ -557,6 +557,7 @@ select {
         background-color: $button-bgcolor;
         color: $white-color;
         z-index: 2;
+        text-align: center;
 
     }
 

@@ -475,6 +475,7 @@ select {
     background-color: #717FE0;
     color: white;
     z-index: 2;
+    text-align: center;
   }
   .nav-content ul li {
     margin: 5px;

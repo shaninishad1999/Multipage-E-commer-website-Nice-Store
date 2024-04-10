@@ -235,6 +235,7 @@ header {
 .hero {
     margin-top: 120px;
     height: 100%;
+   
 
     >h1 {
         font-size: 40px;
@@ -275,7 +276,10 @@ header {
     }
 
 }
-
+.container{
+    position: static;
+    overflow: auto;
+}
 .container-main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -283,6 +287,7 @@ header {
     font-weight: bold;
     font-size: 20px;
     width: 70%;
+    position: static;
 
 }
 
@@ -424,6 +429,7 @@ select {
         background-color: $button-bgcolor;
         color: $white-color;
         z-index: 2;
+        text-align: center;
 
     }
 

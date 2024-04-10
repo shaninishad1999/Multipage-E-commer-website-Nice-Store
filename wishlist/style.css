@@ -201,6 +201,11 @@ header {
   color: white;
 }
 
+.container {
+  position: static;
+  overflow: auto;
+}
+
 .container-main {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -208,6 +213,7 @@ header {
   font-weight: bold;
   font-size: 20px;
   width: 70%;
+  position: static;
 }
 
 .item {
@@ -324,6 +330,7 @@ select {
     background-color: #717FE0;
     color: white;
     z-index: 2;
+    text-align: center;
   }
   .nav-content ul li {
     margin: 5px;
