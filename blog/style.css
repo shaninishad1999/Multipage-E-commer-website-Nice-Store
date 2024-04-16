@@ -43,6 +43,7 @@
 .top-navbar-list ul li {
   padding: 10px 20px 10px 20px;
   border-right: 2px solid white;
+  text-align: center;
 }
 
 .top-navbar-list ul li:hover {
@@ -363,6 +364,7 @@ footer {
 /* get in touch */
 .get-in-touch {
   width: 400px;
+  padding-bottom: 20px;
 }
 
 /*  */
@@ -423,6 +425,10 @@ select {
   margin-top: 20px;
   text-align: center;
   opacity: 0.5;
+}
+
+.copyrights p {
+  padding-bottom: 20px;
 }
 
 .copyrights p a {
@@ -533,9 +539,6 @@ select {
   .help {
     padding-bottom: 50px;
   }
-  .newsletter {
-    padding-TOP: 50px;
-  }
 }
 /* mobile view */
 @media screen and (max-width: 768px) {
@@ -645,9 +648,6 @@ select {
   .help {
     padding-bottom: 50px;
   }
-  .newsletter {
-    padding-TOP: 50px;
-  }
   .footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -659,9 +659,6 @@ select {
   }
   .help {
     padding-bottom: 50px;
-  }
-  .newsletter {
-    padding-TOP: 50px;
   }
 }
 /* mobile view  501  617px*/
@@ -741,9 +738,6 @@ select {
   }
   .help {
     padding-bottom: 50px;
-  }
-  .newsletter {
-    padding-TOP: 50px;
   }
 }
 /* mobile view */
@@ -836,8 +830,5 @@ select {
   }
   .help {
     padding-bottom: 50px;
-  }
-  .newsletter {
-    padding-TOP: 50px;
   }
 }/*# sourceMappingURL=style.css.map */

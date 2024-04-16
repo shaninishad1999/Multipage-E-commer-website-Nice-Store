@@ -44,6 +44,7 @@
 .top-navbar-list ul li {
   padding: 10px 20px 10px 20px;
   border-right: 2px solid white;
+  text-align: center;
 }
 
 .top-navbar-list ul li:hover {
@@ -565,6 +566,10 @@ select {
   opacity: 0.5;
 }
 
+.copyrights p {
+  padding-bottom: 20px;
+}
+
 .copyrights p a {
   text-decoration: none;
   color: aqua;
@@ -725,9 +730,6 @@ select {
   .help {
     padding-bottom: 50px;
   }
-  .newsletter {
-    padding-TOP: 50px;
-  }
 }
 @media screen and (min-width: 769px) and (max-width: 1300px) {
   .top-navbar {
@@ -876,6 +878,18 @@ select {
     display: flex;
     left: 70px;
   }
+  /* product main section */
+  .product-rate {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+    padding-left: 10px;
+  }
   .product-main-section {
     display: block;
     height: auto;
@@ -918,7 +932,8 @@ select {
     padding-bottom: 50px;
   }
   .newsletter {
-    padding-TOP: 50px;
+    padding-top: 20px;
+    padding-left: 0px;
   }
 }
 /* mobile view  501px and 650px*/
@@ -980,6 +995,17 @@ select {
     left: 70px;
   }
   /* product main section */
+  .product-rate {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+    padding-left: 30px;
+  }
   .product-main-section {
     display: block;
     height: auto;
@@ -1001,7 +1027,7 @@ select {
   }
   /* img section  */
   .product-image img {
-    width: 330px;
+    width: 410px;
     height: 450px;
   }
   /* img section close */
@@ -1022,7 +1048,7 @@ select {
     padding-bottom: 50px;
   }
   .newsletter {
-    padding-TOP: 50px;
+    padding-left: 0px;
   }
 }
 /* mobile view  500px*/
@@ -1084,6 +1110,17 @@ select {
     left: 70px;
   }
   /* product main section */
+  .product-rate {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+    padding-left: 0px;
+  }
   .product-main-section {
     display: block;
     height: auto;
@@ -1105,7 +1142,7 @@ select {
   }
   /* img section  */
   .product-image img {
-    width: 330px;
+    width: 410px;
     height: 450px;
   }
   /* img section close */
@@ -1123,8 +1160,5 @@ select {
   }
   .help {
     padding-bottom: 50px;
-  }
-  .newsletter {
-    padding-TOP: 50px;
   }
 }/*# sourceMappingURL=style.css.map */

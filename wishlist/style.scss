@@ -89,6 +89,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 .top-navbar-list ul li {
     padding: 10px 20px 10px 20px;
     border-right: 2px solid $white-color;
+    text-align: center;
 }
 
 .top-navbar-list ul li:hover {
@@ -260,7 +261,7 @@ header {
 .container{
 
    width: 800px;
-   height: 400px;
+   height: 500px;
    margin: auto;
 
 }
@@ -366,7 +367,7 @@ footer {
 /* get in touch */
 .get-in-touch {
     width: 380px;
-    padding: 20px;
+    padding: 0px 20px 20px 0px;
 }
 
 /*  */
@@ -579,9 +580,8 @@ select {
         padding-bottom: 50px;
     }
 
-    .newsletter {
-        padding-TOP: 50px;
-    }
+   
+
 
 }
 
@@ -748,9 +748,7 @@ select {
         padding-bottom: 50px;
     }
 
-    .newsletter {
-        padding-TOP: 50px;
-    }
+  
 
 }
 
@@ -859,9 +857,7 @@ select {
         padding-bottom: 50px;
     }
 
-    .newsletter {
-        padding-TOP: 50px;
-    }
+   
 
     
 }
@@ -994,9 +990,7 @@ select {
         padding-bottom: 50px;
     }
 
-    .newsletter {
-        padding-TOP: 50px;
-    }
+   
 
 
 

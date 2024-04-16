@@ -90,6 +90,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 .top-navbar-list ul li {
     padding: 10px 20px 10px 20px;
     border-right: 2px solid $white-color;
+    text-align: center;
 }
 
 .top-navbar-list ul li:hover {
@@ -659,7 +660,9 @@ select {
     text-align: center;
     opacity: 0.5;
 }
-
+.copyrights p{
+    padding-bottom: 20px;
+}
 .copyrights p a {
     text-decoration: none;
     color: aqua;
@@ -887,9 +890,7 @@ select {
         padding-bottom: 50px;
     }
 
-    .newsletter {
-        padding-TOP: 50px;
-    }
+  
 
 
 }
@@ -1114,8 +1115,20 @@ select {
 
 
 
+  /* product main section */
+  .product-rate {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+    padding-left: 10px;
+ 
 
-
+}
     .product-main-section {
         display: block;
         height: auto;
@@ -1173,10 +1186,11 @@ select {
     .help {
         padding-bottom: 50px;
     }
-
-    .newsletter {
-        padding-TOP: 50px;
-    }
+.newsletter{
+    padding-top: 20px;
+    padding-left: 0px;
+}
+   
 
 }
 
@@ -1268,6 +1282,19 @@ select {
 
 
     /* product main section */
+    .product-rate {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        text-align: left;
+       padding-left: 30px;
+     
+    
+    }
     .product-main-section {
         display: block;
         height: auto;
@@ -1300,7 +1327,7 @@ select {
 
     /* img section  */
     .product-image img {
-        width: 330px;
+        width: 410px;
         height: 450px;
     }
 
@@ -1332,8 +1359,8 @@ select {
         padding-bottom: 50px;
     }
 
-    .newsletter {
-        padding-TOP: 50px;
+    .newsletter{
+        padding-left: 0px;
     }
 
 
@@ -1425,6 +1452,20 @@ select {
 
 
     /* product main section */
+
+    .product-rate {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        text-align: left;
+       padding-left: 0px;
+     
+    
+    }
     .product-main-section {
         display: block;
         height: auto;
@@ -1457,7 +1498,7 @@ select {
 
     /* img section  */
     .product-image img {
-        width: 330px;
+        width: 410px;
         height: 450px;
     }
 
@@ -1489,9 +1530,8 @@ select {
         padding-bottom: 50px;
     }
 
-    .newsletter {
-        padding-TOP: 50px;
-    }
+ 
+  
 
 }
 

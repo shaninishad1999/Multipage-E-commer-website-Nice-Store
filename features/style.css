@@ -43,6 +43,7 @@
 .top-navbar-list ul li {
   padding: 10px 20px 10px 20px;
   border-right: 2px solid white;
+  text-align: center;
 }
 
 .top-navbar-list ul li:hover {
@@ -399,6 +400,11 @@ header {
   transition: all 1s ease;
 }
 
+#country {
+  color: black;
+  cursor: pointer;
+}
+
 /* footer section  start */
 footer {
   background-color: rgba(0, 0, 0, 0.896);
@@ -448,7 +454,7 @@ footer {
 /* get in touch */
 .get-in-touch {
   width: 380px;
-  padding: 20px;
+  padding: 0px 20px 20px 0px;
 }
 
 /*  */
@@ -509,6 +515,10 @@ select {
   margin-top: 20px;
   text-align: center;
   opacity: 0.5;
+}
+
+.copyrights p {
+  padding-bottom: 20px;
 }
 
 .copyrights p a {
@@ -648,9 +658,6 @@ select {
   .help {
     padding-bottom: 50px;
   }
-  .newsletter {
-    padding-TOP: 50px;
-  }
 }
 @media screen and (max-width: 768px) {
   .top-navbar {
@@ -782,9 +789,6 @@ select {
   .help {
     padding-bottom: 50px;
   }
-  .newsletter {
-    padding-TOP: 50px;
-  }
 }
 /* mobile view  501  617px*/
 @media screen and (min-width: 501px) and (max-width: 617px) {
@@ -893,9 +897,6 @@ select {
   }
   .help {
     padding-bottom: 50px;
-  }
-  .newsletter {
-    padding-TOP: 50px;
   }
 }
 /* mobile view  500px*/
@@ -1007,8 +1008,5 @@ select {
   }
   .help {
     padding-bottom: 50px;
-  }
-  .newsletter {
-    padding-TOP: 50px;
   }
 }/*# sourceMappingURL=style.css.map */

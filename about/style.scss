@@ -89,6 +89,7 @@ $border-color: 2px solid rgb(160, 155, 155);
 .top-navbar-list ul li {
     padding: 10px 20px 10px 20px;
     border-right: 2px solid $white-color;
+    text-align: center;
 }
 
 .top-navbar-list ul li:hover {
@@ -415,7 +416,7 @@ footer {
 /* get in touch */
 .get-in-touch {
     width: 380px;
-    padding: 20px;
+    padding: 0px 20px 20px 0px;
 }
 
 /*  */
@@ -486,7 +487,9 @@ select {
     text-align: center;
     opacity: 0.5;
 }
-
+.copyrights p{
+    padding-bottom: 20px;
+}
 .copyrights p a {
     text-decoration: none;
     color: aqua;
@@ -706,9 +709,7 @@ select {
         padding-bottom: 50px;
     }
 
-    .newsletter {
-        padding-TOP: 50px;
-    }
+  
 
 
 }
@@ -918,9 +919,7 @@ select {
         padding-bottom: 50px;
     }
 
-    .newsletter {
-        padding-TOP: 50px;
-    }
+
 
 
 
@@ -1081,9 +1080,7 @@ select {
         padding-bottom: 50px;
     }
 
-    .newsletter {
-        padding-TOP: 50px;
-    }
+  
 
     // footer section close
 
@@ -1249,8 +1246,6 @@ select {
         padding-bottom: 50px;
     }
 
-    .newsletter {
-        padding-TOP: 50px;
-    }
+ 
 
 }
