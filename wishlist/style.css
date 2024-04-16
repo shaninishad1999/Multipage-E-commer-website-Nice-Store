@@ -153,7 +153,7 @@ header {
   color: #717FE0;
 }
 
-.login-ragister {
+.login-register {
   display: none;
 }
 
@@ -427,14 +427,14 @@ select {
     display: flex;
   }
   /* humbergar menu */
-  /* login-ragister */
-  .login-ragister {
+  /* login-register */
+  .login-register {
     display: block;
   }
-  .login-ragister-desktop {
+  .login-register-desktop {
     display: none;
   }
-  /* login-ragister close */
+  /* login-register close */
   /* logo */
   .logo {
     margin-left: -140px;
@@ -536,14 +536,14 @@ select {
     display: flex;
   }
   /* humbergar menu */
-  /* login-ragister */
-  .login-ragister {
+  /* login-register */
+  .login-register {
     display: block;
   }
-  .login-ragister-desktop {
+  .login-register-desktop {
     display: none;
   }
-  /* login-ragister close */
+  /* login-register close */
   /* logo */
   .logo {
     margin-left: -140px;
@@ -614,14 +614,14 @@ select {
     display: flex;
   }
   /* humbergar menu */
-  /* login-ragister */
-  .login-ragister {
+  /* login-register */
+  .login-register {
     display: block;
   }
-  .login-ragister-desktop {
+  .login-register-desktop {
     display: none;
   }
-  /* login-ragister close */
+  /* login-register close */
   /* logo */
   .logo {
     margin-left: -140px;
@@ -687,14 +687,14 @@ select {
     display: flex;
   }
   /* humbergar menu */
-  /* login-ragister */
-  .login-ragister {
+  /* login-register */
+  .login-register {
     display: block;
   }
-  .login-ragister-desktop {
+  .login-register-desktop {
     display: none;
   }
-  /* login-ragister close */
+  /* login-register close */
   /* logo */
   .logo {
     margin-left: -140px;
