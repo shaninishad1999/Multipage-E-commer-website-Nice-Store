@@ -276,6 +276,11 @@ header {
   margin-right: 150px;
 }
 
+#product-overview h1 {
+  font-size: 36px;
+  margin-left: 20px;
+}
+
 #product-overview h3 {
   font-size: 36px;
   padding-bottom: 10px;
