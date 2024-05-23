@@ -581,7 +581,10 @@ select {
     width: 280px;
     height: 350px;
 }
-
+.product-image img:hover{
+    transition: transform 0.3s ease;
+    transform: scale(.90);
+}
 /* product image all */
 .product-rate {
     display: flex;
