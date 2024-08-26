@@ -191,6 +191,7 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 ::-moz-placeholder {
@@ -215,6 +216,7 @@ select {
   border-radius: 4px;
   background-color: transparent;
   font-size: 17px;
+  outline: none;
 }
 
 input[type=email],
@@ -227,6 +229,7 @@ select {
   border-radius: 4px;
   background-color: transparent;
   font-size: 17px;
+  outline: none;
 }
 
 input[type=tel],
@@ -239,6 +242,7 @@ select {
   border-radius: 4px;
   background-color: transparent;
   font-size: 17px;
+  outline: none;
 }
 
 input[type=password],
@@ -251,6 +255,7 @@ select {
   border-radius: 4px;
   background-color: transparent;
   font-size: 17px;
+  outline: none;
 }
 
 #sign-up-btn {
@@ -303,6 +308,136 @@ select {
   display: none;
 }
 
+/* footer section  start */
+footer {
+  background-color: rgba(0, 0, 0, 0.896);
+  color: white;
+  padding-top: 80px;
+  margin-top: 150px;
+}
+
+.footer {
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+.footer-heading h1 {
+  font-size: 20px;
+  font-weight: 800px;
+  margin-bottom: 30px;
+}
+
+/* footer-list */
+.footer-list ul li {
+  line-height: 2.5;
+  list-style: none;
+}
+
+.footer-list ul li a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+}
+
+.footer-list ul li a:hover {
+  color: #717FE0;
+}
+
+/* new change */
+.categories {
+  width: 300px;
+}
+
+.help {
+  width: 200px;
+}
+
+/* get in touch */
+.get-in-touch {
+  width: 380px;
+  padding: 0px 20px 20px 0px;
+}
+
+/*  */
+.get-in-touch p {
+  line-height: 2;
+  font-size: 17px;
+  opacity: 0.7;
+}
+
+.get-in-touch i {
+  margin-top: 20px;
+  margin: 10px;
+  color: white;
+  font-size: 17px;
+}
+
+.get-in-touch i:hover {
+  color: #717FE0;
+}
+
+input[type=emaiil],
+select {
+  width: 100%;
+  font-size: 17px;
+  display: inline-block;
+  background: transparent;
+  outline: none;
+  margin-bottom: 15px;
+  color: white;
+  height: 15%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.46);
+}
+
+/* newsletter button */
+.newsletter button {
+  padding: 15px 50px 15px 50px;
+  font-size: 17px;
+  border-radius: 25px;
+  background-color: #717FE0;
+  color: white;
+  border: none;
+}
+
+.newsletter button:hover {
+  color: #717FE0;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* cards */
+.card {
+  margin-top: 110px;
+  text-align: center;
+}
+
+.copyrights {
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.copyrights p {
+  padding-bottom: 20px;
+}
+
+.copyrights p a {
+  text-decoration: none;
+  color: aqua;
+}
+
+.copyrights p i {
+  background: transparent;
+  border: 1px solid rgb(0, 255, 13);
+  color: red;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+/* footer section close */
 @media screen and (min-width: 769px) and (max-width: 1300px) {
   .top-navbar {
     display: none;
@@ -376,6 +511,20 @@ select {
   .nav-icons {
     display: flex;
     left: 70px;
+  }
+  footer {
+    display: block;
+  }
+  .footer {
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+  .categories {
+    padding-bottom: 50px;
+  }
+  .help {
+    padding-bottom: 50px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -511,6 +660,18 @@ select {
     font-size: 20px;
     color: black;
   }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+  .categories {
+    padding-bottom: 50px;
+  }
+  .help {
+    padding-bottom: 50px;
+  }
 }
 /* mobile view  501  617px*/
 @media screen and (min-width: 501px) and (max-width: 617px) {
@@ -569,6 +730,17 @@ select {
   .nav-icons {
     display: flex;
     left: 70px;
+  }
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    display: block;
+    padding-left: 30px;
+  }
+  .categories {
+    padding-bottom: 50px;
+  }
+  .help {
+    padding-bottom: 50px;
   }
 }
 /* mobile view 500px */
@@ -678,5 +850,31 @@ select {
     margin-left: 10px;
     font-size: 20px;
     color: black;
+  }
+  .footer {
+    grid-template-columns: 1fr;
+    display: block;
+    padding-left: 30px;
+  }
+  .categories {
+    padding-bottom: 50px;
+  }
+  .help {
+    padding-bottom: 50px;
+  }
+  .get-in-touch {
+    width: 100%;
+    padding: 0px 20px 20px 0px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+    top: 150px;
+    border-radius: 25px;
+    width: 100%;
+  }
+  .container > h1 {
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */
