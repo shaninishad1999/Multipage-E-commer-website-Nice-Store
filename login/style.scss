@@ -850,29 +850,170 @@ footer {
 
 /* mobile view 500px */
 
-@media screen and  (max-width:500px) {
+// @media screen and  (max-width:500px) {
 
+//     .top-navbar {
+//         display: none;
+
+//     }
+
+//     .nav-bar {
+//         padding-right: 30px;
+//         font-size: 20px;
+//     }
+
+
+//     /* humburgar menu */
+//     .nav-bar label {
+//         display: block;
+
+//     }
+
+//     .navbar {
+//         top: 0;
+//     }
+
+//     .nav-content ul {
+//         display: flex;
+//         flex-direction: column;
+//         position: absolute;
+//         top: 70px;
+//         left: 0;
+//         width: 100%;
+//         display: none;
+//         background-color: $button-bgcolor;
+//         color: $white-color;
+//         z-index: 2;
+
+//     }
+
+//     .nav-content ul li {
+//         margin: 5px;
+
+//     }
+
+//     .nav-content ul li a {
+//         color: $white-color;
+//     }
+
+//     .nav-content ul li a:hover {
+//         color: $button-bgcolor;
+//     }
+
+//     #click:checked~.nav-content ul {
+//         display: flex;
+//     }
+
+//     /* humbergar menu */
+
+
+//     /* login-register */
+//     .login-register {
+//         display: block;
+//     }
+
+//     .login-register-desktop {
+//         display: none;
+//     }
+
+//     /* login-register close */
+
+//     /* logo */
+//     .logo {
+//         margin-left: -140px;
+//     }
+
+//     /* logo */
+//     .nav-icons {
+//         display: flex;
+//         left: 70px;
+//     }
+
+
+
+
+
+
+
+//   input[type=text], select {
+//    @include input-mobile-property;
+    
+//     }
+//     input[type=email], select {
+//         @include input-mobile-property;
+//     }
+//     input[type=tel], select {
+//     @include input-mobile-property;
+//     }
+//     input[type=password], select {
+//         @include input-mobile-property;
+    
+//     }
+   
+//     .footer {
+//         grid-template-columns: 1fr;
+//         display: block;
+//         padding-left: 30px;
+//     }
+
+//     .categories {
+//         padding-bottom: 50px;
+//     }
+
+//     .help {
+//         padding-bottom: 50px;
+//     }
+
+//     // footer section close
+//     .get-in-touch {
+//          width: 100%;
+//         padding: 0px 20px 20px 0px;
+//     }
+//     .container {
+
+//         display: grid;
+//         grid-template-columns: repeat(1, 1fr);
+//         position: relative;
+//         top: 150px;
+//         border-radius: 25px;
+//         width: 100%;
+//         // margin: auto;
+      
+    
+//         >h1 {
+//             text-align: center;
+//         }
+    
+//     }
+//     .categories {
+//         padding-bottom: 50px;
+//         width: 250px;
+//     }
+// }
+@media screen and (max-width: 500px) {
+
+    /* Hide the top navbar */
     .top-navbar {
         display: none;
-
     }
 
+    /* Adjust padding and font size for the nav-bar */
     .nav-bar {
         padding-right: 30px;
         font-size: 20px;
     }
 
-
-    /* humburgar menu */
+    /* Hamburger menu */
     .nav-bar label {
         display: block;
-
     }
 
+    /* Keep navbar at the top */
     .navbar {
         top: 0;
     }
 
+    /* Style for the nav-content */
     .nav-content ul {
         display: flex;
         flex-direction: column;
@@ -884,30 +1025,29 @@ footer {
         background-color: $button-bgcolor;
         color: $white-color;
         z-index: 2;
-
     }
 
+    /* Adjust margin for menu items */
     .nav-content ul li {
         margin: 5px;
-
     }
 
+    /* Style for navigation links */
     .nav-content ul li a {
         color: $white-color;
     }
 
+    /* Change color on hover */
     .nav-content ul li a:hover {
         color: $button-bgcolor;
     }
 
-    #click:checked~.nav-content ul {
+    /* Show menu when hamburger is clicked */
+    #click:checked ~ .nav-content ul {
         display: flex;
     }
 
-    /* humbergar menu */
-
-
-    /* login-register */
+    /* Display login/register button */
     .login-register {
         display: block;
     }
@@ -916,76 +1056,61 @@ footer {
         display: none;
     }
 
-    /* login-register close */
-
-    /* logo */
+    /* Adjust logo position */
     .logo {
         margin-left: -140px;
     }
 
-    /* logo */
+    /* Align nav-icons */
     .nav-icons {
         display: flex;
         left: 70px;
     }
 
-
-
-
-
-
-
-  input[type=text], select {
-   @include input-mobile-property;
-    
-    }
-    input[type=email], select {
+    /* Input fields styling */
+    input[type=text], input[type=email], input[type=tel], input[type=password], select {
         @include input-mobile-property;
     }
-    input[type=tel], select {
-    @include input-mobile-property;
-    }
-    input[type=password], select {
-        @include input-mobile-property;
-    
-    }
-   
+
+    /* Footer adjustments */
     .footer {
         grid-template-columns: 1fr;
         display: block;
         padding-left: 30px;
     }
 
-    .categories {
+    .categories, .help {
         padding-bottom: 50px;
     }
 
-    .help {
-        padding-bottom: 50px;
-    }
-
-    // footer section close
+    /* Adjust the Get in Touch section */
     .get-in-touch {
-         width: 100%;
+        width: 100%;
         padding: 0px 20px 20px 0px;
     }
-    .container {
 
+    /* Center the form and give it margins on the sides */
+    .container {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
         position: relative;
         top: 150px;
         border-radius: 25px;
-        width: 100%;
-        // margin: auto;
-      
-    
-        >h1 {
-            text-align: center;
-        }
-    
+        width: 90%; /* Reduce width for margin effect */
+        margin: 0 auto; /* Center the container horizontally */
     }
-    
+
+    /* Center-align the heading */
+    .container > h1 {
+        text-align: center;
+    }
+
+    /* Adjust categories width and padding */
+    .categories {
+        padding-bottom: 50px;
+        width: 100%; /* Set full width for mobile */
+    }
 }
+
 
 

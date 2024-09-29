@@ -505,7 +505,7 @@ footer {
 
 /* get in touch */
 .get-in-touch {
-  width: 400px;
+  padding: 0px 20px 20px 0px;
 }
 
 .get-in-touch p {
@@ -1165,5 +1165,25 @@ select {
   }
   .help {
     padding-bottom: 50px;
+  }
+  .product-image img {
+    width: 260px;
+    height: 250px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: #ccc;
+    padding-left: 5px;
+    padding-top: 40px;
+    justify-items: flex-start;
+    margin-bottom: 40px;
+    margin: 0px 15px 50px 15px;
+  }
+  .categories {
+    padding-bottom: 0px;
+  }
+  .categories {
+    width: 0px;
   }
 }/*# sourceMappingURL=style.css.map */

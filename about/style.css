@@ -59,7 +59,7 @@
 
 .top-navbar-list ul li a:hover {
   cursor: pointer;
-  color: #717FE0;
+  color: #717fe0;
 }
 
 .top-bar2 {
@@ -125,7 +125,7 @@ header {
 }
 
 .nav-content ul li a:hover {
-  color: #717FE0;
+  color: #717fe0;
 }
 
 .nav-icons {
@@ -146,13 +146,13 @@ header {
 
 .nav-icons a i span {
   color: white;
-  background-color: #717FE0;
+  background-color: #717fe0;
   font-size: 10px;
   padding: 4px;
 }
 
 .nav-icons a:hover {
-  color: #717FE0;
+  color: #717fe0;
 }
 
 .login-register {
@@ -217,7 +217,7 @@ header {
 
 /*  */
 .story-imag1 {
-  background-color: #717FE0;
+  background-color: #717fe0;
   height: 400px;
   width: 380px;
 }
@@ -258,7 +258,7 @@ header {
 }
 
 .story-imag2 {
-  background-color: #717FE0;
+  background-color: #717fe0;
   height: 400px;
   width: 380px;
 }
@@ -319,7 +319,7 @@ footer {
 }
 
 .footer-list ul li a:hover {
-  color: #717FE0;
+  color: #717fe0;
 }
 
 /* new change */
@@ -352,7 +352,7 @@ footer {
 }
 
 .get-in-touch i:hover {
-  color: #717FE0;
+  color: #717fe0;
 }
 
 input[type=email],
@@ -374,13 +374,13 @@ select {
   padding: 15px 50px 15px 50px;
   font-size: 17px;
   border-radius: 25px;
-  background-color: #717FE0;
+  background-color: #717fe0;
   color: white;
   border: none;
 }
 
 .newsletter button:hover {
-  color: #717FE0;
+  color: #717fe0;
   background-color: white;
   cursor: pointer;
 }
@@ -449,7 +449,7 @@ select {
     left: 0;
     width: 100%;
     display: none;
-    background-color: #717FE0;
+    background-color: #717fe0;
     color: white;
     z-index: 2;
     text-align: center;
@@ -463,7 +463,7 @@ select {
     color: white;
   }
   .nav-content ul li a:hover {
-    color: #717FE0;
+    color: #717fe0;
   }
   #click:checked ~ .nav-content ul {
     display: flex;
@@ -507,7 +507,7 @@ select {
     padding: 75px 0px 20px;
   }
   .story-imag1 {
-    background-color: #717FE0;
+    background-color: #717fe0;
     height: 400px;
     width: 380px;
   }
@@ -596,7 +596,7 @@ select {
     left: 0;
     width: 100%;
     display: none;
-    background-color: #717FE0;
+    background-color: #717fe0;
     color: white;
     z-index: 2;
   }
@@ -609,7 +609,7 @@ select {
     color: white;
   }
   .nav-content ul li a:hover {
-    color: #717FE0;
+    color: #717fe0;
   }
   #click:checked ~ .nav-content ul {
     display: flex;
@@ -655,7 +655,7 @@ select {
     padding: 75px 0px 20px;
   }
   .story-imag1 {
-    background-color: #717FE0;
+    background-color: #717fe0;
     height: 400px;
     width: 380px;
   }
@@ -726,7 +726,7 @@ select {
     left: 0;
     width: 100%;
     display: none;
-    background-color: #717FE0;
+    background-color: #717fe0;
     color: white;
     z-index: 2;
   }
@@ -737,7 +737,7 @@ select {
     color: white;
   }
   .nav-content ul li a:hover {
-    color: #717FE0;
+    color: #717fe0;
   }
   #click:checked ~ .nav-content ul {
     display: flex;
@@ -812,113 +812,150 @@ select {
 }
 /* mobile view  500px*/
 @media screen and (max-width: 500px) {
+  /* Hide the top navbar on smaller screens */
   .top-navbar {
     display: none;
   }
+  /* Adjust padding and font size for the nav-bar */
   .nav-bar {
-    padding-right: 30px;
-    font-size: 20px;
+    padding-right: 15px;
+    font-size: 18px;
   }
-  /* humburgar menu */
+  /* Hamburger menu */
   .nav-bar label {
     display: block;
   }
+  /* Fix the navbar position at the top */
   .navbar {
     top: 0;
+    height: 60px; /* Adjust height for better usability */
   }
+  /* Stack the nav-content items vertically */
   .nav-content ul {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 60px;
     left: 0;
     width: 100%;
     display: none;
-    background-color: #717FE0;
+    background-color: #717fe0;
     color: white;
     z-index: 2;
+    padding: 10px 0;
   }
+  /* Reduce margin for better spacing */
   .nav-content ul li {
-    margin: 5px;
+    margin: 5px 10px;
   }
+  /* Adjust link color and padding */
   .nav-content ul li a {
     color: white;
+    padding: 10px;
   }
+  /* Change hover effect for better feedback */
   .nav-content ul li a:hover {
-    color: #717FE0;
+    background-color: rgba(113, 127, 224, 0.8);
+    color: white;
   }
+  /* Show menu when hamburger is clicked */
   #click:checked ~ .nav-content ul {
     display: flex;
   }
-  /* humbergar menu */
-  /* login-register */
+  /* Display login/register section */
   .login-register {
     display: block;
   }
   .login-register-desktop {
     display: none;
   }
-  /* login-register close */
-  /* logo */
+  /* Adjust logo positioning */
   .logo {
-    margin-left: -140px;
+    margin-left: -120px;
   }
-  /* logo */
+  /* Align nav-icons better */
   .nav-icons {
     display: flex;
-    left: 70px;
+    justify-content: flex-end;
+    margin-right: 20px;
   }
-  /* hero  section*/
+  /* Hero section adjustments */
   .hero {
-    height: 55vh;
-    width: auto;
+    height: 50vh;
+    width: 100%; /* Ensure full-width for small screens */
   }
   .hero-heading {
-    padding-bottom: 50px;
+    font-size: 32px; /* Adjust heading size */
+    padding-bottom: 30px;
+    padding-top: 20px;
   }
+  /* Story section responsive adjustments */
   #story {
     grid-template-columns: 1fr;
     height: auto;
     flex-direction: column-reverse;
   }
-  .story-main-section {
-    grid-template-columns: 1fr;
-    margin-left: 40px;
-    margin-right: 0px;
-    padding: 75px 0px 20px;
-  }
-  .story-1 h1 {
-    margin-bottom: 20px;
-  }
-  .story-1 p {
-    width: 100%;
-    padding-bottom: 20px;
-  }
+  .story-main-section,
   .story-main-section2 {
     grid-template-columns: 1fr;
-    margin-left: 40px;
-    margin-right: 0px;
-    padding: 75px 0px 120px;
+    margin-left: 20px;
+    padding: 50px 10px;
   }
+  /* Improve paragraph width and spacing */
+  .story-1 h1,
+  .story-2 h1 {
+    font-size: 24px; /* Adjust heading size */
+    margin-bottom: 15px;
+  }
+  .story-1 p,
   .story-2 p {
     width: 100%;
+    padding-bottom: 15px;
   }
   .story-2-para {
-    margin-top: 20px;
+    margin-top: 15px;
   }
+  /* Footer section improvements */
   footer {
     display: block;
+    padding: 20px;
     height: auto;
   }
   .footer {
-    height: auto;
     display: block;
-    padding-left: 30px;
+    padding-left: 20px;
   }
-  .categories {
-    padding-bottom: 50px;
-  }
+  /* Footer categories and help sections */
+  .categories,
   .help {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
+  }
+  .get-in-touch {
+    width: 250px;
+    padding: 0px 20px 20px 0px;
+  }
+  .story-imag2 img {
+    width: 95%;
+    height: auto;
+    padding: 20px;
+  }
+  .story-imag2 {
+    background-color: #717fe0;
+    height: auto;
+    width: 250px;
+  }
+  .story-imag1 img {
+    width: 95%;
+    height: auto;
+    padding: 20px;
+  }
+  .story-imag1 {
+    background-color: #717fe0;
+    height: auto;
+    width: 250px;
+  }
+  .categories, .help {
+    width: 30px;
+    padding-bottom: 40px;
   }
 }/*# sourceMappingURL=style.css.map */

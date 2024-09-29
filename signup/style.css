@@ -745,20 +745,23 @@ select {
 }
 /* mobile view 500px */
 @media screen and (max-width: 500px) {
+  /* Hide the top navbar */
   .top-navbar {
     display: none;
   }
+  /* Adjust padding and font size for the nav-bar */
   .nav-bar {
     padding-right: 30px;
     font-size: 20px;
   }
-  /* humburgar menu */
+  /* Hamburger menu settings */
   .nav-bar label {
     display: block;
   }
   .navbar {
     top: 0;
   }
+  /* Navigation content styling */
   .nav-content ul {
     display: flex;
     flex-direction: column;
@@ -780,29 +783,28 @@ select {
   .nav-content ul li a:hover {
     color: #717FE0;
   }
+  /* Show menu when hamburger is clicked */
   #click:checked ~ .nav-content ul {
     display: flex;
   }
-  /* humbergar menu */
-  /* login-register */
+  /* Display login/register on mobile */
   .login-register {
     display: block;
   }
   .login-register-desktop {
     display: none;
   }
-  /* login-register close */
-  /* logo */
+  /* Adjust logo position */
   .logo {
     margin-left: -140px;
   }
-  /* logo */
+  /* Align nav-icons */
   .nav-icons {
     display: flex;
     left: 70px;
   }
-  input[type=text],
-  select {
+  /* Style input fields */
+  input[type=text], input[type=email], input[type=tel], input[type=password], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -812,68 +814,38 @@ select {
     background-color: transparent;
     font-size: 17px;
   }
-  input[type=email],
-  select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-  }
-  input[type=tel],
-  select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-  }
-  input[type=password],
-  select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: transparent;
-    font-size: 17px;
-  }
+  /* Gender field styling */
   .gender {
     text-align: left;
     margin-left: 10px;
     font-size: 20px;
     color: black;
   }
+  /* Footer adjustments */
   .footer {
     grid-template-columns: 1fr;
     display: block;
     padding-left: 30px;
   }
-  .categories {
+  .categories, .help {
     padding-bottom: 50px;
   }
-  .help {
-    padding-bottom: 50px;
-  }
+  /* Adjust Get in Touch section */
   .get-in-touch {
     width: 100%;
     padding: 0px 20px 20px 0px;
   }
+  /* Center content and give margins to the form */
   .container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     position: relative;
     top: 150px;
     border-radius: 25px;
-    width: 100%;
+    width: 90%; /* Reduced width for margins */
+    margin: 0 auto; /* Centers the container */
   }
+  /* Center heading inside the container */
   .container > h1 {
     text-align: center;
   }

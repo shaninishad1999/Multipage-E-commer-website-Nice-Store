@@ -1150,9 +1150,24 @@ footer {
     }
 
   
-    
-
-
+    .get-in-touch {
+         width: 250px;
+        padding: 0px 20px 20px 0px;
+    }
+    .contact {
+        grid-template-columns: auto;
+        margin: 0px;
+         padding: 0px 0px; 
+        background-color: white;
+    }
+    .categories {
+         width: 200px; 
+    }
+    .item {
+        text-align: center;
+        border-right: 2px solid rgb(246, 240, 240);
+        padding: 0px 0px;
+    }
 }
 
 

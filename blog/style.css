@@ -807,6 +807,18 @@ select {
          column-gap: 10px;
     width: 100%;
   }
+  input[type=email], select {
+    width: 0%;
+    font-size: 17px;
+    display: inline-block;
+    background: transparent;
+    outline: none;
+    margin-bottom: 15px;
+    color: white;
+    height: 15%;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.46);
+  }
   input[type=text],
   select {
     width: 100%;
@@ -830,5 +842,12 @@ select {
   }
   .help {
     padding-bottom: 50px;
+  }
+  .get-in-touch {
+    width: 250px;
+    padding-bottom: 20px;
+  }
+  .right-content {
+    padding: 0px 0px 0px 0px;
   }
 }/*# sourceMappingURL=style.css.map */
